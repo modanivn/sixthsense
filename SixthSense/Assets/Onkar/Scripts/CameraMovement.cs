@@ -17,9 +17,8 @@ public class CameraMovement : MonoBehaviour
     {
         // Temporary vector
      Vector3 temp = player.transform.position;
-     temp.x = temp.x - x;
-     temp.y = y;
-     temp.z = temp.z - z;
+     temp.x = temp.x + x;
+     temp.y = temp.y + y;
      // Assign value to Camera position
      transform.position = temp;
     }

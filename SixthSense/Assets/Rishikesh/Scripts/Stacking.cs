@@ -15,15 +15,31 @@ public class Stacking : MonoBehaviour
     List<GameObject> _cubeList = new List<GameObject>();
     private int _cubeListIndexCounter = 0;
 
+    //Jump
+
+    public Vector3 jump;
+    public float jumpForce = 2.0f;
+
+    public bool isGrounded;
+
     private void Awake()
     {
         _playerRigidbody = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
     void Update()
     {
-        _xMove = Input.GetAxis("Horizontal");
-        _zMove = Input.GetAxis("Vertical");
+        _xMove = -Input.GetAxis("Vertical");
+        _zMove = Input.GetAxis("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+
+            _playerRigidbody.AddForce(jump * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
+
         Vector3 forwardMove = Vector3.forward * _zMove *_speed * Time.deltaTime;
         Vector3 horizontalMove = Vector3.right * _xMove * _speed * Time.deltaTime;
         _playerRigidbody.MovePosition(transform.position + forwardMove + horizontalMove);
@@ -51,5 +67,10 @@ public class Stacking : MonoBehaviour
                 _cubeListIndexCounter++;
             }
         }
+    }
+
+    void OnCollisionStay()
+    {
+        isGrounded = true;
     }
 }
