@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1890112055}
-  x: 8
+  x: 7
   y: 2
   z: 0
 --- !u!1 &1466813035

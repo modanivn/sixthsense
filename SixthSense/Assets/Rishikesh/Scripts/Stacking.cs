@@ -35,5 +35,10 @@ public class Stacking : MonoBehaviour
         else if(other.CompareTag("RedCube")){
             UnityEditor.EditorApplication.isPlaying = false;
         }
+
+        if(_cubeList.Count == 3){
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+
     }
 }
