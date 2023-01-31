@@ -194,6 +194,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 604417340345932777, guid: a30802301e244f44a82c6537a25cea37, type: 3}
+      propertyPath: m_TagString
+      value: RedCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 604417340345932779, guid: a30802301e244f44a82c6537a25cea37, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5a7b4349160dbf4bb8d07c6f183085a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a30802301e244f44a82c6537a25cea37, type: 3}
 --- !u!4 &205140588 stripped
@@ -303,6 +311,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 604417340345932777, guid: a30802301e244f44a82c6537a25cea37, type: 3}
+      propertyPath: m_TagString
+      value: RedCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 604417340345932779, guid: a30802301e244f44a82c6537a25cea37, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5a7b4349160dbf4bb8d07c6f183085a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a30802301e244f44a82c6537a25cea37, type: 3}
 --- !u!1001 &838722047
@@ -376,6 +392,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 604417340345932777, guid: a30802301e244f44a82c6537a25cea37, type: 3}
+      propertyPath: m_TagString
+      value: YellowCube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a30802301e244f44a82c6537a25cea37, type: 3}
 --- !u!1 &883182561
@@ -441,7 +461,7 @@ Transform:
   m_GameObject: {fileID: 916773109}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -4.86, y: 0.5, z: 0.06}
-  m_LocalScale: {x: 2, y: 0.5, z: 3.5}
+  m_LocalScale: {x: 6, y: 0.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2138418309}
@@ -641,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 604417340345932777, guid: a30802301e244f44a82c6537a25cea37, type: 3}
+      propertyPath: m_TagString
+      value: YellowCube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a30802301e244f44a82c6537a25cea37, type: 3}
 --- !u!1 &1056456856
@@ -674,7 +698,7 @@ Transform:
   m_GameObject: {fileID: 1056456856}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -16.55, y: 0.11, z: -0}
-  m_LocalScale: {x: 2, y: 0.5, z: 4}
+  m_LocalScale: {x: 6, y: 0.5, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 205140588}
@@ -1082,6 +1106,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4925423430643000640, guid: 9635a65f0dd5886469dabbc557bc5c33, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4925423430643000641, guid: 9635a65f0dd5886469dabbc557bc5c33, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1328,6 +1356,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 604417340345932777, guid: a30802301e244f44a82c6537a25cea37, type: 3}
+      propertyPath: m_TagString
+      value: GreenCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 604417340345932779, guid: a30802301e244f44a82c6537a25cea37, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a95d963b534f2c84f9ffd8ea8be2f39b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a30802301e244f44a82c6537a25cea37, type: 3}
 --- !u!4 &1459588175 stripped
@@ -1433,7 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1890112055}
-  x: 5
+  x: 8
   y: 2
   z: 0
 --- !u!1 &1466813035
