@@ -33,13 +33,13 @@ public class Stacking : MonoBehaviour
             }
         }
         else if(other.CompareTag("RedCube")){
-            // UnityEditor.EditorApplication.isPlaying = false;
-            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+            // Application.Quit();
         }
 
         if(_cubeList.Count == 3){
-            // UnityEditor.EditorApplication.isPlaying = false;
-            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+            // Application.Quit();
         }
 
     }
