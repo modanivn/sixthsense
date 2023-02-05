@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Proyecto26;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -11,18 +12,26 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
     
-
     // [SerializeField] AudioSource jumpSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y < -5)
+        {
+            TimeElapsed.endTime();
+            Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
+            // Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
         float horizontalInput = -Input.GetAxis("Vertical");
         float verticalInput = Input.GetAxis("Horizontal");
 
