@@ -10,6 +10,8 @@ public class Player_Movement : MonoBehaviour
 
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
+
+    
     
 
     // [SerializeField] AudioSource jumpSound;
@@ -28,8 +30,11 @@ public class Player_Movement : MonoBehaviour
 
         rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
 
+        Rotation();
+
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
+            Debug.Log("Inside");
             Jump();
         }
     }
@@ -53,4 +58,9 @@ public class Player_Movement : MonoBehaviour
     {
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
+
+    void Rotation(){
+        transform.Rotate(new Vector3(0,Input.GetAxis("Mouse X")*4f,0));
+    }
+
 }
