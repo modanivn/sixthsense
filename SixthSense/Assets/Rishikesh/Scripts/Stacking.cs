@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Proyecto26;
 
 public class Stacking : MonoBehaviour
 {
@@ -32,12 +33,20 @@ public class Stacking : MonoBehaviour
                 _cubeListIndexCounter++;
             }
         }
-        else if(other.CompareTag("RedCube")){
-            UnityEditor.EditorApplication.isPlaying = false;
+        else if(other.CompareTag("RedCube"))
+        {
+            TimeElapsed.endTime();
+            Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
             // Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+            
         }
 
         if(_cubeList.Count == 3){
+            TimeElapsed.endTime();
+            Level level = new Level(true,TimeElapsed._stopWatch.ElapsedMilliseconds);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
             UnityEditor.EditorApplication.isPlaying = false;
             // Application.Quit();
         }
