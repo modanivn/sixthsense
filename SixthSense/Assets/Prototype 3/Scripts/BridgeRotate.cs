@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BridgeRotate : MonoBehaviour
 {
-    public float rotateSpeed = 5.0f;
+    public float rotateSpeed = 7.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,7 @@ public class BridgeRotate : MonoBehaviour
 
     public void decreaseSpeed(float multiplier){
         rotateSpeed = rotateSpeed / multiplier;
+        rotateSpeed = Mathf.Max(4.0f,rotateSpeed);
     }
 
 }
