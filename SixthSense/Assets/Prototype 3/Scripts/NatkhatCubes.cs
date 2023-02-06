@@ -30,7 +30,6 @@ public class NatkhatCubes : MonoBehaviour
             jumpForceDecrease();
             break;
         }
-        Debug.Log(index);
     }
 
     public void bridgeRotateIncreaseSpeed(){
