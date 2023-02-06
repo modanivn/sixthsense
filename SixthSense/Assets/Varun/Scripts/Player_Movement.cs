@@ -10,11 +10,9 @@ public class Player_Movement : MonoBehaviour
 
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
-
-    
-    
-
-    // [SerializeField] AudioSource jumpSound;
+    public Vector2 turn;
+    public Vector3 deltaMove;
+    public float sensitivity = 4.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +23,19 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = -Input.GetAxis("Vertical");
-        float verticalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = -Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
-        rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+        // rb.velocity = new Vector3(verticalInput * movementSpeed, rb.velocity.y, horizontalInput * movementSpeed);
 
-        Rotation();
+        turn.x += Input.GetAxis("Mouse X") * sensitivity;
+        transform.localRotation = Quaternion.Euler(0,turn.x,0);
+        deltaMove = new Vector3(horizontalInput,0,-verticalInput) * movementSpeed * Time.deltaTime;
+        transform.Translate(deltaMove);
+
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            Debug.Log("Inside");
             Jump();
         }
     }
@@ -60,7 +61,7 @@ public class Player_Movement : MonoBehaviour
     }
 
     void Rotation(){
-        transform.Rotate(new Vector3(0,Input.GetAxis("Mouse X")*4f,0));
+        // transform.Rotate(new Vector3(0,Input.GetAxis("Mouse X")*4f,0));
     }
 
 }
