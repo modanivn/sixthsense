@@ -15,14 +15,10 @@ public class StackingPrototype3 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // if (other.CompareTag(orderSequence[_cubeList.Count]))
-        // {
             Debug.Log(other);
             _cubeList.Add(other.gameObject);
             if (_cubeList.Count==1)
             {
-                // _firstCubePos = GetComponent<MeshRenderer>().bounds.max;
-                // _currentCubePos = new Vector3(other.transform.position.x, _firstCubePos.y, other.transform.position.z);
                 other.gameObject.transform.position = head.transform.position;
                 _currentCubePos = new Vector3(other.transform.position.x, transform.position.y + 0.3f, other.transform.position.z);
                 other.gameObject.GetComponent<Cube>().UpdateCubePosition(head.transform, true);
@@ -34,18 +30,5 @@ public class StackingPrototype3 : MonoBehaviour
                 other.gameObject.GetComponent<Cube>().UpdateCubePosition(_cubeList[_cubeListIndexCounter].transform, true);
                 _cubeListIndexCounter++;
             }
-            // m_Collider = GetComponent<Collider>();
-            // m_Collider.isTrigger = false;
-        // }
-        // else if(other.CompareTag("RedCube")){
-        //     UnityEditor.EditorApplication.isPlaying = false;
-        //     // Application.Quit();
-        // }
-
-        // if(_cubeList.Count == 3){
-        //     UnityEditor.EditorApplication.isPlaying = false;
-        //     // Application.Quit();
-        // }
-
     }
 }
