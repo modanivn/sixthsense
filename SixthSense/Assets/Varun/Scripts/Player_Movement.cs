@@ -64,4 +64,13 @@ public class Player_Movement : MonoBehaviour
         // transform.Rotate(new Vector3(0,Input.GetAxis("Mouse X")*4f,0));
     }
 
+    public void addForce(float multiplier){
+        jumpForce = jumpForce + multiplier;
+    }
+
+    public void decreaseForce(float multiplier){
+        jumpForce = jumpForce - multiplier;
+        jumpForce = Mathf.Max(4f,jumpForce);
+    }
+
 }

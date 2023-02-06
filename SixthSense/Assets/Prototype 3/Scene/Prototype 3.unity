@@ -579,6 +579,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 1110600219}
+--- !u!114 &160491286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160491272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c882eb15f41864498af6f5d835f5ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bridge: {fileID: 961722087}
+  rotateSpeedMultiplier: 5
+  jumpForceMultiplier: 1.5
 --- !u!4 &193530506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1271442364598669409, guid: a85986f7dc16bc649bfaddd885da9870, type: 3}
@@ -767,7 +782,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2245198307982d84eb2d86663bb31b28, type: 2}
+  - {fileID: 2100000, guid: 270dd7ab2bec64d6a955f410a1c557e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -978,7 +993,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2245198307982d84eb2d86663bb31b28, type: 2}
+  - {fileID: 2100000, guid: 270dd7ab2bec64d6a955f410a1c557e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

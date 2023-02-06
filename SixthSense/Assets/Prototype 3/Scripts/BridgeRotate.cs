@@ -17,4 +17,13 @@ public class BridgeRotate : MonoBehaviour
     {
         transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
     }
+
+    public void increaseSpeed(float multiplier){
+        rotateSpeed = rotateSpeed * multiplier;
+    }
+
+    public void decreaseSpeed(float multiplier){
+        rotateSpeed = rotateSpeed / multiplier;
+    }
+
 }

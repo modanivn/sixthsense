@@ -30,5 +30,6 @@ public class StackingPrototype3 : MonoBehaviour
                 other.gameObject.GetComponent<Cube>().UpdateCubePosition(_cubeList[_cubeListIndexCounter].transform, true);
                 _cubeListIndexCounter++;
             }
+            gameObject.GetComponent<NatkhatCubes>().funWithCube(other.gameObject);
     }
 }
