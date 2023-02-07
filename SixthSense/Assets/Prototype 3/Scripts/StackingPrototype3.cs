@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StackingPrototype3 : MonoBehaviour
 {
     private Vector3 _firstCubePos;
     private Vector3 _currentCubePos;
     private string[] orderSequence = {"YellowCube","GreenCube","YellowCube","RedCube"};
+    public TextMeshProUGUI cubeElement;
 
     List<GameObject> _cubeList = new List<GameObject>();
     private int _cubeListIndexCounter = 0;
@@ -31,5 +33,11 @@ public class StackingPrototype3 : MonoBehaviour
                 _cubeListIndexCounter++;
             }
             gameObject.GetComponent<NatkhatCubes>().funWithCube(other.gameObject);
+            cubeElement.text = (8-_cubeList.Count).ToString() + " cubes remaining";
+
+            if (_cubeList.Count == 8){
+                UnityEditor.EditorApplication.isPlaying = false;
+                //Application.Quit();
+            }
     }
 }
