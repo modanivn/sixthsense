@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Proyecto26;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -17,12 +18,15 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         float horizontalInput = -Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -39,9 +43,15 @@ public class Player_Movement : MonoBehaviour
             Jump();
         }
 
+
         if (transform.position.y < -5.0f){
-            UnityEditor.EditorApplication.isPlaying = false;
-            //Application.Quit();
+            
+            TimeElapsed.endTime();
+            Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds, gameObject.GetComponent<StackingPrototype3>()._cubeList.Count);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
+
+            // UnityEditor.EditorApplication.isPlaying = false;
+            Application.Quit();
         }
     }
 

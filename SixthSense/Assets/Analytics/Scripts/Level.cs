@@ -7,10 +7,12 @@ public class Level : MonoBehaviour
     // Start is called before the first frame update
     public bool isComplete;
     public float timeToComplete;
-    public Level(bool isComplete, float timeToComplete)
+    public int cubesCollected;
+    public Level(bool isComplete, float timeToComplete, int cubesCollected)
     {
         this.isComplete = isComplete;
         this.timeToComplete = timeToComplete;
+        this.cubesCollected = cubesCollected;
     }
     void Start()
     {

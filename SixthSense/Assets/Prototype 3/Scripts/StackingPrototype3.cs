@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Proyecto26;
 
 public class StackingPrototype3 : MonoBehaviour
 {
     private Vector3 _firstCubePos;
     private Vector3 _currentCubePos;
-    private string[] orderSequence = {"YellowCube","GreenCube","YellowCube","RedCube"};
+    // private string[] orderSequence = {"YellowCube","GreenCube","YellowCube","RedCube"};
     public TextMeshProUGUI cubeElement;
 
-    List<GameObject> _cubeList = new List<GameObject>();
+    public List<GameObject> _cubeList = new List<GameObject>();
     private int _cubeListIndexCounter = 0;
     Collider m_Collider;
     public GameObject head;
 
     private void OnTriggerEnter(Collider other)
     {
-            Debug.Log(other);
+            
             _cubeList.Add(other.gameObject);
             if (_cubeList.Count==1)
             {
@@ -36,8 +37,11 @@ public class StackingPrototype3 : MonoBehaviour
             cubeElement.text = (8-_cubeList.Count).ToString() + " cubes remaining";
 
             if (_cubeList.Count == 8){
-                UnityEditor.EditorApplication.isPlaying = false;
-                //Application.Quit();
+                TimeElapsed.endTime();
+                Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds, _cubeList.Count);
+                RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
+                // UnityEditor.EditorApplication.isPlaying = false;
+                Application.Quit();
             }
     }
 }
