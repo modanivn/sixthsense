@@ -40,8 +40,8 @@ public class StackingPrototype3 : MonoBehaviour
                 TimeElapsed.endTime();
                 Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds, _cubeList.Count);
                 RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
-                // UnityEditor.EditorApplication.isPlaying = false;
-                Application.Quit();
+                UnityEditor.EditorApplication.isPlaying = false;
+                // Application.Quit();
             }
     }
 }

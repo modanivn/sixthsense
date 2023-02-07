@@ -20,7 +20,7 @@ public class BridgeRotate : MonoBehaviour
 
     public void increaseSpeed(float multiplier){
         rotateSpeed = rotateSpeed * multiplier;
-        rotateSpeed = Mathf.Min(100.0f,rotateSpeed);
+        rotateSpeed = Mathf.Min(75.0f,rotateSpeed);
     }
 
     public void decreaseSpeed(float multiplier){

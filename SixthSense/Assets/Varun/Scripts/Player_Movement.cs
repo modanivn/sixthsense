@@ -50,8 +50,8 @@ public class Player_Movement : MonoBehaviour
             Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds, gameObject.GetComponent<StackingPrototype3>()._cubeList.Count);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
 
-            // UnityEditor.EditorApplication.isPlaying = false;
-            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+            // Application.Quit();
         }
     }
 
