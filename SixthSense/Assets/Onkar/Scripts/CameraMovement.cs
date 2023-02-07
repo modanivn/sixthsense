@@ -6,6 +6,12 @@ public class CameraMovement : MonoBehaviour
 {
     public GameObject player;
     public float x,y,z;
+
+    public float speedH = 2.0f;
+    public float speedV = 2.0f;
+    public float yaw = 0.0f;
+    public float pitch = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {

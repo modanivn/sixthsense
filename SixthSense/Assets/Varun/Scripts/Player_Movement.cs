@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Proyecto26;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -10,27 +11,47 @@ public class Player_Movement : MonoBehaviour
 
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
-    
-
-    // [SerializeField] AudioSource jumpSound;
+    public Vector2 turn;
+    public Vector3 deltaMove;
+    public float sensitivity = 4.0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = -Input.GetAxis("Vertical");
-        float verticalInput = Input.GetAxis("Horizontal");
 
-        rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+        float horizontalInput = -Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        // rb.velocity = new Vector3(verticalInput * movementSpeed, rb.velocity.y, horizontalInput * movementSpeed);
+
+        turn.x += Input.GetAxis("Mouse X") * sensitivity;
+        transform.localRotation = Quaternion.Euler(0,turn.x,0);
+        deltaMove = new Vector3(horizontalInput,0,-verticalInput) * movementSpeed * Time.deltaTime;
+        transform.Translate(deltaMove);
+
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             Jump();
+        }
+
+
+        if (transform.position.y < -5.0f){
+            
+            TimeElapsed.endTime();
+            Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds, gameObject.GetComponent<StackingPrototype3>()._cubeList.Count);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
+
+            UnityEditor.EditorApplication.isPlaying = false;
+            // Application.Quit();
         }
     }
 
@@ -53,4 +74,18 @@ public class Player_Movement : MonoBehaviour
     {
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
+
+    void Rotation(){
+        // transform.Rotate(new Vector3(0,Input.GetAxis("Mouse X")*4f,0));
+    }
+
+    public void addForce(float multiplier){
+        jumpForce = jumpForce + multiplier;
+    }
+
+    public void decreaseForce(float multiplier){
+        jumpForce = jumpForce - multiplier;
+        jumpForce = Mathf.Max(4f,jumpForce);
+    }
+
 }

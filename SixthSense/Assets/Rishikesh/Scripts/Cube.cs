@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cube : MonoBehaviour
 {
     [SerializeField] private float followSpeed;
+    [SerializeField] float speed = 150f;
 
     public void UpdateCubePosition(Transform followedCube, bool isFollowStart)
     {
@@ -18,8 +19,12 @@ public class Cube : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
             transform.position = new Vector3(Mathf.Lerp(transform.position.x, followedCube.position.x, followSpeed * Time.deltaTime),
-                Mathf.Lerp(transform.position.y, followedCube.position.y, followSpeed * Time.deltaTime) + 0.01f,
+                followedCube.position.y + 0.1f,
                 Mathf.Lerp(transform.position.z, followedCube.position.z, followSpeed * Time.deltaTime));
         }
+    }
+
+    public void update() {
+        transform.Rotate(Vector3.up, speed * Time.deltaTime);
     }
 }
