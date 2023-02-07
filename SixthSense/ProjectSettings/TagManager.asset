@@ -8,6 +8,7 @@ TagManager:
   - RedCube
   - YellowCube
   - GreenCube
+  - Platform
   layers:
   - Default
   - TransparentFX
