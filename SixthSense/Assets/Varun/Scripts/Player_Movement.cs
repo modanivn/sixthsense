@@ -38,6 +38,11 @@ public class Player_Movement : MonoBehaviour
         {
             Jump();
         }
+
+        if (transform.position.y < -5.0f){
+            UnityEditor.EditorApplication.isPlaying = false;
+            //Application.Quit();
+        }
     }
 
     void Jump()

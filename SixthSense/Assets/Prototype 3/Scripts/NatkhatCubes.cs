@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NatkhatCubes : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class NatkhatCubes : MonoBehaviour
     public GameObject bridge;
     public float rotateSpeedMultiplier = 5.0f;
     public float jumpForceMultiplier = 1.5f;
+    public TextMeshProUGUI textElement;
 
     public void funWithCube(GameObject currentCube){
         System.Random random = new System.Random();
@@ -34,17 +36,21 @@ public class NatkhatCubes : MonoBehaviour
 
     public void bridgeRotateIncreaseSpeed(){
         bridge.GetComponent<BridgeRotate>().increaseSpeed(rotateSpeedMultiplier);
+        textElement.text = "Bridge Fast";
     }
 
     public void bridgeRotateDecreaseSpeed(){
         bridge.GetComponent<BridgeRotate>().decreaseSpeed(rotateSpeedMultiplier);
+        textElement.text = "Bridge Slow";
     }
 
     public void jumpForceIncrease(){
         gameObject.GetComponent<Player_Movement>().addForce(jumpForceMultiplier);
+        textElement.text = "Jump Increase";
     }
 
     public void jumpForceDecrease(){
         gameObject.GetComponent<Player_Movement>().decreaseForce(jumpForceMultiplier);
+        textElement.text = "Jump Decrease";
     }
 }
