@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Personal/Varun/Test Protoype.unity
     guid: 33723a1ac2e8ebb4fb911da4445140e9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Prototype 3/Scene/Prototype 3.unity
     guid: 81f28280c30df9d449fa272c3d02b073
+  - enabled: 1
+    path: Assets/Personal/Varun/Scenes/Varun Proto 4.unity
+    guid: 3850586834d26824eb78c32449f9b8f3
   m_configObjects: {}

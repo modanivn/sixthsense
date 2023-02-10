@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Proyecto26;
+using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -50,8 +51,8 @@ public class Player_Movement : MonoBehaviour
             Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds, gameObject.GetComponent<StackingPrototype3>()._cubeList.Count);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
 
-            UnityEditor.EditorApplication.isPlaying = false;
-            // Application.Quit();
+            // UnityEditor.EditorApplication.isPlaying = false;
+             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
