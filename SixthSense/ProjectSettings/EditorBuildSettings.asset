@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Varun/Test Protoype.unity
+    path: Assets/Personal/Varun/Test Protoype.unity
     guid: 33723a1ac2e8ebb4fb911da4445140e9
   - enabled: 1
     path: Assets/Prototype 3/Scene/Prototype 3.unity

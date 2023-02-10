@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level : MonoBehaviour
+public class Level
 {
     // Start is called before the first frame update
     public bool isComplete;
@@ -13,15 +13,5 @@ public class Level : MonoBehaviour
         this.isComplete = isComplete;
         this.timeToComplete = timeToComplete;
         this.cubesCollected = cubesCollected;
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
