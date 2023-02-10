@@ -18,7 +18,10 @@ public class StackingPrototype3 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-            
+
+     Debug.Log(other.tag);   
+
+        if(other.tag == "Cube"){
             _cubeList.Add(other.gameObject);
             if (_cubeList.Count==1)
             {
@@ -35,6 +38,7 @@ public class StackingPrototype3 : MonoBehaviour
             }
             gameObject.GetComponent<NatkhatCubes>().funWithCube(other.gameObject);
             cubeElement.text = (8-_cubeList.Count).ToString() + " cubes remaining";
+            Debug.Log(_cubeList.Count);
 
             if (_cubeList.Count == 8){
                 TimeElapsed.endTime();
@@ -43,5 +47,8 @@ public class StackingPrototype3 : MonoBehaviour
                 UnityEditor.EditorApplication.isPlaying = false;
                 // Application.Quit();
             }
+        }
+            
+
     }
 }

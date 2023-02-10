@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 27822246}
   m_Layer: 6
   m_Name: Platform (5)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,6 +618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 1621310491795806697, guid: 427fad23ff258604f879302b62b1418b, type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427fad23ff258604f879302b62b1418b, type: 3}
 --- !u!4 &135977970 stripped
@@ -792,6 +796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yellow Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 1271442364598669469, guid: a85986f7dc16bc649bfaddd885da9870, type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a85986f7dc16bc649bfaddd885da9870, type: 3}
 --- !u!1001 &335965883
@@ -849,6 +857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 1621310491795806697, guid: 427fad23ff258604f879302b62b1418b, type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427fad23ff258604f879302b62b1418b, type: 3}
 --- !u!1 &418091496
@@ -866,7 +878,7 @@ GameObject:
   - component: {fileID: 418091497}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1021,6 +1033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 1120229631203533275, guid: d643edf8155233b4f8fbf036abfe412f, type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d643edf8155233b4f8fbf036abfe412f, type: 3}
 --- !u!1 &497239867
@@ -1077,7 +1093,7 @@ GameObject:
   - component: {fileID: 519559465}
   m_Layer: 6
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1300,6 +1316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 1120229631203533275, guid: d643edf8155233b4f8fbf036abfe412f, type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d643edf8155233b4f8fbf036abfe412f, type: 3}
 --- !u!1 &823027509
@@ -1317,7 +1337,7 @@ GameObject:
   - component: {fileID: 823027510}
   m_Layer: 6
   m_Name: Platform (3)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1432,7 +1452,7 @@ GameObject:
   - component: {fileID: 827588306}
   m_Layer: 6
   m_Name: Platform (6)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1943,6 +1963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yellow Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 1271442364598669469, guid: a85986f7dc16bc649bfaddd885da9870, type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a85986f7dc16bc649bfaddd885da9870, type: 3}
 --- !u!4 &1226120027 stripped
@@ -2102,6 +2126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 1621310491795806697, guid: 427fad23ff258604f879302b62b1418b, type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427fad23ff258604f879302b62b1418b, type: 3}
 --- !u!1 &1493453564
@@ -2119,7 +2147,7 @@ GameObject:
   - component: {fileID: 1493453565}
   m_Layer: 6
   m_Name: Platform (4)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2234,7 +2262,7 @@ GameObject:
   - component: {fileID: 1542788676}
   m_Layer: 6
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2754,6 +2782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 1120229631203533275, guid: d643edf8155233b4f8fbf036abfe412f, type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d643edf8155233b4f8fbf036abfe412f, type: 3}
 --- !u!1 &1855798060
@@ -2865,7 +2897,7 @@ GameObject:
   - component: {fileID: 1971563566}
   m_Layer: 6
   m_Name: Platform (7)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
