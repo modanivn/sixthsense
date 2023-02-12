@@ -16,6 +16,9 @@ public class StackingPrototype3 : MonoBehaviour
     private int _cubeListIndexCounter = 0;
     Collider m_Collider;
     public GameObject head;
+    public Transform bridgeEnd;
+    public Transform bridgeItemPrefab;
+    public float bridgeOffset = 2.0f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,7 +38,7 @@ public class StackingPrototype3 : MonoBehaviour
                 other.gameObject.GetComponent<Cube>().UpdateCubePosition(_cubeList[_cubeListIndexCounter].transform, true);
                 _cubeListIndexCounter++;
             }
-            gameObject.GetComponent<NatkhatCubes>().funWithCube(other.gameObject);
+            // gameObject.GetComponent<NatkhatCubes>().funWithCube(other.gameObject);
             cubeElement.text = (8-_cubeList.Count).ToString() + " cubes remaining";
 
             if (_cubeList.Count == 8){
@@ -56,6 +59,17 @@ public class StackingPrototype3 : MonoBehaviour
         _cubeList.Clear();
         _firstCubePos = Vector3.zero;
         _currentCubePos = Vector3.zero;
+        _cubeListIndexCounter = 0;
+    }
+
+    public void makeBridgeToMonster(){
+        foreach(GameObject currentStackItem in _cubeList){
+            Instantiate(bridgeItemPrefab, bridgeEnd.position, bridgeEnd.rotation);
+             Vector3 temp = bridgeEnd.position;
+            temp.x += bridgeOffset;
+            bridgeEnd.position = temp;
+        }
+        emptyPlayerStack();
     }
 
 }
