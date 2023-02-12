@@ -16,12 +16,24 @@ public class Player_Movement : MonoBehaviour
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
 
+    //public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Projectile")
+        {
+            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
+            Destroy(other.gameObject);
+        }
+        
     }
 
     // Update is called once per frame
