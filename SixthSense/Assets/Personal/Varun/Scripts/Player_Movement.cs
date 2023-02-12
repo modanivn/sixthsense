@@ -50,9 +50,11 @@ public class Player_Movement : MonoBehaviour
             TimeElapsed.endTime();
             Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds, gameObject.GetComponent<StackingPrototype3>()._cubeList.Count);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
+            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
 
             // UnityEditor.EditorApplication.isPlaying = false;
-             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            setPlayerToResetPosition();
         }
     }
 
@@ -87,6 +89,10 @@ public class Player_Movement : MonoBehaviour
     public void decreaseForce(float multiplier){
         jumpForce = jumpForce - multiplier;
         jumpForce = Mathf.Max(4f,jumpForce);
+    }
+
+    public void setPlayerToResetPosition(){
+        gameObject.transform.position = new Vector3(0, 2.5f, 0);
     }
 
 }
