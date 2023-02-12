@@ -9,6 +9,7 @@ TagManager:
   - YellowCube
   - GreenCube
   - Platform
+  - Projectile
   layers:
   - Default
   - TransparentFX
