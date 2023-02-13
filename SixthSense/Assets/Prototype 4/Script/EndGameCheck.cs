@@ -7,7 +7,7 @@ public class EndGameCheck : MonoBehaviour
 {
     public GameObject player;
     public GameObject monster;
-    public float endGameDistance = 0.5f;
+    public float endGameDistance = 2.5f;
     // Start is called before the first frame update
     void Start()
     {

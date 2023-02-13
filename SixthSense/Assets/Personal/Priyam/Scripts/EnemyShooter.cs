@@ -13,7 +13,7 @@ public class EnemyShooter : MonoBehaviour
     public TextMeshProUGUI FreezeTimerText;
     private float repeatTime = 1.25f;
     private float startTime = 1.0f;
-    private float frozenCountDown = 7.0f;
+    private float frozenCountDown = 10.0f;
 
     public void shootProjectile()
     {
@@ -39,11 +39,11 @@ public class EnemyShooter : MonoBehaviour
         FreezeTimerText.gameObject.SetActive(true);
 
         CancelInvoke("shootProjectile");
-        frozenCountDown = 7.0f;
+        frozenCountDown = 10.0f;
         FreezeTimerText.text = "Monster Frozen for " + frozenCountDown.ToString() + " seconds.";
 
         InvokeRepeating("UpdateCountdown", 0.0f, 1.0f);
-        Invoke("unfreezeProjectile",7.0f);
+        Invoke("unfreezeProjectile",10.0f);
    }
 
    void UpdateCountdown() {

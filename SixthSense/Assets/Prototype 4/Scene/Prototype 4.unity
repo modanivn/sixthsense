@@ -660,11 +660,12 @@ MonoBehaviour:
   bridgeEnd: {fileID: 415151418}
   bridgeItemPrefab: {fileID: 5824297460516156512, guid: 3d6e3e51519aaf2479968bd20d78a6cb, type: 3}
   bridgeOffset: 4
-  respawnTime: 10
+  normalRespawnTime: 10
   yellowCubePrefab: {fileID: 1271442364598669409, guid: a85986f7dc16bc649bfaddd885da9870, type: 3}
   redCubePrefab: {fileID: 1621310491795806485, guid: 427fad23ff258604f879302b62b1418b, type: 3}
   greenCubePrefab: {fileID: 1120229631203533095, guid: d643edf8155233b4f8fbf036abfe412f, type: 3}
   monster: {fileID: 437707536}
+  powerUprespawnTime: 15
 --- !u!114 &160491286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1396,7 +1397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823027509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.14, y: 0, z: 8.51}
+  m_LocalPosition: {x: 19.37, y: 0, z: 8.51}
   m_LocalScale: {x: 3, y: 0.5, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:

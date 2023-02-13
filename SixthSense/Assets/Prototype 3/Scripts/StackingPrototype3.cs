@@ -18,16 +18,23 @@ public class StackingPrototype3 : MonoBehaviour
     public GameObject head;
     public Transform bridgeEnd;
     public Transform bridgeItemPrefab;
-    public float bridgeOffset = 1.9f;
-    public float respawnTime = 10.0f;
+    public float bridgeOffset = 1.7f;
+    public float normalRespawnTime = 10.0f;
     public Transform yellowCubePrefab;
     public Transform redCubePrefab;
     public Transform greenCubePrefab;
     public GameObject monster;
+    public float powerUprespawnTime = 15.0f;
 
     private IEnumerator respawnCube(string cubeType, Transform cubeParent){
+
+        float rTime = normalRespawnTime;
+
+        if(cubeType == "RedCube" || cubeType == "GreenCube"){
+            rTime = powerUprespawnTime;
+        }
         
-        yield return new WaitForSeconds(respawnTime);
+        yield return new WaitForSeconds(rTime);
 
         Vector3 temp = cubeParent.position;
         temp.y += 0.4f;

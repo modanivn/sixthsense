@@ -10,7 +10,7 @@ public class NatkhatCubes : MonoBehaviour
     public float rotateSpeedMultiplier = 5.0f;
     public float jumpForceMultiplier = 1.5f;
     public TextMeshProUGUI textElement;
-    public float powerUpTime = 7.0f;
+    public float powerUpTime = 10.0f;
 
     public void funWithCube(int index){
         // System.Random random = new System.Random();
