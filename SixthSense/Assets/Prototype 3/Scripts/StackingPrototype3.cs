@@ -18,7 +18,7 @@ public class StackingPrototype3 : MonoBehaviour
     public GameObject head;
     public Transform bridgeEnd;
     public Transform bridgeItemPrefab;
-    public float bridgeOffset = 2.0f;
+    public float bridgeOffset = 1.9f;
     public float respawnTime = 10.0f;
     public Transform yellowCubePrefab;
     public Transform redCubePrefab;
