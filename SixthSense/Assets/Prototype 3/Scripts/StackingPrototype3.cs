@@ -23,6 +23,7 @@ public class StackingPrototype3 : MonoBehaviour
     public Transform yellowCubePrefab;
     public Transform redCubePrefab;
     public Transform greenCubePrefab;
+    public GameObject monster;
 
     private IEnumerator respawnCube(string cubeType, Transform cubeParent){
         
@@ -41,7 +42,9 @@ public class StackingPrototype3 : MonoBehaviour
             Instantiate(greenCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
 
-
+            case "RedCube":
+            Instantiate(redCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            break;
         }
     }
 
@@ -79,6 +82,11 @@ public class StackingPrototype3 : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
+        }
+        else if(other.tag == "RedCube"){
+            Destroy(other.gameObject);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent));
+            monster.GetComponent<EnemyShooter>().freezeProjectile();
         }
     }
 
