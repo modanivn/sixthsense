@@ -19,11 +19,39 @@ public class StackingPrototype3 : MonoBehaviour
     public Transform bridgeEnd;
     public Transform bridgeItemPrefab;
     public float bridgeOffset = 2.0f;
+    public float respawnTime = 10.0f;
+    public Transform yellowCubePrefab;
+    public Transform redCubePrefab;
+    public Transform greenCubePrefab;
+    public GameObject monster;
+
+    private IEnumerator respawnCube(string cubeType, Transform cubeParent){
+        
+        yield return new WaitForSeconds(respawnTime);
+
+        Vector3 temp = cubeParent.position;
+        temp.y += 0.4f;
+        Vector3 respawnPosition = temp;
+
+        switch(cubeType){
+            case "YellowCube":
+            Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            break;
+
+            case "GreenCube":
+            Instantiate(greenCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            break;
+
+            case "RedCube":
+            Instantiate(redCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            break;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if(other.tag == "Cube"){
+        if(other.tag == "YellowCube"){
+            StartCoroutine(respawnCube(other.tag,other.transform.parent));
             _cubeList.Add(other.gameObject);
             if (_cubeList.Count==1)
             {
@@ -39,16 +67,26 @@ public class StackingPrototype3 : MonoBehaviour
                 _cubeListIndexCounter++;
             }
             // gameObject.GetComponent<NatkhatCubes>().funWithCube(other.gameObject);
-            cubeElement.text = (8-_cubeList.Count).ToString() + " cubes remaining";
+            // cubeElement.text = (8-_cubeList.Count).ToString() + " cubes remaining";
 
-            if (_cubeList.Count == 8){
-                TimeElapsed.endTime();
-                Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds, _cubeList.Count);
-                RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
-                // UnityEditor.EditorApplication.isPlaying = false;
-                // Application.Quit();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            // if (_cubeList.Count == 8){
+            //     TimeElapsed.endTime();
+            //     Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds, _cubeList.Count);
+            //     RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
+            //     // UnityEditor.EditorApplication.isPlaying = false;
+            //     // Application.Quit();
+            //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // }
+        }
+        else if(other.tag == "GreenCube"){
+            Destroy(other.gameObject);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent));
+            gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
+        }
+        else if(other.tag == "RedCube"){
+            Destroy(other.gameObject);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent));
+            monster.GetComponent<EnemyShooter>().freezeProjectile();
         }
     }
 
@@ -65,11 +103,10 @@ public class StackingPrototype3 : MonoBehaviour
     public void makeBridgeToMonster(){
         foreach(GameObject currentStackItem in _cubeList){
             Instantiate(bridgeItemPrefab, bridgeEnd.position, bridgeEnd.rotation);
-             Vector3 temp = bridgeEnd.position;
+            Vector3 temp = bridgeEnd.position;
             temp.x += bridgeOffset;
             bridgeEnd.position = temp;
         }
         emptyPlayerStack();
     }
-
 }
