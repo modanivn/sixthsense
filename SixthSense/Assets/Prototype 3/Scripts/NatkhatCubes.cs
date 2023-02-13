@@ -10,10 +10,11 @@ public class NatkhatCubes : MonoBehaviour
     public float rotateSpeedMultiplier = 5.0f;
     public float jumpForceMultiplier = 1.5f;
     public TextMeshProUGUI textElement;
+    public float powerUpTime = 7.0f;
 
-    public void funWithCube(GameObject currentCube){
-        System.Random random = new System.Random();
-        int index = random.Next(1, functionArray.Length+1);
+    public void funWithCube(int index){
+        // System.Random random = new System.Random();
+        // int index = random.Next(1, functionArray.Length+1);
         
         switch(index){
             case 1:
@@ -47,9 +48,11 @@ public class NatkhatCubes : MonoBehaviour
     public void jumpForceIncrease(){
         gameObject.GetComponent<Player_Movement>().addForce(jumpForceMultiplier);
         textElement.text = "Jump Increase";
+        StartCoroutine(jumpForceDecrease());
     }
 
-    public void jumpForceDecrease(){
+    public IEnumerator jumpForceDecrease(){
+        yield return new WaitForSeconds(powerUpTime);
         gameObject.GetComponent<Player_Movement>().decreaseForce(jumpForceMultiplier);
         textElement.text = "Jump Decrease";
     }
