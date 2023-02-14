@@ -116,7 +116,7 @@ public class StackingPrototype3 : MonoBehaviour
     }
 
     public void emptyPlayerStack(){
-        Debug.Log("Inside Empty Stack");
+        // Debug.Log("Inside Empty Stack");
         foreach(GameObject currentStackItem in _cubeList){
             Destroy(currentStackItem);
         }
@@ -125,12 +125,12 @@ public class StackingPrototype3 : MonoBehaviour
         _currentCubePos = Vector3.zero;
         _cubeListIndexCounter = 0;
 
-        if(foodCollected){
-            Destroy(foodPlatform.GetChild(0).gameObject);
-            isFoodPresent = false;
-            foodCollected = false;
-            spawnFoodItem();
-        }
+        // if(foodCollected){
+        //     Destroy(foodPlatform.GetChild(0).gameObject);
+        //     isFoodPresent = false;
+        //     foodCollected = false;
+        //     spawnFoodItem();
+        // }
 
     }
 
