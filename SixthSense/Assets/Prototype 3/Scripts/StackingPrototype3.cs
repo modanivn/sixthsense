@@ -101,8 +101,10 @@ public class StackingPrototype3 : MonoBehaviour
         }
         else if(other.tag == "Food"){
             emptyPlayerStack();
+            _cubeList.Add(other.gameObject);
+            _cubeListIndexCounter++;
             other.gameObject.transform.position = head.transform.position;
-            _currentCubePos = new Vector3(other.transform.position.x, transform.position.y + 0.3f, other.transform.position.z);
+            _currentCubePos = new Vector3(other.transform.position.x, transform.position.y + 0.5f, other.transform.position.z);
             other.gameObject.GetComponent<Cube>().UpdateCubePosition(head.transform, true);
         }
     }
@@ -146,7 +148,7 @@ public class StackingPrototype3 : MonoBehaviour
 
     private void spawnFoodItem(){
         Vector3 temp = foodPlatform.position;
-        temp.y += 1.5f;
+        temp.y += 1.0f;
         Vector3 respawnPosition = temp;
         var food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
         food.transform.parent = foodPlatform;
