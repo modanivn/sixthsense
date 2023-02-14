@@ -125,7 +125,7 @@ public class StackingPrototype3 : MonoBehaviour
     public void makeBridgeToMonster(){
         if(monsterPlatformCount <= totalPlatformsNeeded){
             foreach(GameObject currentStackItem in _cubeList){
-                if(monsterPlatformCount > totalPlatformsNeeded){
+                if(monsterPlatformCount >= totalPlatformsNeeded){
                     break;
                 }
                 else{
