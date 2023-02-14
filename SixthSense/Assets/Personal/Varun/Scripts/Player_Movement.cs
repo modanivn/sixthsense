@@ -66,6 +66,7 @@ public class Player_Movement : MonoBehaviour
 
             // UnityEditor.EditorApplication.isPlaying = false;
             //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             setPlayerToResetPosition();
         }
     }
