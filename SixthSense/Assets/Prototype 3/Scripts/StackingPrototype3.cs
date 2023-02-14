@@ -150,7 +150,8 @@ public class StackingPrototype3 : MonoBehaviour
             Vector3 temp = foodPlatform.position;
             temp.y += 1.0f;
             Vector3 respawnPosition = temp;
-            food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation,foodPlatform);
+            food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
+            food.parent = foodPlatform;
             isFoodPresent = true;
         }
     }
