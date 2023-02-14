@@ -7,6 +7,8 @@ public class MonsterBridgeTrigger : MonoBehaviour
     public GameObject player;
     private void OnTriggerEnter(Collider other)
     {
-        player.GetComponent<StackingPrototype3>().makeBridgeToMonster();
+        if(other.tag == "Player"){
+            player.GetComponent<StackingPrototype3>().makeBridgeToMonster();
+        }
     }
 }

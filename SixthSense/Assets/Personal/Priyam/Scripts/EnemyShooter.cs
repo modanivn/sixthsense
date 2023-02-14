@@ -17,7 +17,7 @@ public class EnemyShooter : MonoBehaviour
 
     public void shootProjectile()
     {
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, transform.position + new Vector3(0,0.5f,0), Quaternion.identity);
 
         Vector3 direction = player.transform.position - transform.position;
 

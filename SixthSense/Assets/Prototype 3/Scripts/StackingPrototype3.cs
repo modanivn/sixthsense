@@ -31,6 +31,7 @@ public class StackingPrototype3 : MonoBehaviour
     public Transform foodPlatform;
     private Transform food;
     private bool isFoodPresent = false;
+    private bool foodCollected = false;
 
     private IEnumerator respawnCube(string cubeType, Transform cubeParent){
 
@@ -106,6 +107,7 @@ public class StackingPrototype3 : MonoBehaviour
             other.gameObject.transform.position = head.transform.position;
             _currentCubePos = new Vector3(other.transform.position.x, transform.position.y + 0.3f, other.transform.position.z);
             other.gameObject.GetComponent<Cube>().UpdateCubePosition(head.transform, true);
+            foodCollected = true;
         }
     }
 
@@ -121,6 +123,14 @@ public class StackingPrototype3 : MonoBehaviour
         _firstCubePos = Vector3.zero;
         _currentCubePos = Vector3.zero;
         _cubeListIndexCounter = 0;
+
+        if(foodCollected){
+            Destroy(food);
+            isFoodPresent = false;
+            foodCollected = false;
+            spawnFoodItem();
+        }
+
     }
 
     public void makeBridgeToMonster(){
@@ -153,6 +163,12 @@ public class StackingPrototype3 : MonoBehaviour
             food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
             food.parent = foodPlatform;
             isFoodPresent = true;
+        }
+    }
+
+    public void checkEndCondition(){
+        if(foodCollected){
+            Debug.Log("Food Fed");
         }
     }
 }

@@ -11,6 +11,8 @@ TagManager:
   - Platform
   - Projectile
   - Food
+  - BridgeMaker
+  - GameEndPlatform
   layers:
   - Default
   - TransparentFX
