@@ -47,9 +47,9 @@ public class EnemyShooter : MonoBehaviour
    }
 
    void UpdateCountdown() {
-        frozenCountDown -= 1.0f;
+        // frozenCountDown -= 1.0f;
         FreezeTimerText.text = "Monster Frozen for " + Mathf.CeilToInt(frozenCountDown).ToString() + " seconds.";
-
+        frozenCountDown -= 1.0f;
    }
 
    void unfreezeProjectile()
