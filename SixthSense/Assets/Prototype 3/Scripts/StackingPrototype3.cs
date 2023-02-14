@@ -164,7 +164,6 @@ public class StackingPrototype3 : MonoBehaviour
             food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
             food.parent = foodPlatform;
             isFoodPresent = true;
-            Debug.Log(food.gameObject);
         }
     }
 
