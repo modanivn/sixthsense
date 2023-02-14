@@ -29,7 +29,7 @@ public class StackingPrototype3 : MonoBehaviour
     public int totalPlatformsNeeded = 4;
     public Transform foodPrefab;
     public Transform foodPlatform;
-    private GameObject food;
+    private Transform food;
     private bool isFoodPresent = false;
 
     private IEnumerator respawnCube(string cubeType, Transform cubeParent){
