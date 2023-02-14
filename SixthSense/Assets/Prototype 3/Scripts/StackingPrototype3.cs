@@ -146,7 +146,7 @@ public class StackingPrototype3 : MonoBehaviour
 
     private void spawnFoodItem(){
         Vector3 temp = foodPlatform.position;
-        temp.y += 1.0f;
+        temp.y += 1.5f;
         Vector3 respawnPosition = temp;
         var food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
         food.transform.parent = foodPlatform;
