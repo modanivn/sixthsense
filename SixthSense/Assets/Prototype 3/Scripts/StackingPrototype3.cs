@@ -33,6 +33,7 @@ public class StackingPrototype3 : MonoBehaviour
     private bool isFoodPresent = false;
     private bool foodCollected = false;
 
+
     private IEnumerator respawnCube(string cubeType, Transform cubeParent){
 
         float rTime = normalRespawnTime;
@@ -169,7 +170,8 @@ public class StackingPrototype3 : MonoBehaviour
 
     public void checkEndCondition(){
         if(foodCollected){
-            Debug.Log("Food Fed");
+            //Debug.Log("Food Fed");
+            gameObject.GetComponent<PanelSwitcher>().switchpanel();
         }
     }
 }
