@@ -125,7 +125,7 @@ public class StackingPrototype3 : MonoBehaviour
         _cubeListIndexCounter = 0;
 
         if(foodCollected){
-            Destroy(food);
+            Destroy(food.gameObject);
             isFoodPresent = false;
             foodCollected = false;
             spawnFoodItem();
