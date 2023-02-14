@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Personal/Rishikesh/Scenes/Main Menu.unity
     guid: e7b666d90fbf94edfa6168aedfffc593
   - enabled: 1
+    path: Assets/Personal/Rishikesh/Scenes/Prototype 4.unity
+    guid: 5b4beec7f3a3f4d77a5902c9802b3feb
+  - enabled: 1
     path: Assets/Personal/Rishikesh/Scenes/Varun Proto 4.unity
     guid: abf3f9b3aa86a49b4bb90763da85e1d5
   m_configObjects: {}
