@@ -99,6 +99,16 @@ public class StackingPrototype3 : MonoBehaviour
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             monster.GetComponent<EnemyShooter>().freezeProjectile();
         }
+        else if(other.tag == "Food"){
+            emptyPlayerStack();
+            other.gameObject.transform.position = head.transform.position;
+            _currentCubePos = new Vector3(other.transform.position.x, transform.position.y + 0.3f, other.transform.position.z);
+            other.gameObject.GetComponent<Cube>().UpdateCubePosition(head.transform, true);
+        }
+    }
+
+    private void stackOnPlayer(){
+        
     }
 
     public void emptyPlayerStack(){
@@ -138,6 +148,7 @@ public class StackingPrototype3 : MonoBehaviour
         Vector3 temp = foodPlatform.position;
         temp.y += 1.0f;
         Vector3 respawnPosition = temp;
-        Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation, foodPlatform);
+        var food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
+        food.transform.parent = foodPlatform;
     }
 }
