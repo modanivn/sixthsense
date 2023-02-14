@@ -29,7 +29,7 @@ public class StackingPrototype3 : MonoBehaviour
     public int totalPlatformsNeeded = 4;
     public Transform foodPrefab;
     public Transform foodPlatform;
-    private Transform food;
+    private GameObject food;
     private bool isFoodPresent = false;
     private bool foodCollected = false;
 
@@ -125,8 +125,8 @@ public class StackingPrototype3 : MonoBehaviour
         _currentCubePos = Vector3.zero;
         _cubeListIndexCounter = 0;
 
-        if(monsterPlatformCount == totalPlatformsNeeded){
-            Destroy(food.gameObject);
+        if(monsterPlatformCount == totalPlatformsNeeded && foodCollected){
+            Destroy(food);
             isFoodPresent = false;
             foodCollected = false;
             spawnFoodItem();
@@ -161,7 +161,7 @@ public class StackingPrototype3 : MonoBehaviour
             Vector3 temp = foodPlatform.position;
             temp.y += 1.0f;
             Vector3 respawnPosition = temp;
-            food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
+            food = (GameObject)Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
             food.parent = foodPlatform;
             isFoodPresent = true;
             Debug.Log(food.gameObject);
