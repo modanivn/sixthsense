@@ -59,10 +59,10 @@ public class Player_Movement : MonoBehaviour
 
         if (transform.position.y < -5.0f){
             
-            TimeElapsed.endTime();
-            Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds, gameObject.GetComponent<StackingPrototype3>()._cubeList.Count);
-            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
-            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
+            // TimeElapsed.endTime();
+            // Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds, gameObject.GetComponent<StackingPrototype3>()._cubeList.Count);
+            // RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
+            // gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
 
             // UnityEditor.EditorApplication.isPlaying = false;
             //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);

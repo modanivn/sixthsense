@@ -5,6 +5,7 @@ using TMPro;
 using Proyecto26;
 using UnityEngine.SceneManagement;
 
+
 public class StackingPrototype3 : MonoBehaviour
 {
     private Vector3 _firstCubePos;
@@ -33,6 +34,10 @@ public class StackingPrototype3 : MonoBehaviour
     private bool isFoodPresent = false;
     private bool foodCollected = false;
 
+
+    void Start(){
+        TimeElapsed.startTime();
+    }
 
     private IEnumerator respawnCube(string cubeType, Transform cubeParent){
 
@@ -170,6 +175,9 @@ public class StackingPrototype3 : MonoBehaviour
 
     public void checkEndCondition(){
         if(foodCollected){
+            TimeElapsed.endTime();
+            Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json",level);
             //Debug.Log("Food Fed");
             gameObject.GetComponent<PanelSwitcher>().switchpanel();
         }

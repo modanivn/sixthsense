@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Proyecto26;
 
 public class PanelSwitcher : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PanelSwitcher : MonoBehaviour
     private bool switchStarted = false;
     public TextMeshProUGUI timerText;
 
+    void Start(){
+        TimeElapsed.startTime();
+    }
 
     void Update()
     {
@@ -27,7 +31,12 @@ public class PanelSwitcher : MonoBehaviour
 
             if (timer <= 0)
             {
+                TimeElapsed.endTime();
+                Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds);
+                RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json",level);
                 switchpanel();
+
+
             }
         }
     }
