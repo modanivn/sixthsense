@@ -48,12 +48,23 @@ public class NatkhatCubes : MonoBehaviour
     public void jumpForceIncrease(){
         gameObject.GetComponent<Player_Movement>().addForce(jumpForceMultiplier);
         textElement.text = "Jump Increase";
+        InvokeRepeating("UpdateCountdown",0.0f,1.0f);
         StartCoroutine(jumpForceDecrease());
+    }
+
+    void UpdateCountdown(){
+        textElement.text = "Jump increased for " + Mathf.CeilToInt(powerUpTime).ToString() + " seconds.";
+        // Debug.Log(powerUpTime);
+        powerUpTime -= 1.0f;
     }
 
     public IEnumerator jumpForceDecrease(){
         yield return new WaitForSeconds(powerUpTime);
+        CancelInvoke("UpdateCountdown");
+        textElement.text = "";
+        powerUpTime = 10.0f;
         gameObject.GetComponent<Player_Movement>().decreaseForce(jumpForceMultiplier);
-        textElement.text = "Jump Decrease";
+        // textElement.text = "Jump Decrease";
     }
 }
+
