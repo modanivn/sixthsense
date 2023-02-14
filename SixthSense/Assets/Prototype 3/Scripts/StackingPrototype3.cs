@@ -116,6 +116,7 @@ public class StackingPrototype3 : MonoBehaviour
     }
 
     public void emptyPlayerStack(){
+        Debug.Log("Inside Empty Stack");
         foreach(GameObject currentStackItem in _cubeList){
             Destroy(currentStackItem);
         }
@@ -124,7 +125,7 @@ public class StackingPrototype3 : MonoBehaviour
         _currentCubePos = Vector3.zero;
         _cubeListIndexCounter = 0;
 
-        if(foodCollected){
+        if(monsterPlatformCount == totalPlatformsNeeded){
             Destroy(food.gameObject);
             isFoodPresent = false;
             foodCollected = false;
@@ -163,6 +164,7 @@ public class StackingPrototype3 : MonoBehaviour
             food = Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation);
             food.parent = foodPlatform;
             isFoodPresent = true;
+            Debug.Log(food.gameObject);
         }
     }
 
