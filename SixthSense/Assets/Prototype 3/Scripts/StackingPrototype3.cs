@@ -27,6 +27,8 @@ public class StackingPrototype3 : MonoBehaviour
     public float powerUprespawnTime = 15.0f;
     private int monsterPlatformCount = 0;
     public int totalPlatformsNeeded = 4;
+    public Transform foodPrefab;
+    public Transform foodPlatform;
 
     private IEnumerator respawnCube(string cubeType, Transform cubeParent){
 
@@ -112,13 +114,30 @@ public class StackingPrototype3 : MonoBehaviour
     public void makeBridgeToMonster(){
         if(monsterPlatformCount <= totalPlatformsNeeded){
             foreach(GameObject currentStackItem in _cubeList){
-            Instantiate(bridgeItemPrefab, bridgeEnd.position, bridgeEnd.rotation);
-            Vector3 temp = bridgeEnd.position;
-            temp.x += bridgeOffset;
-            bridgeEnd.position = temp;
-            monsterPlatformCount += 1;
+                if(monsterPlatformCount > totalPlatformsNeeded){
+                    break;
+                }
+                else{
+                    Instantiate(bridgeItemPrefab, bridgeEnd.position, bridgeEnd.rotation);
+                    Vector3 temp = bridgeEnd.position;
+                    temp.x += bridgeOffset;
+                    bridgeEnd.position = temp;
+                    monsterPlatformCount += 1;
+                }
         }
         }
         emptyPlayerStack();
+
+        if(monsterPlatformCount == totalPlatformsNeeded){
+            spawnFoodItem();
+        }
+
+    }
+
+    private void spawnFoodItem(){
+        Vector3 temp = foodPlatform.position;
+        temp.y += 1.0f;
+        Vector3 respawnPosition = temp;
+        Instantiate(foodPrefab, respawnPosition, foodPlatform.rotation, foodPlatform);
     }
 }

@@ -8,6 +8,7 @@ public class EndGameCheck : MonoBehaviour
     public GameObject player;
     public GameObject monster;
     public float endGameDistance = 2.5f;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,6 @@ public class EndGameCheck : MonoBehaviour
         if(distance <= endGameDistance){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
     }
 }
