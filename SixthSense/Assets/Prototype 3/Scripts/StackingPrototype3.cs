@@ -125,7 +125,7 @@ public class StackingPrototype3 : MonoBehaviour
         _currentCubePos = Vector3.zero;
         _cubeListIndexCounter = 0;
 
-        if(monsterPlatformCount == totalPlatformsNeeded && foodCollected){
+        if(foodCollected){
             Destroy(food);
             isFoodPresent = false;
             foodCollected = false;
