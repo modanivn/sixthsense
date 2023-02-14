@@ -267,7 +267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1095573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec5510e2a22314afd8dc5563f9a46800, type: 3}
+  m_Script: {fileID: 11500000, guid: fa6f70f6522be42b1a3e01d0d3d06d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 884184922}
@@ -1685,7 +1685,7 @@ GameObject:
   - component: {fileID: 862417494}
   - component: {fileID: 862417493}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2745,7 +2745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
