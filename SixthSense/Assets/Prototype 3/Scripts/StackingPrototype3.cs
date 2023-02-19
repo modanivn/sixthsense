@@ -33,6 +33,9 @@ public class StackingPrototype3 : MonoBehaviour
     private Transform food;
     private bool isFoodPresent = false;
     private bool foodCollected = false;
+    public TextMeshProUGUI gameProgress;
+    public TextMeshProUGUI foodAvailable;
+    
 
 
     void Start(){
@@ -50,7 +53,7 @@ public class StackingPrototype3 : MonoBehaviour
         yield return new WaitForSeconds(rTime);
 
         Vector3 temp = cubeParent.position;
-        temp.y += 0.4f;
+        temp.y += 0.8f;
         Vector3 respawnPosition = temp;
 
         switch(cubeType){
@@ -73,19 +76,22 @@ public class StackingPrototype3 : MonoBehaviour
         if(other.tag == "YellowCube"){
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             _cubeList.Add(other.gameObject);
-            if (_cubeList.Count==1)
-            {
-                other.gameObject.transform.position = head.transform.position;
-                _currentCubePos = new Vector3(other.transform.position.x, transform.position.y + 0.3f, other.transform.position.z);
-                other.gameObject.GetComponent<Cube>().UpdateCubePosition(head.transform, true);
-            }
-            else if (_cubeList.Count > 1)
-            {
-                other.gameObject.transform.position = _currentCubePos;
-                _currentCubePos = new Vector3(other.transform.position.x, other.gameObject.transform.position.y + 0.3f, other.transform.position.z);
-                other.gameObject.GetComponent<Cube>().UpdateCubePosition(_cubeList[_cubeListIndexCounter].transform, true);
-                _cubeListIndexCounter++;
-            }
+            // if (_cubeList.Count==1)
+            // {
+            //     other.gameObject.transform.position = head.transform.position;
+            //     _currentCubePos = new Vector3(other.transform.position.x, transform.position.y + 0.3f, other.transform.position.z);
+            //     other.gameObject.GetComponent<Cube>().UpdateCubePosition(head.transform, true);
+            // }
+            // else if (_cubeList.Count > 1)
+            // {
+            //     other.gameObject.transform.position = _currentCubePos;
+            //     _currentCubePos = new Vector3(other.transform.position.x, other.gameObject.transform.position.y + 0.3f, other.transform.position.z);
+            //     other.gameObject.GetComponent<Cube>().UpdateCubePosition(_cubeList[_cubeListIndexCounter].transform, true);
+            //     _cubeListIndexCounter++;
+            // }
+            makeBridgeToMonster();
+
+            //Old Code
             // gameObject.GetComponent<NatkhatCubes>().funWithCube(other.gameObject);
             // cubeElement.text = (8-_cubeList.Count).ToString() + " cubes remaining";
 
@@ -159,7 +165,10 @@ public class StackingPrototype3 : MonoBehaviour
 
         if(monsterPlatformCount == totalPlatformsNeeded){
             spawnFoodItem();
+            foodAvailable.text = "Food available to feed the monster!";
         }
+
+        gameProgress.text = monsterPlatformCount + "/4 Yellow Cubes Collected";
     }
 
     private void spawnFoodItem(){
