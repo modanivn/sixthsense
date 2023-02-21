@@ -22,8 +22,8 @@ public class StackingPrototype3 : MonoBehaviour
     public float bridgeOffset = 1.7f;
     public float normalRespawnTime = 10.0f;
     public Transform yellowCubePrefab;
-    public Transform redCubePrefab;
-    public Transform greenCubePrefab;
+    public Transform redCubeAndTextPrefab;
+    public Transform greenCubeAndTextPrefab;
     public GameObject monster;
     public float powerUprespawnTime = 15.0f;
     private int monsterPlatformCount = 0;
@@ -46,7 +46,7 @@ public class StackingPrototype3 : MonoBehaviour
 
         float rTime = normalRespawnTime;
 
-        if(cubeType == "RedCube" || cubeType == "GreenCube"){
+        if(cubeType == "FreezePrefab" || cubeType == "JumpPrefab"){
             rTime = powerUprespawnTime;
         }
         
@@ -61,12 +61,16 @@ public class StackingPrototype3 : MonoBehaviour
             Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
 
-            case "GreenCube":
-            Instantiate(greenCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
-            break;
+            case "JumpPrefab":
+            {
+                //Debug.Log("in switch");
+                Instantiate(greenCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+                break;
+            }
+            
 
-            case "RedCube":
-            Instantiate(redCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            case "FreezePrefab":
+            Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
         }
     }
@@ -104,12 +108,14 @@ public class StackingPrototype3 : MonoBehaviour
             //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             // }
         }
-        else if(other.tag == "GreenCube"){
-            Destroy(other.gameObject);
+        else if(other.tag == "JumpPrefab"){
+            //Debug.Log("in on trigger");
+            //Destroy(other.gameObject);
+            Debug.Log(other);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
         }
-        else if(other.tag == "RedCube"){
+        else if(other.tag == "FreezePrefab"){
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             monster.GetComponent<EnemyShooter>().freezeProjectile();
