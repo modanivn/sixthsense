@@ -8,6 +8,13 @@ TagManager:
   - RedCube
   - YellowCube
   - GreenCube
+  - Platform
+  - Projectile
+  - Food
+  - BridgeMaker
+  - GameEndPlatform
+  - JumpPrefab
+  - FreezePrefab
   layers:
   - Default
   - TransparentFX

@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Varun/Test Protoype.unity
-    guid: 33723a1ac2e8ebb4fb911da4445140e9
   - enabled: 1
-    path: Assets/Prototype 3/Scene/Prototype 3.unity
-    guid: 81f28280c30df9d449fa272c3d02b073
+    path: Assets/Prototype 4/Scene/Main Menu.unity
+    guid: e7b666d90fbf94edfa6168aedfffc593
+  - enabled: 1
+    path: Assets/Prototype 4/Scene/Prototype 6.unity
+    guid: 67beeba8a60a04ee0b0c75283ca0a58c
   m_configObjects: {}
