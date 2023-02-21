@@ -8,13 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prototype 4/Scene/Main Menu.unity
     guid: e7b666d90fbf94edfa6168aedfffc593
-  - enabled: 0
-    path: Assets/Prototype 4/Scene/Prototype 4 New.unity
-    guid: 5b4beec7f3a3f4d77a5902c9802b3feb
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Prototype 4/Scene/Prototype 4.unity
-    guid: 7fb339e8a3ca15f4ebee1fa04c19c888
+    path: Assets/Prototype 4/Scene/Prototype 6.unity
+    guid: 67beeba8a60a04ee0b0c75283ca0a58c
   m_configObjects: {}
