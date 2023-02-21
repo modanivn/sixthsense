@@ -164,8 +164,8 @@ public class StackingPrototype3 : MonoBehaviour
         emptyPlayerStack();
 
         if(monsterPlatformCount == totalPlatformsNeeded){
-            spawnFoodItem();
-            foodAvailable.text = "Food available to feed the monster!";
+            // spawnFoodItem();
+            // foodAvailable.text = "Food available to feed the monster!";
         }
 
         gameProgress.text = monsterPlatformCount + "/4 Yellow Cubes Collected";
@@ -183,7 +183,7 @@ public class StackingPrototype3 : MonoBehaviour
     }
 
     public void checkEndCondition(){
-        if(foodCollected){
+        if(true){
             TimeElapsed.endTime();
             Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json",level);
