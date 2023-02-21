@@ -41,6 +41,14 @@ public class PanelSwitcher : MonoBehaviour
         }
     }
 
+    public void reduceTime(){
+        // Debug.Log("Before update timer value : "  + timer);
+        timer -= 5.0f;
+        // Debug.Log("method called : "  + timer);
+         int minutes = Mathf.FloorToInt(timer / 60f);
+        int seconds = Mathf.FloorToInt(timer % 60f);
+        timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
     public void switchpanel(){
         switchStarted = true;
         fromPanel.alpha = 0f;
