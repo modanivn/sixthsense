@@ -110,8 +110,8 @@ public class StackingPrototype3 : MonoBehaviour
         }
         else if(other.tag == "JumpPrefab"){
             //Debug.Log("in on trigger");
-            //Destroy(other.gameObject);
-            Debug.Log(other);
+            Destroy(other.gameObject);
+            //Debug.Log(other);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
         }

@@ -13,6 +13,8 @@ TagManager:
   - Food
   - BridgeMaker
   - GameEndPlatform
+  - JumpPrefab
+  - FreezePrefab
   layers:
   - Default
   - TransparentFX
