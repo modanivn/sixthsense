@@ -8,10 +8,12 @@ public class PanelSwitcher : MonoBehaviour
     public CanvasGroup fromPanel;
     public CanvasGroup toPanel;
     public float timer = 60.0f;
+    public float popUpTime = 2.0f;
 
     //private float timer = 0f;
     private bool switchStarted = false;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI Penalty;
 
     void Start(){
         TimeElapsed.startTime();
@@ -29,6 +31,11 @@ public class PanelSwitcher : MonoBehaviour
             int seconds = Mathf.FloorToInt(timer % 60f);
             timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
 
+            // if(popUpTime<=0){
+            // popUpTime = 2.5f;
+            // CancelInvoke("Countdown");
+            // Penalty.text = "";
+            // }
             if (timer <= 0)
             {
                 TimeElapsed.endTime();
@@ -45,10 +52,29 @@ public class PanelSwitcher : MonoBehaviour
         // Debug.Log("Before update timer value : "  + timer);
         timer -= 5.0f;
         // Debug.Log("method called : "  + timer);
-         int minutes = Mathf.FloorToInt(timer / 60f);
+        int minutes = Mathf.FloorToInt(timer / 60f);
         int seconds = Mathf.FloorToInt(timer % 60f);
         timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        InvokeRepeating("Countdown",0.0f,1.0f);
+        // if(popUpTime<=0f){
+        //     popUpTime = 3.0f;
+        //     CancelInvoke("Countdown");
+        //     Penalty.text = "";
+        // }
     }
+
+    void Countdown(){
+
+        Penalty.text = "-5 seconds";
+        popUpTime -= 1.0f;
+        //Debug.Log(popUpTime);
+        if(popUpTime<=0f){
+            popUpTime = 2.0f;
+            CancelInvoke("Countdown");
+            Penalty.text = "";
+        }
+    }
+
     public void switchpanel(){
         switchStarted = true;
         fromPanel.alpha = 0f;
