@@ -36,7 +36,8 @@ public class StackingPrototype3 : MonoBehaviour
     public TextMeshProUGUI gameProgress;
     public TextMeshProUGUI foodAvailable;
     
-
+    private int totalNumberOfFreeze;
+    private int totalNumberOfJumps;
 
     void Start(){
         TimeElapsed.startTime();
