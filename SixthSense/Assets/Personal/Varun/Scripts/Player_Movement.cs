@@ -15,6 +15,8 @@ public class Player_Movement : MonoBehaviour
     public Vector2 turn;
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
+
+    public int totalNumberOfHits;
     
     //public GameObject player;
 
@@ -33,6 +35,7 @@ public class Player_Movement : MonoBehaviour
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             Destroy(other.gameObject);
+            totalNumberOfHits++;
         }
         
     }
