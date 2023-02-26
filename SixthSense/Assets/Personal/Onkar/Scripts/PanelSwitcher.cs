@@ -39,8 +39,13 @@ public class PanelSwitcher : MonoBehaviour
             if (timer <= 0)
             {
                 TimeElapsed.endTime();
-                Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds);
-                RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json",level);
+                int totalNumberOfJumps = gameObject.GetComponent<StackingPrototype3>().getTotalNumberOfJumps();
+                int totalNumberOfFreeze = gameObject.GetComponent<StackingPrototype3>().getTotalNumberOfFreeze();
+                int totalNumberOfFalls = gameObject.GetComponent<Player_Movement>().getTotalNumberOfFalls();
+                int totalNumberOfHits = gameObject.GetComponent<Player_Movement>().getTotalNumberOfHits();
+                float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
+                Level level = new Level(totalNumberOfJumps, totalNumberOfFreeze, totalNumberOfHits, totalNumberOfFalls, totalTimeTaken, false);
+                RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level);
                 switchpanel();
 
 

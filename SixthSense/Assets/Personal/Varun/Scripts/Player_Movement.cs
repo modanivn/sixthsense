@@ -16,6 +16,9 @@ public class Player_Movement : MonoBehaviour
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
 
+    public int totalNumberOfHits;
+    public int totalNumberOfFalls;
+    
     //public GameObject player;
 
     // Start is called before the first frame update
@@ -30,11 +33,22 @@ public class Player_Movement : MonoBehaviour
     {
         if(other.gameObject.tag == "Projectile")
         {
+            // TimeElapsed.subtractTime();
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             Destroy(other.gameObject);
+            totalNumberOfHits++;
+
         }
         
+    }
+
+    public int getTotalNumberOfHits() {
+        return totalNumberOfHits;
+    }
+
+    public int getTotalNumberOfFalls() {
+        return totalNumberOfFalls;
     }
 
     // Update is called once per frame
@@ -67,9 +81,12 @@ public class Player_Movement : MonoBehaviour
 
             // UnityEditor.EditorApplication.isPlaying = false;
             //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // TimeElapsed.subtractTime();
+
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             setPlayerToResetPosition();
+            totalNumberOfFalls++;
         }
     }
 

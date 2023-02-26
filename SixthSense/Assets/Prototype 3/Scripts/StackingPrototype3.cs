@@ -36,7 +36,8 @@ public class StackingPrototype3 : MonoBehaviour
     public TextMeshProUGUI gameProgress;
     public TextMeshProUGUI foodAvailable;
     
-
+    private int totalNumberOfFreeze;
+    private int totalNumberOfJumps;
 
     void Start(){
         TimeElapsed.startTime();
@@ -109,6 +110,7 @@ public class StackingPrototype3 : MonoBehaviour
             // }
         }
         else if(other.tag == "JumpPrefab"){
+            totalNumberOfJumps++;
             //Debug.Log("in on trigger");
             Destroy(other.gameObject);
             //Debug.Log(other);
@@ -116,6 +118,7 @@ public class StackingPrototype3 : MonoBehaviour
             gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
         }
         else if(other.tag == "FreezePrefab"){
+            totalNumberOfFreeze++;
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             monster.GetComponent<EnemyShooter>().freezeProjectile();
@@ -129,6 +132,13 @@ public class StackingPrototype3 : MonoBehaviour
         }
     }
 
+    public int getTotalNumberOfFreeze() {
+        return totalNumberOfFreeze;
+    }
+
+    public int getTotalNumberOfJumps() {
+        return totalNumberOfJumps;
+    }
     private void stackOnPlayer(){
         
     }
@@ -191,8 +201,11 @@ public class StackingPrototype3 : MonoBehaviour
     public void checkEndCondition(){
         if(true){
             TimeElapsed.endTime();
-            Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds);
-            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json",level);
+            int totalNumberOfHits = gameObject.GetComponent<Player_Movement>().getTotalNumberOfHits();
+            int totalNumberOfFalls = gameObject.GetComponent<Player_Movement>().getTotalNumberOfFalls();
+            float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
+            Level level = new Level(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, totalTimeTaken, true);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level);
             //Debug.Log("Food Fed");
             gameObject.GetComponent<PanelSwitcher>().switchpanel();
         }
