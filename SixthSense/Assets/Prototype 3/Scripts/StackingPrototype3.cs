@@ -201,8 +201,9 @@ public class StackingPrototype3 : MonoBehaviour
     public void checkEndCondition(){
         if(true){
             TimeElapsed.endTime();
-            Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds);
-            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json",level);
+            int totalNumberOfHits = gameObject.GetComponent<Player_Movement>().getTotalNumberOfHits();
+            Level level = new Level(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, TimeElapsed._stopWatch.ElapsedMilliseconds);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level);
             //Debug.Log("Food Fed");
             gameObject.GetComponent<PanelSwitcher>().switchpanel();
         }
