@@ -40,6 +40,10 @@ public class Player_Movement : MonoBehaviour
         
     }
 
+    public int getTotalNumberOfHits() {
+        return totalNumberOfHits;
+    }
+
     // Update is called once per frame
     void Update()
     {
