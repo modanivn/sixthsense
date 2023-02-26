@@ -6,7 +6,7 @@ using TMPro;
 public class NatkhatCubes_L2 : MonoBehaviour
 {
     private int[] functionArray = {1,2,3,4};
-    public GameObject bridge;
+    //public GameObject bridge;
     public float rotateSpeedMultiplier = 5.0f;
     public float jumpForceMultiplier = 1.5f;
     public TextMeshProUGUI textElement;
@@ -17,13 +17,13 @@ public class NatkhatCubes_L2 : MonoBehaviour
         // int index = random.Next(1, functionArray.Length+1);
         
         switch(index){
-            case 1:
-            bridgeRotateIncreaseSpeed();
-            break;
+            // case 1:
+            // bridgeRotateIncreaseSpeed();
+            // break;
 
-            case 2:
-            bridgeRotateDecreaseSpeed();
-            break;
+            // case 2:
+            // bridgeRotateDecreaseSpeed();
+            // break;
 
             case 3:
             jumpForceIncrease();
@@ -35,15 +35,15 @@ public class NatkhatCubes_L2 : MonoBehaviour
         }
     }
 
-    public void bridgeRotateIncreaseSpeed(){
-        bridge.GetComponent<BridgeRotate>().increaseSpeed(rotateSpeedMultiplier);
-        textElement.text = "Bridge Fast";
-    }
+    // public void bridgeRotateIncreaseSpeed(){
+    //     bridge.GetComponent<BridgeRotate>().increaseSpeed(rotateSpeedMultiplier);
+    //     textElement.text = "Bridge Fast";
+    // }
 
-    public void bridgeRotateDecreaseSpeed(){
-        bridge.GetComponent<BridgeRotate>().decreaseSpeed(rotateSpeedMultiplier);
-        textElement.text = "Bridge Slow";
-    }
+    // public void bridgeRotateDecreaseSpeed(){
+    //     bridge.GetComponent<BridgeRotate>().decreaseSpeed(rotateSpeedMultiplier);
+    //     textElement.text = "Bridge Slow";
+    // }
 
     public void jumpForceIncrease(){
         gameObject.GetComponent<Player_Movement_L2>().addForce(jumpForceMultiplier);

@@ -174,7 +174,7 @@ public class Stacking_level_2 : MonoBehaviour
             // foodAvailable.text = "Food available to feed the monster!";
         }
 
-        gameProgress.text = monsterPlatformCount + "/4 Yellow Cubes Collected";
+        gameProgress.text = monsterPlatformCount + "/2 Yellow Cubes Collected";
     }
 
     private void spawnFoodItem(){
@@ -193,7 +193,7 @@ public class Stacking_level_2 : MonoBehaviour
             TimeElapsed.endTime();
             //Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds);
             //RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json",level);
-            Debug.Log("Food Fed");
+            //Debug.Log("Food Fed");
             gameObject.GetComponent<PanelSwitcher>().switchpanel();
         }
     }
