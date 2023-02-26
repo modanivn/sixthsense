@@ -17,6 +17,7 @@ public class Player_Movement : MonoBehaviour
     public float sensitivity = 4.0f;
 
     public int totalNumberOfHits;
+    public int totalNumberOfFalls;
     
     //public GameObject player;
 
@@ -44,6 +45,10 @@ public class Player_Movement : MonoBehaviour
 
     public int getTotalNumberOfHits() {
         return totalNumberOfHits;
+    }
+
+    public int getTotalNumberOfFalls() {
+        return totalNumberOfFalls;
     }
 
     // Update is called once per frame
@@ -77,9 +82,11 @@ public class Player_Movement : MonoBehaviour
             // UnityEditor.EditorApplication.isPlaying = false;
             //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             // TimeElapsed.subtractTime();
+
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             setPlayerToResetPosition();
+            totalNumberOfFalls++;
         }
     }
 
