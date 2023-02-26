@@ -17,14 +17,15 @@ public class Level
         this.totalNumberOfFreeze = totalNumberOfFreeze;
         this.totalNumberOfHits = totalNumberOfHits;
         this.timeToComplete = timeToComplete;
+        this.totalNumberOfPowerups = this.totalNumberOfFreeze + this.totalNumberOfJumps;
         //this.cubesCollected = cubesCollected;
     }
 
-    public void addNumberOfPowerups() {
-        totalNumberOfPowerups = totalNumberOfFreeze + totalNumberOfJumps;
-    }
+    // public void addNumberOfPowerups() {
+    //     totalNumberOfPowerups = totalNumberOfFreeze + totalNumberOfJumps;
+    // }
 
-    public int getTotalNumberOfPowerups() {
-        return totalNumberOfPowerups;
-    }
+    // public int getTotalNumberOfPowerups() {
+    //     return ;
+    // }
 }
