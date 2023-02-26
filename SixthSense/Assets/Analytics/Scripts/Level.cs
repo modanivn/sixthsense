@@ -10,14 +10,16 @@ public class Level
     public int totalNumberOfJumps;
     public int totalNumberOfHits;
     public float timeToComplete;
+    public boolean isComplete;
     //public int cubesCollected;
-    public Level(int totalNumberOfJumps, int totalNumberOfFreeze, int totalNumberOfHits, float timeToComplete)
+    public Level(int totalNumberOfJumps, int totalNumberOfFreeze, int totalNumberOfHits, float timeToComplete, boolean isComplete)
     {
         this.totalNumberOfJumps = totalNumberOfJumps;
         this.totalNumberOfFreeze = totalNumberOfFreeze;
         this.totalNumberOfHits = totalNumberOfHits;
         this.timeToComplete = timeToComplete;
         this.totalNumberOfPowerups = this.totalNumberOfFreeze + this.totalNumberOfJumps;
+        this.isComplete = isComplete;
         //this.cubesCollected = cubesCollected;
     }
 
