@@ -32,7 +32,7 @@ public class Player_Movement : MonoBehaviour
     {
         if(other.gameObject.tag == "Projectile")
         {
-            gameObject.GetComponent<TimeElapsed>().subtractTime();
+            // TimeElapsed.subtractTime();
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             Destroy(other.gameObject);
@@ -76,7 +76,7 @@ public class Player_Movement : MonoBehaviour
 
             // UnityEditor.EditorApplication.isPlaying = false;
             //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            gameObject.GetComponent<TimeElapsed>().subtractTime();
+            // TimeElapsed.subtractTime();
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             setPlayerToResetPosition();
