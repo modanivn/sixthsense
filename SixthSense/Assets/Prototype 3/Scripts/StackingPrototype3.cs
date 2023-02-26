@@ -110,6 +110,7 @@ public class StackingPrototype3 : MonoBehaviour
             // }
         }
         else if(other.tag == "JumpPrefab"){
+            totalNumberOfJumps++;
             //Debug.Log("in on trigger");
             Destroy(other.gameObject);
             //Debug.Log(other);
@@ -117,6 +118,7 @@ public class StackingPrototype3 : MonoBehaviour
             gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
         }
         else if(other.tag == "FreezePrefab"){
+            totalNumberOfFreeze++;
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             monster.GetComponent<EnemyShooter>().freezeProjectile();
@@ -130,6 +132,13 @@ public class StackingPrototype3 : MonoBehaviour
         }
     }
 
+    public int getTotalNumberOfFreeze() {
+        return totalNumberOfFreeze;
+    }
+
+    public int getTotalNumberOfJumps() {
+        return totalNumberOfJumps;
+    }
     private void stackOnPlayer(){
         
     }
