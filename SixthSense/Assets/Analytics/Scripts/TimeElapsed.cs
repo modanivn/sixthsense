@@ -16,7 +16,7 @@ public class TimeElapsed : MonoBehaviour
 
     public static void subtractTime()
     {
-        _stopWatch.SubtractTime(5.0f);
+        _stopWatch.Subtract(5.0f);
     }
 
     public static void endTime()
