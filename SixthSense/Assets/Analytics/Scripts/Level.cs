@@ -5,12 +5,17 @@ using UnityEngine;
 public class Level
 {
     // Start is called before the first frame update
-    public bool isComplete;
+    public int totalNumberOfPowerups;
+    public int totalNumberOfFreeze;
+    public int totalNumberOfJumps;
+    public int totalNumberOfHits;
     public float timeToComplete;
     //public int cubesCollected;
-    public Level(bool isComplete, float timeToComplete)
+    public Level(int totalNumberOfJumps, int totalNumberOfFreeze, int totalNumberOfHits, float timeToComplete)
     {
-        this.isComplete = isComplete;
+        this.totalNumberOfJumps = totalNumberOfJumps;
+        this.totalNumberOfFreeze = totalNumberOfFreeze;
+        this.totalNumberOfHits = totalNumberOfHits;
         this.timeToComplete = timeToComplete;
         //this.cubesCollected = cubesCollected;
     }
