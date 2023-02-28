@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Proyecto26;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -19,7 +20,6 @@ public class Player_Movement : MonoBehaviour
     public int totalNumberOfHits;
     public int totalNumberOfFalls;
     public List<List<float>> hitLocations = new List<List<float>>();
-    
     //public GameObject player;
 
     // Start is called before the first frame update
@@ -27,6 +27,7 @@ public class Player_Movement : MonoBehaviour
     {
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
+        // Set the minimum and maximum values of the slider to match the range of values for your public variable
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,6 +43,13 @@ public class Player_Movement : MonoBehaviour
 
         }
         
+    }
+    
+    public void UpdateSensitivity(float value)
+    {
+        // This function will be called whenever the slider value changes
+        // It will set the value of the public variable to the slider value
+        sensitivity = value;
     }
 
     public int getTotalNumberOfHits() {
