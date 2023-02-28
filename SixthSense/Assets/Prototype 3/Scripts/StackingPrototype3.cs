@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Proyecto26;
 using UnityEngine.SceneManagement;
-
+using System.Linq;
 
 public class StackingPrototype3 : MonoBehaviour
 {
@@ -205,7 +205,9 @@ public class StackingPrototype3 : MonoBehaviour
             int totalNumberOfHits = gameObject.GetComponent<Player_Movement>().getTotalNumberOfHits();
             int totalNumberOfFalls = gameObject.GetComponent<Player_Movement>().getTotalNumberOfFalls();
             float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
-            Level level = new Level(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true);
+            List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement>().getHitLocations();
+            string hitLocationsString = string.Join("\n", hitLocations.Select(row => "[" + string.Join(", ", row.Select(item => item.ToString()).ToArray()) + "],").ToArray());
+            Level level = new Level(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level);
             //Debug.Log("Food Fed");
             gameObject.GetComponent<PanelSwitcher>().switchpanel();
