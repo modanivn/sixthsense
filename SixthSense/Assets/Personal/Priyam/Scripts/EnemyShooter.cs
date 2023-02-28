@@ -66,7 +66,9 @@ public class EnemyShooter : MonoBehaviour
         FreezeTimerText.text = "";
         FreezeTimerText.gameObject.SetActive(false);
         CancelInvoke("UpdateCountdown");
-        InvokeRepeating("shootProjectile", startTime, repeatTime);
+        if(currentHealth > 0){
+            InvokeRepeating("shootProjectile", startTime, repeatTime);
+        }
    }
 
    public void reduceProjectileVelocity(int numberOfLevels){
