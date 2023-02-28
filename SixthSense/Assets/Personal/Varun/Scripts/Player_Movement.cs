@@ -27,8 +27,6 @@ public class Player_Movement : MonoBehaviour
     {
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
-        transform.Rotate(0, 0, 0);
-
     }
 
     private void OnTriggerEnter(Collider other)
