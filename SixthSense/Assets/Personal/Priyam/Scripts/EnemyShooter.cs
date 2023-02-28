@@ -11,9 +11,15 @@ public class EnemyShooter : MonoBehaviour
     //public Transform playerTransform;
     public GameObject player;
     public TextMeshProUGUI FreezeTimerText;
-    private float repeatTime = 1.25f;
-    private float startTime = 1.0f;
+    private float repeatTime = 0.75f;
+    private float startTime = 3.0f;
+    private float startShootVelocity = 15.0f;
+    private float shootMultipler = 15.0f;
     private float frozenCountDown = 10.0f;
+    private int totalTimesProjectileFrequencyReduced = 1;
+    public Image healthBarImage;
+    private float currentHealth = 1.0f;
+    
 
     public void shootProjectile()
     {
@@ -22,7 +28,7 @@ public class EnemyShooter : MonoBehaviour
         Vector3 direction = player.transform.position - transform.position;
 
         Rigidbody projectileRigidBody = projectile.GetComponent<Rigidbody>();
-        projectileRigidBody.velocity = direction.normalized * 15;
+        projectileRigidBody.velocity = direction.normalized * shootMultipler;
     }
 
     void Start()
@@ -59,9 +65,22 @@ public class EnemyShooter : MonoBehaviour
         CancelInvoke("UpdateCountdown");
         InvokeRepeating("shootProjectile", startTime, repeatTime);
    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+   public void reduceProjectileVelocity(int numberOfLevels){
+
+        if(numberOfLevels > totalTimesProjectileFrequencyReduced){
+            float reducible = (repeatTime/numberOfLevels) * 2;
+            repeatTime += reducible;
+            CancelInvoke("shootProjectile");
+            InvokeRepeating("shootProjectile", startTime, repeatTime);
+            totalTimesProjectileFrequencyReduced += 1;
+            float percentageReduce = 1/(float)numberOfLevels;
+            currentHealth = currentHealth - percentageReduce;
+            healthBarImage.fillAmount =  currentHealth;
+        }
+        else{
+            healthBarImage.fillAmount =  0;
+            CancelInvoke("shootProjectile");
+        }
+   }
 }

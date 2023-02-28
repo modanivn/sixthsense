@@ -7,10 +7,12 @@ public class PausePanel : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel;
     public void Pause() {
+        TimeElapsed.endTime();
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
     }
     public void Resume() {
+        TimeElapsed.startTime();
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
     }

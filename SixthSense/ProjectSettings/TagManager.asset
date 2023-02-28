@@ -15,6 +15,7 @@ TagManager:
   - GameEndPlatform
   - JumpPrefab
   - FreezePrefab
+  - JumpPrefabL2
   layers:
   - Default
   - TransparentFX
