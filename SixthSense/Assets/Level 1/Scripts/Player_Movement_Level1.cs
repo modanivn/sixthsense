@@ -26,6 +26,7 @@ public class Player_Movement_Level1 : MonoBehaviour
     {
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
+        transform.localRotation = Quaternion.Euler(0,90,0);
 
     }
 

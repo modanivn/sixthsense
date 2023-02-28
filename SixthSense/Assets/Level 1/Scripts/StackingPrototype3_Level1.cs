@@ -27,7 +27,7 @@ public class StackingPrototype3_Level1 : MonoBehaviour
     public GameObject monster;
     public float powerUprespawnTime = 15.0f;
     private int monsterPlatformCount = 0;
-    public int totalPlatformsNeeded = 4;
+    public int totalPlatformsNeeded = 2;
     public Transform foodPrefab;
     public Transform foodPlatform;
     private Transform food;
@@ -196,7 +196,7 @@ public class StackingPrototype3_Level1 : MonoBehaviour
             // foodAvailable.text = "Food available to feed the monster!";
         }
 
-        gameProgress.text = monsterPlatformCount + "/4 Yellow Cubes Collected";
+        gameProgress.text = monsterPlatformCount + "/2 Yellow Cubes Collected";
     }
 
     private void spawnFoodItem(){
