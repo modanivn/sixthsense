@@ -81,6 +81,7 @@ public class StackingPrototype3 : MonoBehaviour
         if(other.tag == "YellowCube"){
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             _cubeList.Add(other.gameObject);
+            monster.GetComponent<EnemyShooter>().reduceProjectileVelocity(totalPlatformsNeeded);
             // if (_cubeList.Count==1)
             // {
             //     other.gameObject.transform.position = head.transform.position;

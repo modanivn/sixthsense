@@ -4,7 +4,7 @@ using UnityEngine;
 using Proyecto26;
 using UnityEngine.SceneManagement;
 
-public class Player_Movement_Level1 : MonoBehaviour
+public class Player_Movement_Level3 : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] float movementSpeed = 6f;
@@ -35,8 +35,8 @@ public class Player_Movement_Level1 : MonoBehaviour
         if(other.gameObject.tag == "Projectile")
         {
             // TimeElapsed.subtractTime();
-            gameObject.GetComponent<PanelSwitcher>().reduceTime();
-            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
+            gameObject.GetComponent<PanelSwitcher_Level3>().reduceTime();
+            gameObject.GetComponent<StackingPrototype3_Level3>().emptyPlayerStack();
             Destroy(other.gameObject);
             totalNumberOfHits++;
 
@@ -84,8 +84,8 @@ public class Player_Movement_Level1 : MonoBehaviour
             //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             // TimeElapsed.subtractTime();
 
-            gameObject.GetComponent<PanelSwitcher_Level1>().reduceTime();
-            gameObject.GetComponent<StackingPrototype3_Level1>().emptyPlayerStack();
+            gameObject.GetComponent<PanelSwitcher_Level3>().reduceTime();
+            gameObject.GetComponent<StackingPrototype3_Level3>().emptyPlayerStack();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
         }

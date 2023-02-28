@@ -6,7 +6,7 @@ using Proyecto26;
 using UnityEngine.SceneManagement;
 
 
-public class StackingPrototype3_Level1 : MonoBehaviour
+public class StackingPrototype3_Level3 : MonoBehaviour
 {
     private Vector3 _firstCubePos;
     private Vector3 _currentCubePos;
@@ -27,7 +27,7 @@ public class StackingPrototype3_Level1 : MonoBehaviour
     public GameObject monster;
     public float powerUprespawnTime = 15.0f;
     private int monsterPlatformCount = 0;
-    public int totalPlatformsNeeded = 2;
+    public int totalPlatformsNeeded = 3;
     public Transform foodPrefab;
     public Transform foodPlatform;
     private Transform food;
@@ -37,6 +37,7 @@ public class StackingPrototype3_Level1 : MonoBehaviour
     public TextMeshProUGUI foodAvailable;
     public GameObject platform1;
     public GameObject platform2;
+    public GameObject platform3;
     
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
@@ -117,13 +118,13 @@ public class StackingPrototype3_Level1 : MonoBehaviour
             Destroy(other.gameObject);
             //Debug.Log(other);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
-            gameObject.GetComponent<NatkhatCubes_Level1>().funWithCube(3);
+            gameObject.GetComponent<NatkhatCubes_Level3>().funWithCube(3);
         }
         else if(other.tag == "FreezePrefab"){
             totalNumberOfFreeze++;
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
-            monster.GetComponent<EnemyShooter>().freezeProjectile();
+            monster.GetComponent<EnemyShooter_L3>().freezeProjectile();
         }
         else if(other.tag == "Food"){
             emptyPlayerStack();
@@ -167,7 +168,7 @@ public class StackingPrototype3_Level1 : MonoBehaviour
     public void makeBridgeToMonster(){
         if(monsterPlatformCount <= totalPlatformsNeeded){
             foreach(GameObject currentStackItem in _cubeList){
-                if(monsterPlatformCount >= totalPlatformsNeeded){
+                if(monsterPlatformCount > totalPlatformsNeeded){
                     break;
                 }
                 else{
@@ -185,6 +186,13 @@ public class StackingPrototype3_Level1 : MonoBehaviour
                         monsterPlatformCount += 1; 
                         Debug.Log(monsterPlatformCount);                  
                     }
+                    else if (monsterPlatformCount==2){
+                        Debug.Log("3rd platform");
+                        Vector3 position = platform3.transform.position;
+                        Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+                        monsterPlatformCount += 1; 
+                        Debug.Log(monsterPlatformCount);                  
+                    }
 
                 }
         }
@@ -196,7 +204,7 @@ public class StackingPrototype3_Level1 : MonoBehaviour
             // foodAvailable.text = "Food available to feed the monster!";
         }
 
-        gameProgress.text = monsterPlatformCount + "/2 Yellow Cubes Collected";
+        gameProgress.text = monsterPlatformCount + "/3 Yellow Cubes Collected";
     }
 
     private void spawnFoodItem(){
@@ -213,13 +221,13 @@ public class StackingPrototype3_Level1 : MonoBehaviour
     public void checkEndCondition(){
         if(true){
             TimeElapsed.endTime();
-            int totalNumberOfHits = gameObject.GetComponent<Player_Movement_Level1>().getTotalNumberOfHits();
-            int totalNumberOfFalls = gameObject.GetComponent<Player_Movement_Level1>().getTotalNumberOfFalls();
+            int totalNumberOfHits = gameObject.GetComponent<Player_Movement_Level3>().getTotalNumberOfHits();
+            int totalNumberOfFalls = gameObject.GetComponent<Player_Movement_Level3>().getTotalNumberOfFalls();
             float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
             Level level = new Level(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level);
             //Debug.Log("Food Fed");
-            gameObject.GetComponent<PanelSwitcher_Level1>().switchpanel();
+            gameObject.GetComponent<PanelSwitcher_Level3>().switchpanel();
         }
     }
 }
