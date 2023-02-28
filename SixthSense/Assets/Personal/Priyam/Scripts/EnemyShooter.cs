@@ -36,7 +36,7 @@ public class EnemyShooter : MonoBehaviour
         // FreezeTimerText.text = '';
         FreezeTimerText.gameObject.SetActive(false);
         
-        if(currentHealth > 0){
+        if(currentHealth > 0.0f){
             InvokeRepeating("shootProjectile", startTime, repeatTime);
         }
 
@@ -66,7 +66,7 @@ public class EnemyShooter : MonoBehaviour
         FreezeTimerText.text = "";
         FreezeTimerText.gameObject.SetActive(false);
         CancelInvoke("UpdateCountdown");
-        if(currentHealth > 0){
+        if(currentHealth > 0.0f){
             InvokeRepeating("shootProjectile", startTime, repeatTime);
         }
    }
@@ -85,6 +85,8 @@ public class EnemyShooter : MonoBehaviour
         }
         else{
             healthBarImage.fillAmount =  0;
+            currentHealth = 0.0f;
+            repeatTime = 1000.0f;
             CancelInvoke("shootProjectile");
         }
    }
