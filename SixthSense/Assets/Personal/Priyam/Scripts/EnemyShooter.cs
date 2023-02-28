@@ -35,7 +35,10 @@ public class EnemyShooter : MonoBehaviour
     {
         // FreezeTimerText.text = '';
         FreezeTimerText.gameObject.SetActive(false);
-        InvokeRepeating("shootProjectile", startTime, repeatTime);
+        
+        if(currentHealth > 0){
+            InvokeRepeating("shootProjectile", startTime, repeatTime);
+        }
 
     }
 
