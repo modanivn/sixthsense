@@ -18,6 +18,7 @@ public class Player_Movement_Level3 : MonoBehaviour
 
     public int totalNumberOfHits;
     public int totalNumberOfFalls;
+    public List<List<float>> hitLocations = new List<List<float>>();
     
     //public GameObject player;
 
@@ -34,6 +35,7 @@ public class Player_Movement_Level3 : MonoBehaviour
     {
         if(other.gameObject.tag == "Projectile")
         {
+            hitLocations.Add(new List<float>() { gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z });
             // TimeElapsed.subtractTime();
             gameObject.GetComponent<PanelSwitcher_Level3>().reduceTime();
             gameObject.GetComponent<StackingPrototype3_Level3>().emptyPlayerStack();
@@ -50,6 +52,10 @@ public class Player_Movement_Level3 : MonoBehaviour
 
     public int getTotalNumberOfFalls() {
         return totalNumberOfFalls;
+    }
+
+    public List<List<float>> getHitLocations() {
+        return hitLocations;
     }
 
     // Update is called once per frame
