@@ -16,6 +16,8 @@ public class Player_Movement_L2 : MonoBehaviour
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
 
+    public int totalNumberOfFalls;
+
     //public GameObject player;
 
     // Start is called before the first frame update
@@ -24,6 +26,10 @@ public class Player_Movement_L2 : MonoBehaviour
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
 
+    }
+
+    public int getTotalNumberOfFalls() {
+        return totalNumberOfFalls;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -71,6 +77,7 @@ public class Player_Movement_L2 : MonoBehaviour
             gameObject.GetComponent<PanelSwitcher_L2>().reduceTime();
             gameObject.GetComponent<Stacking_level_2>().emptyPlayerStack();
             setPlayerToResetPosition();
+            totalNumberOfFalls++;
         }
     }
 
