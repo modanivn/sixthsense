@@ -40,7 +40,7 @@ public class StackingPrototype3_Level3 : MonoBehaviour
     public GameObject platform3;
     
     private int totalNumberOfFreeze;
-    private int totalNumberOfJumps;
+    // private int totalNumberOfJumps;
 
     void Start(){
         TimeElapsed.startTime();
@@ -113,7 +113,7 @@ public class StackingPrototype3_Level3 : MonoBehaviour
             // }
         }
         else if(other.tag == "JumpPrefab"){
-            totalNumberOfJumps++;
+            // totalNumberOfJumps++;
             //Debug.Log("in on trigger");
             Destroy(other.gameObject);
             //Debug.Log(other);
@@ -139,9 +139,10 @@ public class StackingPrototype3_Level3 : MonoBehaviour
         return totalNumberOfFreeze;
     }
 
-    public int getTotalNumberOfJumps() {
-        return totalNumberOfJumps;
-    }
+    // public int getTotalNumberOfJumps() {
+    //     return totalNumberOfJumps;
+    // }
+
     private void stackOnPlayer(){
         
     }
@@ -224,8 +225,10 @@ public class StackingPrototype3_Level3 : MonoBehaviour
             int totalNumberOfHits = gameObject.GetComponent<Player_Movement_Level3>().getTotalNumberOfHits();
             int totalNumberOfFalls = gameObject.GetComponent<Player_Movement_Level3>().getTotalNumberOfFalls();
             float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
-            // Level level = new Level(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true);
-            // RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level);
+            List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement_Level3>().getHitLocations();
+            string hitLocationsString = Level_4.formatHitLocations(hitLocations);
+            Level_3 level_3 = new Level_3(getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/3/.json",level_3);
             //Debug.Log("Food Fed");
             // gameObject.GetComponent<PanelSwitcher_Level3>().switchpanel();
         }
