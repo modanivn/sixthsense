@@ -16,7 +16,7 @@ public class Player_Movement_Level1 : MonoBehaviour
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
 
-    public int totalNumberOfHits;
+    // public int totalNumberOfHits;
     public int totalNumberOfFalls;
     
     //public GameObject player;
@@ -38,15 +38,15 @@ public class Player_Movement_Level1 : MonoBehaviour
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             Destroy(other.gameObject);
-            totalNumberOfHits++;
+            // totalNumberOfHits++;
 
         }
         
     }
 
-    public int getTotalNumberOfHits() {
-        return totalNumberOfHits;
-    }
+    // public int getTotalNumberOfHits() {
+    //     return totalNumberOfHits;
+    // }
 
     public int getTotalNumberOfFalls() {
         return totalNumberOfFalls;
