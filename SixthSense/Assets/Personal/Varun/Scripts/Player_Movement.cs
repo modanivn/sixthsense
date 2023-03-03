@@ -20,6 +20,10 @@ public class Player_Movement : MonoBehaviour
     public int totalNumberOfHits;
     public int totalNumberOfFalls;
     public List<List<float>> hitLocations = new List<List<float>>();
+
+    public float jumpButtonGracePeriod;
+    private float lastGroundedTime;
+    private float jumpPressedTime;
     //public GameObject player;
 
     // Start is called before the first frame update
@@ -27,6 +31,8 @@ public class Player_Movement : MonoBehaviour
     {
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
+        lastGroundedTime = 0f;
+        jumpPressedTime = -2f;
         // Set the minimum and maximum values of the slider to match the range of values for your public variable
     }
 
@@ -79,10 +85,27 @@ public class Player_Movement : MonoBehaviour
         transform.Translate(deltaMove);
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if(IsGrounded())
         {
-            Jump();
+            lastGroundedTime = Time.time;
         }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpPressedTime = Time.time;
+        }
+
+        if (Mathf.Abs(lastGroundedTime - jumpPressedTime) <= jumpButtonGracePeriod)
+        {
+            // Debug.Log("Jump");
+            Jump();
+            jumpPressedTime = -2f;
+            lastGroundedTime = 0f;
+        }
+        // if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        // {
+        //     Jump();
+        // }
 
 
         if (transform.position.y < -5.0f){

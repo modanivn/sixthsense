@@ -882,6 +882,7 @@ MonoBehaviour:
   sensitivity: 4
   totalNumberOfHits: 0
   totalNumberOfFalls: 0
+  jumpButtonGracePeriod: 0.5
 --- !u!114 &160491282
 MonoBehaviour:
   m_ObjectHideFlags: 0
