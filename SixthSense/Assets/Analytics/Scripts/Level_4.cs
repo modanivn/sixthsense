@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-public class Level
+public class Level_4
 {
     // Start is called before the first frame update
     public int totalNumberOfPowerups;
@@ -14,7 +15,7 @@ public class Level
     public bool isComplete;
     public string hitLocations;
     //public int cubesCollected;
-    public Level(int totalNumberOfJumps, int totalNumberOfFreeze, int totalNumberOfHits, int totalNumberOfFalls, float timeToComplete, bool isComplete, string hitLocations)
+    public Level_4(int totalNumberOfJumps, int totalNumberOfFreeze, int totalNumberOfHits, int totalNumberOfFalls, float timeToComplete, bool isComplete, string hitLocations)
     {
         this.totalNumberOfJumps = totalNumberOfJumps;
         this.totalNumberOfFreeze = totalNumberOfFreeze;
@@ -25,6 +26,10 @@ public class Level
         this.isComplete = isComplete;
         this.hitLocations = hitLocations;
         //this.cubesCollected = cubesCollected;
+    }
+
+    public static string formatHitLocations(List<List<float>> hitLocations) {
+        return string.Join("\n", hitLocations.Select(row => "[" + string.Join(", ", row.Select(item => item.ToString()).ToArray()) + "],").ToArray());
     }
 
     // public void addNumberOfPowerups() {
