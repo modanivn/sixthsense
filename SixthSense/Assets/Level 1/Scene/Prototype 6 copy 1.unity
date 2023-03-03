@@ -1178,8 +1178,8 @@ MonoBehaviour:
   turn: {x: 0, y: 0}
   deltaMove: {x: 0, y: 0, z: 0}
   sensitivity: 4
-  totalNumberOfHits: 0
   totalNumberOfFalls: 0
+  jumpButtonGracePeriod: 0.5
 --- !u!114 &160491302
 MonoBehaviour:
   m_ObjectHideFlags: 0
