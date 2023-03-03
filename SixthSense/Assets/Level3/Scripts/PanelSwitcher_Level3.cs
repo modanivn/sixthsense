@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using Proyecto26;
+using System.Collections.Generic;
 
 public class PanelSwitcher_Level3 : MonoBehaviour
 {
@@ -39,13 +40,15 @@ public class PanelSwitcher_Level3 : MonoBehaviour
             if (timer <= 0)
             {
                 TimeElapsed.endTime();
-                int totalNumberOfJumps = gameObject.GetComponent<StackingPrototype3_Level3>().getTotalNumberOfJumps();
+                // int totalNumberOfJumps = gameObject.GetComponent<StackingPrototype3_Level3>().getTotalNumberOfJumps();
                 int totalNumberOfFreeze = gameObject.GetComponent<StackingPrototype3_Level3>().getTotalNumberOfFreeze();
                 int totalNumberOfFalls = gameObject.GetComponent<Player_Movement_Level3>().getTotalNumberOfFalls();
                 int totalNumberOfHits = gameObject.GetComponent<Player_Movement_Level3>().getTotalNumberOfHits();
                 float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
-                // Level level = new Level(totalNumberOfJumps, totalNumberOfFreeze, totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, false);
-                // RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level);
+                List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement_Level3>().getHitLocations();
+                string hitLocationsString = Level_4.formatHitLocations(hitLocations);
+                Level_3 level_3 = new Level_3(totalNumberOfFreeze, totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, false, hitLocationsString);
+                RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/3/.json",level_3);
                 switchpanel();
 
 
