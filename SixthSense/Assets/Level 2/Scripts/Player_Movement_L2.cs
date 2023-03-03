@@ -4,6 +4,7 @@ using UnityEngine;
 using Proyecto26;
 using UnityEngine.SceneManagement;
 
+
 public class Player_Movement_L2 : MonoBehaviour
 {
     Rigidbody rb;
@@ -15,6 +16,11 @@ public class Player_Movement_L2 : MonoBehaviour
     public Vector2 turn;
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
+    
+    public float jumpButtonGracePeriod;
+    private float lastGroundedTime;
+    private float jumpPressedTime;
+
 
     public int totalNumberOfFalls;
 
@@ -25,6 +31,8 @@ public class Player_Movement_L2 : MonoBehaviour
     {
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
+        lastGroundedTime = 0f;
+        jumpPressedTime = -2f;
 
     }
 
@@ -58,11 +66,29 @@ public class Player_Movement_L2 : MonoBehaviour
         transform.Translate(deltaMove);
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if(IsGrounded())
+        {
+            lastGroundedTime = Time.time;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpPressedTime = Time.time;
+        }
+
+        if (Mathf.Abs(lastGroundedTime - jumpPressedTime) <= jumpButtonGracePeriod)
         {
             // Debug.Log("Jump");
             Jump();
+            jumpPressedTime = -2f;
+            lastGroundedTime = 0f;
         }
+        
+        // if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        // {
+        //     // Debug.Log("Jump");
+        //     Jump();
+        // }
 
 
         if (transform.position.y < -5.0f){
