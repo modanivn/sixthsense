@@ -38,6 +38,10 @@ public class StackingPrototype3 : MonoBehaviour
     
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
+    public GameObject platform1;
+    public GameObject platform2;
+    public GameObject platform3;
+    public GameObject platform4;
 
     void Start(){
         TimeElapsed.resetStopwatch();
@@ -167,15 +171,39 @@ public class StackingPrototype3 : MonoBehaviour
     public void makeBridgeToMonster(){
         if(monsterPlatformCount <= totalPlatformsNeeded){
             foreach(GameObject currentStackItem in _cubeList){
-                if(monsterPlatformCount >= totalPlatformsNeeded){
+                if(monsterPlatformCount > totalPlatformsNeeded){
                     break;
                 }
                 else{
-                    Instantiate(bridgeItemPrefab, bridgeEnd.position, bridgeEnd.rotation);
-                    Vector3 temp = bridgeEnd.position;
-                    temp.x += bridgeOffset;
-                    bridgeEnd.position = temp;
-                    monsterPlatformCount += 1;
+                    if(monsterPlatformCount==0){
+
+                        Vector3 position = platform1.transform.position;
+                        Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+                        monsterPlatformCount += 1;
+                        Debug.Log(monsterPlatformCount);
+                    }
+
+                    else if (monsterPlatformCount==1){
+                        Vector3 position = platform2.transform.position;
+                        Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+                        monsterPlatformCount += 1; 
+                        Debug.Log(monsterPlatformCount);                  
+                    }
+                    else if (monsterPlatformCount==2){
+                        Debug.Log("3rd platform");
+                        Vector3 position = platform3.transform.position;
+                        Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+                        monsterPlatformCount += 1; 
+                        Debug.Log(monsterPlatformCount);                  
+                    }
+                    else if (monsterPlatformCount==4){
+                        Debug.Log("3rd platform");
+                        Vector3 position = platform4.transform.position;
+                        Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+                        monsterPlatformCount += 1; 
+                        Debug.Log(monsterPlatformCount);                  
+                    }
+
                 }
         }
         }
