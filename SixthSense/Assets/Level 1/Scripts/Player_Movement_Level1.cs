@@ -23,6 +23,10 @@ public class Player_Movement_Level1 : MonoBehaviour
     private float lastGroundedTime;
     private float jumpPressedTime;
     
+    private float jumpX;
+    private float jumpZ;
+
+    private string jumpString = "";
     //public GameObject player;
 
     // Start is called before the first frame update
@@ -36,7 +40,9 @@ public class Player_Movement_Level1 : MonoBehaviour
         jumpPressedTime = -2f;
 
     }
-
+    public string getFallLocations() {
+        return jumpString;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Projectile")
@@ -81,6 +87,9 @@ public class Player_Movement_Level1 : MonoBehaviour
 
         if(IsGrounded())
         {
+            jumpX = transform.position.x;
+            jumpZ = transform.position.z;
+
             lastGroundedTime = Time.time;
         }
 
@@ -113,6 +122,7 @@ public class Player_Movement_Level1 : MonoBehaviour
             gameObject.GetComponent<StackingPrototype3_Level1>().emptyPlayerStack();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
+            jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
         }
     }
 

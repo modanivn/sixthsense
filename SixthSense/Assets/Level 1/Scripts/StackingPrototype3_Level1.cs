@@ -218,7 +218,8 @@ public class StackingPrototype3_Level1 : MonoBehaviour
             // float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
             // List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement_Level3>().getHitLocations();
             // string hitLocationsString = Level_4.formatHitLocations(hitLocations);
-            Level_1 level_1 = new Level_1(totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true);
+            string fallLocation = gameObject.GetComponent<Player_Movement_Level1>().getFallLocations();
+            Level_1 level_1 = new Level_1(totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true,fallLocation);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/1/.json",level_1);
             //Debug.Log("Food Fed");
             // gameObject.GetComponent<PanelSwitcher_Level1>().switchpanel();
