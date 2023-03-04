@@ -42,6 +42,7 @@ public class StackingPrototype3_Level1 : MonoBehaviour
     private int totalNumberOfJumps;
 
     void Start(){
+        TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
     }
 
