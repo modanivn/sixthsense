@@ -2,26 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level : MonoBehaviour
+public class Level
 {
     // Start is called before the first frame update
-    public bool isComplete;
+    public int totalNumberOfPowerups;
+    public int totalNumberOfFreeze;
+    public int totalNumberOfJumps;
+    public int totalNumberOfHits;
+    public int totalNumberOfFalls;
     public float timeToComplete;
-    public int cubesCollected;
-    public Level(bool isComplete, float timeToComplete, int cubesCollected)
+    public bool isComplete;
+    public string hitLocations;
+    //public int cubesCollected;
+    public Level(int totalNumberOfJumps, int totalNumberOfFreeze, int totalNumberOfHits, int totalNumberOfFalls, float timeToComplete, bool isComplete, string hitLocations)
     {
-        this.isComplete = isComplete;
+        this.totalNumberOfJumps = totalNumberOfJumps;
+        this.totalNumberOfFreeze = totalNumberOfFreeze;
+        this.totalNumberOfHits = totalNumberOfHits;
+        this.totalNumberOfFalls = totalNumberOfFalls;
         this.timeToComplete = timeToComplete;
-        this.cubesCollected = cubesCollected;
-    }
-    void Start()
-    {
-        
+        this.totalNumberOfPowerups = this.totalNumberOfFreeze + this.totalNumberOfJumps;
+        this.isComplete = isComplete;
+        this.hitLocations = hitLocations;
+        //this.cubesCollected = cubesCollected;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // public void addNumberOfPowerups() {
+    //     totalNumberOfPowerups = totalNumberOfFreeze + totalNumberOfJumps;
+    // }
+
+    // public int getTotalNumberOfPowerups() {
+    //     return ;
+    // }
 }
