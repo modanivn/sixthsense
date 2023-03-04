@@ -4,6 +4,7 @@ using UnityEngine;
 using Proyecto26;
 using UnityEngine.SceneManagement;
 
+
 public class Player_Movement_L2 : MonoBehaviour
 {
     Rigidbody rb;
@@ -15,15 +16,34 @@ public class Player_Movement_L2 : MonoBehaviour
     public Vector2 turn;
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
+    
+    public float jumpButtonGracePeriod;
+    private float lastGroundedTime;
+    private float jumpPressedTime;
+
+
+    public int totalNumberOfFalls;
+
+     private float jumpX;
+    private float jumpZ;
+
+    private string jumpString = "";
 
     //public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
+        lastGroundedTime = 0f;
+        jumpPressedTime = -2f;
 
+    }
+
+    public int getTotalNumberOfFalls() {
+        return totalNumberOfFalls;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,7 +56,9 @@ public class Player_Movement_L2 : MonoBehaviour
         }
         
     }
-
+     public string getFallLocations() {
+        return jumpString;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -45,18 +67,38 @@ public class Player_Movement_L2 : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         // rb.velocity = new Vector3(verticalInput * movementSpeed, rb.velocity.y, horizontalInput * movementSpeed);
-
+        sensitivity = PlayerPrefs.GetFloat("sensitivity");
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         transform.localRotation = Quaternion.Euler(0,turn.x,0);
         deltaMove = new Vector3(horizontalInput,0,-verticalInput) * movementSpeed * Time.deltaTime;
         transform.Translate(deltaMove);
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if(IsGrounded())
+        {
+             jumpX = transform.position.x;
+            jumpZ = transform.position.z;
+            lastGroundedTime = Time.time;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpPressedTime = Time.time;
+        }
+
+        if (Mathf.Abs(lastGroundedTime - jumpPressedTime) <= jumpButtonGracePeriod)
         {
             // Debug.Log("Jump");
             Jump();
+            jumpPressedTime = -2f;
+            lastGroundedTime = 0f;
         }
+        
+        // if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        // {
+        //     // Debug.Log("Jump");
+        //     Jump();
+        // }
 
 
         if (transform.position.y < -5.0f){
@@ -71,6 +113,8 @@ public class Player_Movement_L2 : MonoBehaviour
             gameObject.GetComponent<PanelSwitcher_L2>().reduceTime();
             gameObject.GetComponent<Stacking_level_2>().emptyPlayerStack();
             setPlayerToResetPosition();
+            totalNumberOfFalls++;
+             jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
         }
     }
 

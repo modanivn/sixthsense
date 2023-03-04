@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SliderController : MonoBehaviour
+public class Sensitivity : MonoBehaviour
 {
-    public float sensitivity; // the public variable you want to control with the slider
     public Slider slider; // the slider game object
     public GameObject player;
-
+    // Start is called before the first frame update
     void Start()
     {
         // Set the minimum and maximum values of the slider to match the range of values for your public variable
@@ -16,11 +15,14 @@ public class SliderController : MonoBehaviour
         slider.maxValue = 100f;
     }
 
+    // Update is called once per frame
     public void UpdateSensitivity()
     {
-        // This function will be called whenever the slider value changes
-        // It will set the value of the public variable to the slider value
-        sensitivity = slider.value;
-        player.GetComponent<Player_Movement>().UpdateSensitivity(sensitivity);
+        // player.GetComponent<Player_Movement>().UpdateSensitivity(slider.value);
+        Debug.Log("first sensitivity: " + PlayerPrefs.GetFloat("sensitivity"));
+        PlayerPrefs.SetFloat("sensitivity", slider.value);
+        Debug.Log("second sensitivity: " + PlayerPrefs.GetFloat("sensitivity"));
     }
+
+    
 }

@@ -22,6 +22,9 @@ public class TimeElapsed : MonoBehaviour
     {
         
     }
+    public static void resetStopwatch() {
+        _stopWatch.Reset();
+    }
 
     // Update is called once per frame
     void Update()

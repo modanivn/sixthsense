@@ -16,6 +16,7 @@ public class PanelSwitcher_L2 : MonoBehaviour
     public TextMeshProUGUI Penalty;
 
     void Start(){
+        TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
     }
 
@@ -39,13 +40,16 @@ public class PanelSwitcher_L2 : MonoBehaviour
             if (timer <= 0)
             {
                 TimeElapsed.endTime();
-                // int totalNumberOfJumps = gameObject.GetComponent<Stacking_level_2>().getTotalNumberOfJumps();
-                // int totalNumberOfFreeze = gameObject.GetComponent<Stacking_level_2>().getTotalNumberOfFreeze();
-                // int totalNumberOfFalls = gameObject.GetComponent<Player_Movement_L2>().getTotalNumberOfFalls();
-                // int totalNumberOfHits = gameObject.GetComponent<Player_Movement_L2>().getTotalNumberOfHits();
-                // float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
-                // Level level = new Level(totalNumberOfJumps, totalNumberOfFreeze, totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, false);
-                // RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level);
+                int totalNumberOfJumps = gameObject.GetComponent<Stacking_level_2>().getTotalNumberOfJumps();
+                // int totalNumberOfFreeze = gameObject.GetComponent<StackingPrototype3_Level3>().getTotalNumberOfFreeze();
+                int totalNumberOfFalls = gameObject.GetComponent<Player_Movement_L2>().getTotalNumberOfFalls();
+                // int totalNumberOfHits = gameObject.GetComponent<Player_Movement_Level3>().getTotalNumberOfHits();
+                float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls);
+                // List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement_Level3>().getHitLocations();
+                // string hitLocationsString = Level_4.formatHitLocations(hitLocations);
+                string fallLocation = gameObject.GetComponent<Player_Movement_L2>().getFallLocations();
+                Level_2 level_2 = new Level_2(totalNumberOfJumps, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, false, fallLocation);
+                RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/2/.json",level_2);
                 switchpanel();
 
 

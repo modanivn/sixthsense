@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject sensitivityMenu;
     public void Pause() {
         pauseMenu.SetActive(true);
+        sensitivityMenu.SetActive(false);
         Time.timeScale = 0f;
     }
     public void Resume() {
@@ -18,5 +20,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneId);
     }
-   
+    public void Quit() {
+        SceneManager.LoadScene(0);
+    }
+    public void OpenSensitivityCanvas() {
+        sensitivityMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+    }
 }

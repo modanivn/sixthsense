@@ -36,9 +36,10 @@ public class Stacking_level_2 : MonoBehaviour
     public TextMeshProUGUI gameProgress;
     public TextMeshProUGUI foodAvailable;
     
-
+    private int totalNumberOfJumps;
 
     void Start(){
+        TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
     }
 
@@ -75,6 +76,10 @@ public class Stacking_level_2 : MonoBehaviour
         }
     }
 
+    public int getTotalNumberOfJumps() {
+        return totalNumberOfJumps;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "YellowCube"){
@@ -109,6 +114,7 @@ public class Stacking_level_2 : MonoBehaviour
             // }
         }
         else if(other.tag == "JumpPrefab"){
+            totalNumberOfJumps++;
             //Debug.Log("in on trigger");
             Destroy(other.gameObject);
             //Debug.Log(other);
@@ -191,6 +197,13 @@ public class Stacking_level_2 : MonoBehaviour
     public void checkEndCondition(){
         if(true){
             TimeElapsed.endTime();
+            int totalNumberOfFalls = gameObject.GetComponent<Player_Movement_L2>().getTotalNumberOfFalls();
+            // float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
+            // List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement_Level3>().getHitLocations();
+            // string hitLocationsString = Level_4.formatHitLocations(hitLocations);
+            string fallLocation = gameObject.GetComponent<Player_Movement_L2>().getFallLocations();
+            Level_2 level_2 = new Level_2(getTotalNumberOfJumps(), totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true,fallLocation);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/2/.json",level_2);
             //Level level = new Level(true, TimeElapsed._stopWatch.ElapsedMilliseconds);
             //RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json",level);
             //Debug.Log("Food Fed");
