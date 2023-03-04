@@ -16,6 +16,7 @@ public class PanelSwitcher_L2 : MonoBehaviour
     public TextMeshProUGUI Penalty;
 
     void Start(){
+        TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
     }
 

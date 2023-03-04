@@ -29,6 +29,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;

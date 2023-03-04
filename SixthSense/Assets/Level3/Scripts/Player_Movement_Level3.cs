@@ -29,6 +29,7 @@ public class Player_Movement_Level3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
         rb = GetComponent<Rigidbody>();
         transform.localRotation = Quaternion.Euler(0,90,0);
