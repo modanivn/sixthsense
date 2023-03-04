@@ -81,7 +81,7 @@ public class Player_Movement_Level3 : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         // rb.velocity = new Vector3(verticalInput * movementSpeed, rb.velocity.y, horizontalInput * movementSpeed);
-
+        sensitivity = PlayerPrefs.GetFloat("sensitivity");
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         transform.localRotation = Quaternion.Euler(0,turn.x,0);
         deltaMove = new Vector3(horizontalInput,0,-verticalInput) * movementSpeed * Time.deltaTime;
