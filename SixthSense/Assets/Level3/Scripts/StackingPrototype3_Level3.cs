@@ -17,9 +17,9 @@ public class StackingPrototype3_Level3 : MonoBehaviour
     private int _cubeListIndexCounter = 0;
     Collider m_Collider;
     public GameObject head;
-    public Transform bridgeEnd;
+    // public Transform bridgeEnd;
     public Transform bridgeItemPrefab;
-    public float bridgeOffset = 1.7f;
+    // public float bridgeOffset = 1.7f;
     public float normalRespawnTime = 10.0f;
     public Transform yellowCubePrefab;
     public Transform redCubeAndTextPrefab;
