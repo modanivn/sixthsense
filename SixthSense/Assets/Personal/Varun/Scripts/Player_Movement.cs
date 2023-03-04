@@ -24,6 +24,11 @@ public class Player_Movement : MonoBehaviour
     public float jumpButtonGracePeriod;
     private float lastGroundedTime;
     private float jumpPressedTime;
+
+     private float jumpX;
+    private float jumpZ;
+
+    private string jumpString = "";
     //public GameObject player;
 
     // Start is called before the first frame update
@@ -35,6 +40,9 @@ public class Player_Movement : MonoBehaviour
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
         // Set the minimum and maximum values of the slider to match the range of values for your public variable
+    }
+     public string getFallLocations() {
+        return jumpString;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -88,6 +96,8 @@ public class Player_Movement : MonoBehaviour
 
         if(IsGrounded())
         {
+             jumpX = transform.position.x;
+            jumpZ = transform.position.z;
             lastGroundedTime = Time.time;
         }
 
@@ -124,6 +134,7 @@ public class Player_Movement : MonoBehaviour
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
+             jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
         }
     }
 
