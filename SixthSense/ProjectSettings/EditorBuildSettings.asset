@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Prototype 4/Scene/Main Menu.unity
     guid: e7b666d90fbf94edfa6168aedfffc593
   - enabled: 1
+    path: Assets/Prototype 4/Scene/Sensitivity.unity
+    guid: 3b3fd4b602ca24a0998ec1321c8dac63
+  - enabled: 1
     path: Assets/Level 1/Scene/Prototype 6 copy 1.unity
     guid: 4fd87c901cb814a6f8dff3765eff60be
   - enabled: 1

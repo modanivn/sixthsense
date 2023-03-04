@@ -24,6 +24,11 @@ public class Player_Movement : MonoBehaviour
     public float jumpButtonGracePeriod;
     private float lastGroundedTime;
     private float jumpPressedTime;
+
+     private float jumpX;
+    private float jumpZ;
+
+    private string jumpString = "";
     //public GameObject player;
 
     // Start is called before the first frame update
@@ -34,7 +39,11 @@ public class Player_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
+        // Debug.Log("sensitivity start(): " + sensitivity);
         // Set the minimum and maximum values of the slider to match the range of values for your public variable
+    }
+     public string getFallLocations() {
+        return jumpString;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,12 +61,12 @@ public class Player_Movement : MonoBehaviour
         
     }
     
-    public void UpdateSensitivity(float value)
-    {
+    // public void UpdateSensitivity(float value)
+    // {
         // This function will be called whenever the slider value changes
         // It will set the value of the public variable to the slider value
-        sensitivity = value;
-    }
+    //     sensitivity = value;
+    // }
 
     public int getTotalNumberOfHits() {
         return totalNumberOfHits;
@@ -79,7 +88,8 @@ public class Player_Movement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         // rb.velocity = new Vector3(verticalInput * movementSpeed, rb.velocity.y, horizontalInput * movementSpeed);
-
+        sensitivity = PlayerPrefs.GetFloat("sensitivity");
+        // Debug.Log("sensitivity: " + sensitivity);
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         transform.localRotation = Quaternion.Euler(0,turn.x,0);
         deltaMove = new Vector3(horizontalInput,0,-verticalInput) * movementSpeed * Time.deltaTime;
@@ -88,6 +98,8 @@ public class Player_Movement : MonoBehaviour
 
         if(IsGrounded())
         {
+             jumpX = transform.position.x;
+            jumpZ = transform.position.z;
             lastGroundedTime = Time.time;
         }
 
@@ -124,6 +136,7 @@ public class Player_Movement : MonoBehaviour
             gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
+             jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
         }
     }
 

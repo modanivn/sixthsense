@@ -17,9 +17,9 @@ public class StackingPrototype3_Level3 : MonoBehaviour
     private int _cubeListIndexCounter = 0;
     Collider m_Collider;
     public GameObject head;
-    public Transform bridgeEnd;
+    // public Transform bridgeEnd;
     public Transform bridgeItemPrefab;
-    public float bridgeOffset = 1.7f;
+    // public float bridgeOffset = 1.7f;
     public float normalRespawnTime = 10.0f;
     public Transform yellowCubePrefab;
     public Transform redCubeAndTextPrefab;
@@ -228,7 +228,8 @@ public class StackingPrototype3_Level3 : MonoBehaviour
             float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
             List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement_Level3>().getHitLocations();
             string hitLocationsString = Level_4.formatHitLocations(hitLocations);
-            Level_3 level_3 = new Level_3(getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString);
+            string fallLocation = gameObject.GetComponent<Player_Movement_Level3>().getFallLocations();
+            Level_3 level_3 = new Level_3(getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString, fallLocation);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/3/.json",level_3);
             //Debug.Log("Food Fed");
             // gameObject.GetComponent<PanelSwitcher_Level3>().switchpanel();

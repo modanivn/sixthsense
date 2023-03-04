@@ -15,7 +15,7 @@ public class FeedMonsterTrigger_L2 : MonoBehaviour
     }
 
     public void nextScene() {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
         nextScenePanel2.alpha = 0f;
     }
 }
