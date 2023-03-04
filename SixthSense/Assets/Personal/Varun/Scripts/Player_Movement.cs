@@ -15,7 +15,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] LayerMask ground;
     public Vector2 turn;
     public Vector3 deltaMove;
-    public float sensitivity;
+    public float sensitivity = 4.0f;
 
     public int totalNumberOfHits;
     public int totalNumberOfFalls;
@@ -34,7 +34,7 @@ public class Player_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
-        sensitivity = PlayerPrefs.GetFloat("sensitivity");
+        // Debug.Log("sensitivity start(): " + sensitivity);
         // Set the minimum and maximum values of the slider to match the range of values for your public variable
     }
 
