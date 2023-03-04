@@ -14,7 +14,7 @@ public class FeedMonsterTrigger_Level3 : MonoBehaviour
         }
     }
      public void nextScene() {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
         nextScenePanel.alpha = 0f;
     }
 }
