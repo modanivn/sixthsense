@@ -24,6 +24,11 @@ public class Player_Movement_L2 : MonoBehaviour
 
     public int totalNumberOfFalls;
 
+     private float jumpX;
+    private float jumpZ;
+
+    private string jumpString = "";
+
     //public GameObject player;
 
     // Start is called before the first frame update
@@ -51,7 +56,9 @@ public class Player_Movement_L2 : MonoBehaviour
         }
         
     }
-
+     public string getFallLocations() {
+        return jumpString;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -69,6 +76,8 @@ public class Player_Movement_L2 : MonoBehaviour
 
         if(IsGrounded())
         {
+             jumpX = transform.position.x;
+            jumpZ = transform.position.z;
             lastGroundedTime = Time.time;
         }
 
@@ -105,6 +114,7 @@ public class Player_Movement_L2 : MonoBehaviour
             gameObject.GetComponent<Stacking_level_2>().emptyPlayerStack();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
+             jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
         }
     }
 

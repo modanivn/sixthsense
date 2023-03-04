@@ -23,6 +23,11 @@ public class Player_Movement_Level3 : MonoBehaviour
     public float jumpButtonGracePeriod;
     private float lastGroundedTime;
     private float jumpPressedTime;
+
+     private float jumpX;
+    private float jumpZ;
+
+    private string jumpString = "";
     
     //public GameObject player;
 
@@ -36,6 +41,9 @@ public class Player_Movement_Level3 : MonoBehaviour
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
 
+    }
+     public string getFallLocations() {
+        return jumpString;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -87,6 +95,8 @@ public class Player_Movement_Level3 : MonoBehaviour
 
         if(IsGrounded())
         {
+            jumpX = transform.position.x;
+            jumpZ = transform.position.z;
             lastGroundedTime = Time.time;
         }
 
@@ -119,6 +129,7 @@ public class Player_Movement_Level3 : MonoBehaviour
             gameObject.GetComponent<StackingPrototype3_Level3>().emptyPlayerStack();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
+            jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
         }
     }
 
