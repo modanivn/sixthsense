@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject controlsMenu;
 
     public void Pause() {
+        Debug.Log("Inside Pause Menu");
         pauseMenu.SetActive(true);
         sensitivityMenu.SetActive(false);
         controlsMenu.SetActive(false);
