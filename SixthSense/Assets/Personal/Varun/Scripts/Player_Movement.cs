@@ -15,7 +15,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] LayerMask ground;
     public Vector2 turn;
     public Vector3 deltaMove;
-    public float sensitivity = 4.0f;
+    public float sensitivity;
 
     public int totalNumberOfHits;
     public int totalNumberOfFalls;
@@ -34,6 +34,7 @@ public class Player_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
+        sensitivity = PlayerPrefs.GetFloat("sensitivity");
         // Set the minimum and maximum values of the slider to match the range of values for your public variable
     }
 
@@ -52,12 +53,12 @@ public class Player_Movement : MonoBehaviour
         
     }
     
-    public void UpdateSensitivity(float value)
-    {
+    // public void UpdateSensitivity(float value)
+    // {
         // This function will be called whenever the slider value changes
         // It will set the value of the public variable to the slider value
-        sensitivity = value;
-    }
+    //     sensitivity = value;
+    // }
 
     public int getTotalNumberOfHits() {
         return totalNumberOfHits;
@@ -79,7 +80,8 @@ public class Player_Movement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         // rb.velocity = new Vector3(verticalInput * movementSpeed, rb.velocity.y, horizontalInput * movementSpeed);
-
+        sensitivity = PlayerPrefs.GetFloat("sensitivity");
+        // Debug.Log("sensitivity: " + sensitivity);
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         transform.localRotation = Quaternion.Euler(0,turn.x,0);
         deltaMove = new Vector3(horizontalInput,0,-verticalInput) * movementSpeed * Time.deltaTime;
