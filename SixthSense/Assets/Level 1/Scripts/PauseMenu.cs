@@ -7,9 +7,12 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject sensitivityMenu;
+    [SerializeField] GameObject controlsMenu;
+
     public void Pause() {
         pauseMenu.SetActive(true);
         sensitivityMenu.SetActive(false);
+        controlsMenu.SetActive(false);
         Time.timeScale = 0f;
     }
     public void Resume() {
@@ -25,6 +28,10 @@ public class PauseMenu : MonoBehaviour
     }
     public void OpenSensitivityCanvas() {
         sensitivityMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+    }
+    public void OpenControlsCanvas() {
+        controlsMenu.SetActive(true);
         pauseMenu.SetActive(false);
     }
 }
