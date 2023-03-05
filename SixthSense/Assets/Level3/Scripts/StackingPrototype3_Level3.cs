@@ -127,6 +127,14 @@ public class StackingPrototype3_Level3 : MonoBehaviour
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             monster.GetComponent<EnemyShooter_L3>().freezeProjectile();
         }
+
+        // else if(other.tag == "Gun"){
+        //     totalNumberOfFreeze++;
+        //     Destroy(other.gameObject);
+        //     StartCoroutine(respawnCube(other.tag,other.transform.parent));
+        //     monster.GetComponent<EnemyShooter_L3>().freezeProjectile();
+        // }
+
         else if(other.tag == "Food"){
             emptyPlayerStack();
             other.gameObject.transform.position = head.transform.position;
