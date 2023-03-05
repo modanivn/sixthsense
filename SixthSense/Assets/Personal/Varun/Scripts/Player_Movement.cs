@@ -4,6 +4,7 @@ using UnityEngine;
 using Proyecto26;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class Player_Movement : MonoBehaviour
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
 
+    private bool isAiming = false;
+    public CinemachineVirtualCamera aimCamera;
+    // public Transform head;
+
     public int totalNumberOfHits;
     public int totalNumberOfFalls;
     public List<List<float>> hitLocations = new List<List<float>>();
@@ -25,7 +30,7 @@ public class Player_Movement : MonoBehaviour
     private float lastGroundedTime;
     private float jumpPressedTime;
 
-     private float jumpX;
+    private float jumpX;
     private float jumpZ;
 
     private string jumpString = "";
@@ -95,6 +100,27 @@ public class Player_Movement : MonoBehaviour
         deltaMove = new Vector3(horizontalInput,0,-verticalInput) * movementSpeed * Time.deltaTime;
         transform.Translate(deltaMove);
 
+        if (Input.GetMouseButtonDown(1))
+        {
+            isAiming = !isAiming;
+        }
+
+        if (isAiming)
+        {
+            aimCamera.Priority = 20;
+            aimCamera.enabled = true;
+            turn.x += Input.GetAxis("Mouse X") * sensitivity;
+            turn.y -= Input.GetAxis("Mouse Y") * sensitivity;
+            // head.transform.localRotation = Quaternion.Euler(turn.y, turn.x, 0);
+            transform.localRotation = Quaternion.Euler(turn.y, turn.x, 0);
+        }
+        else
+        {
+            aimCamera.Priority = 1;
+            aimCamera.enabled = false;
+        }
+
+        turn.y = Mathf.Clamp(turn.y, -80f, 80f);
 
         if(IsGrounded())
         {
