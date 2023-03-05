@@ -21,6 +21,15 @@ public class EnemyShooter : MonoBehaviour
     private float currentHealth = 1.0f;
     
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            Debug.Log("Monster is Hit");
+            // Add any additional logic here for when the monster collides with a projectile
+        }
+    }
+
     public void shootProjectile()
     {
         GameObject projectile = Instantiate(projectilePrefab, transform.position + new Vector3(0,0.25f,0), Quaternion.identity);

@@ -23,6 +23,7 @@ public class StackingPrototype3 : MonoBehaviour
     public float normalRespawnTime = 10.0f;
     public Transform yellowCubePrefab;
     public Transform redCubeAndTextPrefab;
+    public Transform bulletPrefab;
     public Transform greenCubeAndTextPrefab;
     public GameObject monster;
     public float powerUprespawnTime = 15.0f;
@@ -35,7 +36,7 @@ public class StackingPrototype3 : MonoBehaviour
     private bool foodCollected = false;
     public TextMeshProUGUI gameProgress;
     public TextMeshProUGUI foodAvailable;
-    
+    public GameObject playerw;
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
     public GameObject platform1;
@@ -77,6 +78,10 @@ public class StackingPrototype3 : MonoBehaviour
 
             case "FreezePrefab":
             Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            break;
+
+            case "Gun":
+            Instantiate(bulletPrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
         }
     }
@@ -123,6 +128,17 @@ public class StackingPrototype3 : MonoBehaviour
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
         }
+
+        // else if(other.tag == "Gun"){
+            
+        //     //Debug.Log("in on trigger");
+        //     Destroy(other.gameObject);
+        //     //Debug.Log(other);
+        //     StartCoroutine(respawnCube(other.tag,other.transform.parent));
+            
+        // }
+
+
         else if(other.tag == "FreezePrefab"){
             totalNumberOfFreeze++;
             Destroy(other.gameObject);
