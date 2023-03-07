@@ -12,7 +12,7 @@ public class Sensitivity : MonoBehaviour
     {
         // Set the minimum and maximum values of the slider to match the range of values for your public variable
         slider.minValue = 0f;
-        slider.maxValue = 10f;
+        slider.maxValue = 20f;
         // slider.value = 4f;
     }
 
