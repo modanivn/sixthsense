@@ -918,7 +918,7 @@ MonoBehaviour:
   fromPanel: {fileID: 73242094}
   toPanel: {fileID: 0}
   EndGameCanvas: {fileID: 838523850}
-  timer: 20
+  timer: 150
   popUpTime: 2
   timerText: {fileID: 1285397596}
   Penalty: {fileID: 414814734}
