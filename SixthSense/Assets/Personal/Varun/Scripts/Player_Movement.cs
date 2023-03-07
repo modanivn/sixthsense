@@ -34,7 +34,7 @@ public class Player_Movement : MonoBehaviour
     private float jumpZ;
 
     private string jumpString = "";
-    //public GameObject player;
+    public GameObject gun;
 
     // Start is called before the first frame update
     void Start()
@@ -109,22 +109,25 @@ public class Player_Movement : MonoBehaviour
         {
             aimCamera.Priority = 20;
             aimCamera.enabled = true;
-            turn.x += Input.GetAxis("Mouse X") * sensitivity;
+            // turn.x += Input.GetAxis("Mouse X") * sensitivity;
             turn.y -= Input.GetAxis("Mouse Y") * sensitivity;
+            turn.y = Mathf.Clamp(turn.y, -20f, 20f);
             // head.transform.localRotation = Quaternion.Euler(turn.y, turn.x, 0);
-            transform.localRotation = Quaternion.Euler(turn.y, turn.x, 0);
+            gun.transform.localRotation = Quaternion.Euler(-turn.y, 180, 0);
         }
         else
         {
             aimCamera.Priority = 1;
             aimCamera.enabled = false;
+            gun.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            turn.y = 0;
         }
 
-        turn.y = Mathf.Clamp(turn.y, -80f, 80f);
+        
 
         if(IsGrounded())
         {
-             jumpX = transform.position.x;
+            jumpX = transform.position.x;
             jumpZ = transform.position.z;
             lastGroundedTime = Time.time;
         }
