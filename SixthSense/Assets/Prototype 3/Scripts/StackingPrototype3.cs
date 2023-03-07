@@ -98,7 +98,7 @@ public class StackingPrototype3 : MonoBehaviour
             Debug.Log(other.transform.parent);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             _cubeList.Add(other.gameObject);
-            monster.GetComponent<EnemyShooter>().reduceProjectileVelocity(totalPlatformsNeeded);
+            // monster.GetComponent<EnemyShooter>().reduceProjectileVelocity(totalPlatformsNeeded);
             // if (_cubeList.Count==1)
             // {
             //     other.gameObject.transform.position = head.transform.position;
