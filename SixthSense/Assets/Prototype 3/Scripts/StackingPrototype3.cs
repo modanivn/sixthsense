@@ -218,7 +218,7 @@ public class StackingPrototype3 : MonoBehaviour
                         monsterPlatformCount += 1; 
                         Debug.Log(monsterPlatformCount);                  
                     }
-                    else if (monsterPlatformCount==4){
+                    else if (monsterPlatformCount==3){
                         Debug.Log("3rd platform");
                         Vector3 position = platform4.transform.position;
                         Instantiate(bridgeItemPrefab, position, Quaternion.identity);
