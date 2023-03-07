@@ -60,11 +60,12 @@ public class ShootingScript : MonoBehaviour
         // // Set the velocity of the projectile
         // projectileRb.velocity = horizontalVelocity + Vector3.up * verticalVelocity;
 
-        GameObject projectile = Instantiate(projectilePrefab, gun.transform.GetChild(0).position, transform.GetChild(0).rotation);
+        GameObject projectile = Instantiate(projectilePrefab, gun.transform.GetChild(0).position, transform.GetChild(3).rotation);
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
         // Calculate the velocity of the projectile
         Vector3 aimDirection = gun.transform.GetChild(0).forward;
+        Debug.Log(aimDirection);
         float verticalVelocity = ((Input.mousePosition.y / Screen.height) - 0.5f) * projectileSpeed * 2f;
         verticalVelocity *= -1f;
         float verticalScale = 0.25f;

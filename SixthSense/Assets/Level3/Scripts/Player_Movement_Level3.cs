@@ -112,7 +112,7 @@ public class Player_Movement_Level3 : MonoBehaviour
             turn.y -= Input.GetAxis("Mouse Y") * sensitivity;
             turn.y = Mathf.Clamp(turn.y, -20f, 20f);
             // head.transform.localRotation = Quaternion.Euler(turn.y, turn.x, 0);
-            gun.transform.localRotation = Quaternion.Euler(-turn.y, 180, 0);
+            gun.transform.localRotation = Quaternion.Euler(turn.y, 180, 0);
         }
         else
         {
