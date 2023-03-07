@@ -64,7 +64,7 @@ public class PanelSwitcher_L2 : MonoBehaviour
         // Debug.Log("method called : "  + timer);
         int minutes = Mathf.FloorToInt(timer / 60f);
         int seconds = Mathf.FloorToInt(timer % 60f);
-        timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = "Timer: " + string.Format("{0:00}:{1:00}", minutes, seconds);
         InvokeRepeating("Countdown",0.0f,1.0f);
         // if(popUpTime<=0f){
         //     popUpTime = 3.0f;
