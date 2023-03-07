@@ -28,7 +28,7 @@ public class ShootingScript : MonoBehaviour
         {
             Debug.Log("F Key pressed");
             bulletsShot++;
-            textMeshProComponent.SetText(bulletsShot +" / 4 bullets shot!" );
+            textMeshProComponent.SetText((4 - bulletsShot) +"bullets left" );
             Shoot();
             
             
@@ -81,7 +81,7 @@ public class ShootingScript : MonoBehaviour
         {
             bulletsShot = 0;
             textMeshProComponent.enabled = true;
-            textMeshProComponent.SetText(bulletsShot +" / 4 bullets shot!" );
+            textMeshProComponent.SetText("4 bullets left");
             hasGun = true;
             
         }
