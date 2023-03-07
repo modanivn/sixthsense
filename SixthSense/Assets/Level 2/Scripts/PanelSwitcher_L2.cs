@@ -7,6 +7,7 @@ public class PanelSwitcher_L2 : MonoBehaviour
     //public float switchTime = 0f;
     public CanvasGroup fromPanel;
     public CanvasGroup toPanel;
+    [SerializeField] GameObject EndGameCanvas;
     public float timer = 60.0f;
     public float popUpTime = 2.0f;
 
@@ -86,11 +87,12 @@ public class PanelSwitcher_L2 : MonoBehaviour
 
     public void switchpanel(){
         switchStarted = true;
-        fromPanel.alpha = 0f;
-        fromPanel.interactable = false;
-        fromPanel.blocksRaycasts = false;
-        toPanel.alpha = 1f;
-        toPanel.interactable = true;
-        toPanel.blocksRaycasts = true;
+        EndGameCanvas.SetActive(true);
+        // fromPanel.alpha = 0f;
+        // fromPanel.interactable = false;
+        // fromPanel.blocksRaycasts = false;
+        // toPanel.alpha = 1f;
+        // toPanel.interactable = true;
+        // toPanel.blocksRaycasts = true;
     }
 }
