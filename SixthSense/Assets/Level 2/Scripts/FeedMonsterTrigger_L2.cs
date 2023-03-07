@@ -19,7 +19,7 @@ public class FeedMonsterTrigger_L2 : MonoBehaviour
 
     public void nextScene() {
         SceneManager.LoadScene(4);
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         // nextScenePanel2.alpha = 0f;
     }
 }
