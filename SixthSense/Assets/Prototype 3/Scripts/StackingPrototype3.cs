@@ -53,7 +53,7 @@ public class StackingPrototype3 : MonoBehaviour
 
         float rTime = normalRespawnTime;
 
-        if(cubeType == "FreezePrefab" || cubeType == "JumpPrefab"){
+        if(cubeType == "FreezePrefab" || cubeType == "JumpPrefab" || cubeType == "Bullet"){
             rTime = powerUprespawnTime;
         }
         
@@ -61,6 +61,9 @@ public class StackingPrototype3 : MonoBehaviour
 
         Vector3 temp = cubeParent.position;
         temp.y += 0.8f;
+        if(cubeType == "Bullet"){
+            temp.y = 0.7f;
+        }
         Vector3 respawnPosition = temp;
 
         switch(cubeType){
@@ -80,7 +83,7 @@ public class StackingPrototype3 : MonoBehaviour
             Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
 
-            case "Gun":
+            case "Bullet":
             Instantiate(bulletPrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
         }
@@ -130,13 +133,12 @@ public class StackingPrototype3 : MonoBehaviour
             gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
         }
 
-        else if(other.tag == "Gun"){
+        else if(other.tag == "Bullet"){
             
             //Debug.Log("in on trigger");
             Destroy(other.gameObject);
             //Debug.Log(other);
-            StartCoroutine(respawnCube(other.tag,other.transform.parent));
-            
+            StartCoroutine(respawnCube(other.tag,other.transform.parent)); 
         }
 
 

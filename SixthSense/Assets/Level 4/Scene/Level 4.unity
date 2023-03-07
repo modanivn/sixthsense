@@ -3662,6 +3662,63 @@ MonoBehaviour:
   CameraRadius: 0.2
   DampingIntoCollision: 0
   DampingFromCollision: 2
+--- !u!1001 &564111458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 889090712}
+    m_Modifications:
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609027543808176360, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_Name
+      value: Bullet Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
 --- !u!1001 &566561419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4673,6 +4730,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &744970796 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+  m_PrefabInstance: {fileID: 564111458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &816503262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5097,6 +5159,7 @@ Transform:
   m_Children:
   - {fileID: 566561420}
   - {fileID: 93405286}
+  - {fileID: 744970796}
   m_Father: {fileID: 497239868}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0.171, z: 0}
@@ -9733,6 +9796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 4312839069543429366, guid: a25c7e8f5e24c49d3b47005d30841c6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4350764911362691022, guid: a25c7e8f5e24c49d3b47005d30841c6b, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -12727,7 +12794,7 @@ PrefabInstance:
     - target: {fileID: 8051666052084373819, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 3346781253726819230, guid: a25c7e8f5e24c49d3b47005d30841c6b, type: 3}
+      objectReference: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
     - target: {fileID: 8051666052084373819, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: foodPlatform
       value: 

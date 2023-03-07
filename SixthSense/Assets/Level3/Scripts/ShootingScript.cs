@@ -51,9 +51,8 @@ public class ShootingScript : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Gun")
+        if (other.gameObject.tag == "Bullet")
         {
-            Debug.Log("Gun Detected");
             bulletsShot = 0;
             hasGun = true;
             

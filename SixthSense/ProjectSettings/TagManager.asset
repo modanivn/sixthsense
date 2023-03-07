@@ -16,6 +16,8 @@ TagManager:
   - JumpPrefab
   - FreezePrefab
   - JumpPrefabL2
+  - Gun
+  - Bullet
   layers:
   - Default
   - TransparentFX
