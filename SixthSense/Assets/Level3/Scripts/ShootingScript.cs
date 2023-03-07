@@ -16,10 +16,10 @@ public class ShootingScript : MonoBehaviour
     private bool hasGun = false;
     public Transform gun;
     
-    public TextMeshProUGUI textMeshProComponent;
+    public TextMeshProUGUI bulletText;
  
     public void start() {
-        textMeshProComponent = GetComponent<TextMeshProUGUI>();
+        bulletText = GetComponent<TextMeshProUGUI>();
     }
     public void Update()
     { 
@@ -28,14 +28,14 @@ public class ShootingScript : MonoBehaviour
         {
             Debug.Log("F Key pressed");
             bulletsShot++;
-            textMeshProComponent.SetText((4 - bulletsShot) +"bullets left" );
+            bulletText.SetText((4 - bulletsShot) +"bullets left" );
             Shoot();
             
             
             
         }
         if(bulletsShot == 4) {
-            textMeshProComponent.enabled = false;
+            bulletText.enabled = false;
         }
         
         // Aim();
@@ -60,7 +60,7 @@ public class ShootingScript : MonoBehaviour
         // // Set the velocity of the projectile
         // projectileRb.velocity = horizontalVelocity + Vector3.up * verticalVelocity;
 
-        GameObject projectile = Instantiate(projectilePrefab, gun.transform.GetChild(0).position, transform.GetChild(3).rotation);
+        GameObject projectile = Instantiate(projectilePrefab, gun.transform.GetChild(0).position, transform.GetChild(0).rotation);
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
         // Calculate the velocity of the projectile
@@ -80,8 +80,9 @@ public class ShootingScript : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             bulletsShot = 0;
-            textMeshProComponent.enabled = true;
-            textMeshProComponent.SetText("4 bullets left");
+            Debug.Log("Bullets Collected");
+            bulletText.enabled = true;
+            bulletText.SetText("4 bullets left");
             hasGun = true;
             
         }
