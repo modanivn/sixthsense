@@ -13,6 +13,7 @@ public class ShootingScript : MonoBehaviour
     private Vector3 respawnPosition;
     private GameObject currentGunPrefab;
     private bool hasGun = false;
+    public Transform gun;
     
 
     public void Update()
@@ -36,19 +37,33 @@ public class ShootingScript : MonoBehaviour
     }
     void Shoot()
     {
-        GameObject projectile = Instantiate(projectilePrefab, transform.GetChild(3).position, transform.GetChild(3).rotation);
+        // GameObject projectile = Instantiate(projectilePrefab, transform.GetChild(3).position, transform.GetChild(3).rotation);
+        // Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+
+        // // Calculate horizontal and vertical components of the velocity
+        // Vector3 aimDirection = transform.GetChild(3).right;
+        // aimDirection.y = 0f;
+        // Vector3 horizontalVelocity = aimDirection.normalized * projectileSpeed;
+        // float verticalVelocity = ((Input.mousePosition.y / Screen.height) - 0.5f) * projectileSpeed * 2f;
+        // verticalVelocity *= -1f;
+        // float verticalScale = 0.25f;
+        // verticalVelocity *= verticalScale;
+        // // Set the velocity of the projectile
+        // projectileRb.velocity = horizontalVelocity + Vector3.up * verticalVelocity;
+
+        GameObject projectile = Instantiate(projectilePrefab, gun.transform.GetChild(0).position, transform.GetChild(3).rotation);
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
-        // Calculate horizontal and vertical components of the velocity
-        Vector3 aimDirection = transform.GetChild(3).right;
-        aimDirection.y = 0f;
-        Vector3 horizontalVelocity = aimDirection.normalized * projectileSpeed;
+        // Calculate the velocity of the projectile
+        Vector3 aimDirection = gun.transform.GetChild(0).forward;
         float verticalVelocity = ((Input.mousePosition.y / Screen.height) - 0.5f) * projectileSpeed * 2f;
         verticalVelocity *= -1f;
         float verticalScale = 0.25f;
         verticalVelocity *= verticalScale;
-        // Set the velocity of the projectile
-        projectileRb.velocity = horizontalVelocity + Vector3.up * verticalVelocity;
+        Vector3 velocity = aimDirection.normalized * projectileSpeed + Vector3.up * verticalVelocity;
+
+    // Set the velocity of the projectile
+    projectileRb.velocity = velocity;
     }
     
     void OnTriggerEnter(Collider other)
