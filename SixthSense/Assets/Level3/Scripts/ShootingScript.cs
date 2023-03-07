@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShootingScript : MonoBehaviour
 {
@@ -15,7 +16,11 @@ public class ShootingScript : MonoBehaviour
     private bool hasGun = false;
     public Transform gun;
     
-
+    public TextMeshProUGUI textMeshProComponent;
+ 
+    public void start() {
+        textMeshProComponent = GetComponent<TextMeshProUGUI>();
+    }
     public void Update()
     { 
         // Debug.Log("Came from stacking");
@@ -23,10 +28,14 @@ public class ShootingScript : MonoBehaviour
         {
             Debug.Log("F Key pressed");
             bulletsShot++;
+            textMeshProComponent.SetText(bulletsShot +" / 4 bullets shot!" );
             Shoot();
             
             
             
+        }
+        if(bulletsShot == 4) {
+            textMeshProComponent.enabled = false;
         }
         
         // Aim();
@@ -71,6 +80,8 @@ public class ShootingScript : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             bulletsShot = 0;
+            textMeshProComponent.enabled = true;
+            textMeshProComponent.SetText(bulletsShot +" / 4 bullets shot!" );
             hasGun = true;
             
         }
