@@ -19,13 +19,32 @@ public class EnemyShooter : MonoBehaviour
     private int totalTimesProjectileFrequencyReduced = 1;
     public Image healthBarImage;
     private float currentHealth = 1.0f;
+    private int numberOfLevels = 4;
+    private bool hasbeenHit = false;
     
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Projectile"))
+        if (other.gameObject.CompareTag("PlayerBullet"))
         {
+            numberOfLevels--;
             Debug.Log("Monster is Hit");
+            Destroy(other.gameObject);
+            repeatTime+=0.275f;
+            CancelInvoke("shootProjectile");
+            InvokeRepeating("shootProjectile", startTime, repeatTime);
+            float damage = 0.1f; // set the amount of damage to be inflicted
+            currentHealth -= damage;
+            healthBarImage.fillAmount = currentHealth;
+            if (currentHealth <= 0) {
+                healthBarImage.fillAmount =  0;
+                currentHealth = 0.0f;
+                repeatTime = 1000.0f;
+                CancelInvoke("shootProjectile");
+            // Add any additional logic here for when the monster's health reaches 0
+            }
+            
+
             // Add any additional logic here for when the monster collides with a projectile
         }
     }
@@ -80,17 +99,20 @@ public class EnemyShooter : MonoBehaviour
         }
    }
 
-   public void reduceProjectileVelocity(int numberOfLevels){
+   public void reduceProjectileVelocity(){
 
         if(numberOfLevels > totalTimesProjectileFrequencyReduced){
+            Debug.Log("Health decresed by ");
+            Debug.Log(numberOfLevels);
             float reducible = (repeatTime/numberOfLevels) * 2;
             repeatTime += reducible;
             CancelInvoke("shootProjectile");
             InvokeRepeating("shootProjectile", startTime, repeatTime);
-            totalTimesProjectileFrequencyReduced += 1;
+            // totalTimesProjectileFrequencyReduced += 1;
             float percentageReduce = 1/(float)numberOfLevels;
             currentHealth = currentHealth - percentageReduce;
             healthBarImage.fillAmount =  currentHealth;
+            
         }
         else{
             healthBarImage.fillAmount =  0;
@@ -98,5 +120,6 @@ public class EnemyShooter : MonoBehaviour
             repeatTime = 1000.0f;
             CancelInvoke("shootProjectile");
         }
+        return;
    }
 }
