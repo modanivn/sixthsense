@@ -14,7 +14,7 @@ public class EnemyShooter : MonoBehaviour
     private float repeatTime = 0.75f;
     private float startTime = 3.0f;
     private float startShootVelocity = 15.0f;
-    private float shootMultipler = 15.0f;
+    private float shootMultipler = 12.0f;
     private float frozenCountDown = 10.0f;
     private int totalTimesProjectileFrequencyReduced = 1;
     public Image healthBarImage;
