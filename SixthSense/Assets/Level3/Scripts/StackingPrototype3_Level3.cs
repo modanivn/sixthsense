@@ -64,7 +64,7 @@ public class StackingPrototype3_Level3 : MonoBehaviour
 
         switch(cubeType){
             case "YellowCube":
-            Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            // Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
 
             case "JumpPrefab":
