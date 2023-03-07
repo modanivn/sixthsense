@@ -89,6 +89,7 @@ public class StackingPrototype3 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "YellowCube"){
+            Debug.Log(other.transform.parent);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             _cubeList.Add(other.gameObject);
             monster.GetComponent<EnemyShooter>().reduceProjectileVelocity(totalPlatformsNeeded);
@@ -129,14 +130,14 @@ public class StackingPrototype3 : MonoBehaviour
             gameObject.GetComponent<NatkhatCubes>().funWithCube(3);
         }
 
-        // else if(other.tag == "Gun"){
+        else if(other.tag == "Gun"){
             
-        //     //Debug.Log("in on trigger");
-        //     Destroy(other.gameObject);
-        //     //Debug.Log(other);
-        //     StartCoroutine(respawnCube(other.tag,other.transform.parent));
+            //Debug.Log("in on trigger");
+            Destroy(other.gameObject);
+            //Debug.Log(other);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent));
             
-        // }
+        }
 
 
         else if(other.tag == "FreezePrefab"){

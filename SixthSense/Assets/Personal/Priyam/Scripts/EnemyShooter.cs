@@ -21,9 +21,9 @@ public class EnemyShooter : MonoBehaviour
     private float currentHealth = 1.0f;
     
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (other.gameObject.CompareTag("Projectile"))
         {
             Debug.Log("Monster is Hit");
             // Add any additional logic here for when the monster collides with a projectile
