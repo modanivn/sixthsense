@@ -27,7 +27,7 @@ public class ShootingScript : MonoBehaviour
     public void Update()
     { 
         // Debug.Log("Came from stacking");
-        if (hasGun && Input.GetKeyDown(KeyCode.F) && bulletCount > 0)
+        if (hasGun && Input.GetMouseButtonDown(0) && bulletCount > 0)
         {
             Debug.Log("F Key pressed");
             // bulletsShot++;

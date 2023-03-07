@@ -9026,16 +9026,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 40.872
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 299.72803
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20.436
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11
+      value: 0.13382
       objectReference: {fileID: 0}
     - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.6
+      value: 7.0826
       objectReference: {fileID: 0}
     - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01
+      value: 0.0019574
       objectReference: {fileID: 0}
     - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9080,6 +9092,26 @@ PrefabInstance:
     - target: {fileID: 8480053143084531074, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
       propertyPath: m_Name
       value: Slime_Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189243689049047093, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.022243153
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189243689049047093, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.019728731
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189243689049047093, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00051246234
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189243689049047093, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0070644333
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189243689049047093, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.004381199
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}

@@ -33,7 +33,7 @@ public class EnemyShooter : MonoBehaviour
             repeatTime+=0.275f;
             CancelInvoke("shootProjectile");
             InvokeRepeating("shootProjectile", startTime, repeatTime);
-            float damage = 0.1f; // set the amount of damage to be inflicted
+            float damage = 0.25f; // set the amount of damage to be inflicted
             currentHealth -= damage;
             healthBarImage.fillAmount = currentHealth;
             if (currentHealth <= 0) {
