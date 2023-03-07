@@ -15,8 +15,11 @@ public class ShootingScript : MonoBehaviour
     private GameObject currentGunPrefab;
     private bool hasGun = false;
     public Transform gun;
+    private int bulletCount = 0;
     
     public TextMeshProUGUI bulletText;
+    private int totalShots = 0;
+    private int bulletCollectedCount = 0;
  
     public void start() {
         bulletText = GetComponent<TextMeshProUGUI>();
@@ -24,17 +27,19 @@ public class ShootingScript : MonoBehaviour
     public void Update()
     { 
         // Debug.Log("Came from stacking");
-        if (hasGun && Input.GetKeyDown(KeyCode.F) && bulletsShot<4)
+        if (hasGun && Input.GetKeyDown(KeyCode.F) && bulletCount > 0)
         {
             Debug.Log("F Key pressed");
-            bulletsShot++;
-            bulletText.SetText((4 - bulletsShot) +"bullets left" );
+            // bulletsShot++;
+            bulletCount --;
+            totalShots++;
+            bulletText.SetText((bulletCount) +" bullets left" );
             Shoot();
             
             
             
         }
-        if(bulletsShot == 4) {
+        if(bulletCount == 0) {
             bulletText.enabled = false;
         }
         
@@ -42,7 +47,7 @@ public class ShootingScript : MonoBehaviour
     }
 
     public int getBulletsShot() {
-        return bulletsShot;
+        return totalShots;
     }
     void Shoot()
     {
@@ -80,10 +85,15 @@ public class ShootingScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            bulletsShot = 0;
+            
+            // bulletCollectedCount+=4;
+            bulletCount += 4;
+            bulletText.SetText(bulletCount +  " bullets left");
+            // bulletsShot = 0;
+            
             Debug.Log("Bullets Collected");
             bulletText.enabled = true;
-            bulletText.SetText("4 bullets left");
+            
             hasGun = true;
             
         }
