@@ -23,6 +23,7 @@ public class StackingPrototype3_Level3 : MonoBehaviour
     public float normalRespawnTime = 10.0f;
     public Transform yellowCubePrefab;
     public Transform redCubeAndTextPrefab;
+    public Transform bulletPrefab;
     public Transform greenCubeAndTextPrefab;
     public GameObject monster;
     public float powerUprespawnTime = 15.0f;
@@ -77,6 +78,10 @@ public class StackingPrototype3_Level3 : MonoBehaviour
             case "FreezePrefab":
             Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
+
+            case "Bullet":
+            Instantiate(bulletPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            break;
         }
     }
 
@@ -121,6 +126,15 @@ public class StackingPrototype3_Level3 : MonoBehaviour
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             gameObject.GetComponent<NatkhatCubes_Level3>().funWithCube(3);
         }
+
+        else if(other.tag == "Bullet"){
+            
+            //Debug.Log("in on trigger");
+            Destroy(other.gameObject);
+            //Debug.Log(other);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent)); 
+        }
+
         else if(other.tag == "FreezePrefab"){
             totalNumberOfFreeze++;
             Destroy(other.gameObject);

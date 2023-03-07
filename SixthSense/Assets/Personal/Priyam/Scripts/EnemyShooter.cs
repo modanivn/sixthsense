@@ -99,27 +99,5 @@ public class EnemyShooter : MonoBehaviour
         }
    }
 
-   public void reduceProjectileVelocity(){
 
-        if(numberOfLevels > totalTimesProjectileFrequencyReduced){
-            Debug.Log("Health decresed by ");
-            Debug.Log(numberOfLevels);
-            float reducible = (repeatTime/numberOfLevels) * 2;
-            repeatTime += reducible;
-            CancelInvoke("shootProjectile");
-            InvokeRepeating("shootProjectile", startTime, repeatTime);
-            // totalTimesProjectileFrequencyReduced += 1;
-            float percentageReduce = 1/(float)numberOfLevels;
-            currentHealth = currentHealth - percentageReduce;
-            healthBarImage.fillAmount =  currentHealth;
-            
-        }
-        else{
-            healthBarImage.fillAmount =  0;
-            currentHealth = 0.0f;
-            repeatTime = 1000.0f;
-            CancelInvoke("shootProjectile");
-        }
-        return;
-   }
 }
