@@ -59,7 +59,12 @@ public class StackingPrototype3_Level3 : MonoBehaviour
         yield return new WaitForSeconds(rTime);
 
         Vector3 temp = cubeParent.position;
-        temp.y += 0.8f;
+        if(cubeType == "Bullet"){
+            temp.y += 0.4f;
+        }
+        else{
+            temp.y += 0.8f;
+        }
         Vector3 respawnPosition = temp;
 
         switch(cubeType){

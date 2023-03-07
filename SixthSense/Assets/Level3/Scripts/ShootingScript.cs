@@ -65,20 +65,28 @@ public class ShootingScript : MonoBehaviour
         // // Set the velocity of the projectile
         // projectileRb.velocity = horizontalVelocity + Vector3.up * verticalVelocity;
 
-        GameObject projectile = Instantiate(projectilePrefab, gun.transform.GetChild(0).position, transform.GetChild(3).rotation);
+        // GameObject projectile = Instantiate(projectilePrefab, gun.transform.GetChild(0).position, transform.GetChild(3).rotation);
+        // Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+
+        // // Calculate the velocity of the projectile
+        // Vector3 aimDirection = gun.transform.GetChild(0).forward;
+        // Debug.Log(aimDirection);
+        // float verticalVelocity = ((Input.mousePosition.y / Screen.height) - 0.5f) * projectileSpeed * 2f;
+        // verticalVelocity *= -1f;
+        // float verticalScale = 0.25f;
+        // verticalVelocity *= verticalScale;
+        // Vector3 velocity = aimDirection.normalized * projectileSpeed + Vector3.up * verticalVelocity;
+
+        GameObject projectile = Instantiate(projectilePrefab, gun.transform.position, gun.transform.rotation);
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
         // Calculate the velocity of the projectile
-        Vector3 aimDirection = gun.transform.GetChild(0).forward;
-        Debug.Log(aimDirection);
-        float verticalVelocity = ((Input.mousePosition.y / Screen.height) - 0.5f) * projectileSpeed * 2f;
-        verticalVelocity *= -1f;
-        float verticalScale = 0.25f;
-        verticalVelocity *= verticalScale;
-        Vector3 velocity = aimDirection.normalized * projectileSpeed + Vector3.up * verticalVelocity;
+        Vector3 velocity = gun.transform.forward * projectileSpeed;
 
-    // Set the velocity of the projectile
-    projectileRb.velocity = velocity;
+        // projectileRb.velocity = velocity;
+
+        // Set the velocity of the projectile
+        projectileRb.velocity = velocity;
     }
     
     void OnTriggerEnter(Collider other)
