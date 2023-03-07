@@ -31,7 +31,9 @@ public class ShootingScript : MonoBehaviour
         // Aim();
     }
 
-
+    public int getBulletsShot() {
+        return bulletsShot;
+    }
     void Shoot()
     {
         GameObject projectile = Instantiate(projectilePrefab, transform.GetChild(3).position, transform.GetChild(3).rotation);
