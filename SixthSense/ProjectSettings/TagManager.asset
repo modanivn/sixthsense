@@ -18,6 +18,8 @@ TagManager:
   - JumpPrefabL2
   - Gun
   - Bullet
+  - PlayerBullet
+  - crosshair
   layers:
   - Default
   - TransparentFX

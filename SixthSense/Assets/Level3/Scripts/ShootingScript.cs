@@ -6,7 +6,7 @@ using TMPro;
 public class ShootingScript : MonoBehaviour
 {
     public GameObject projectilePrefab;
-    public float projectileSpeed = 10f;
+    public float projectileSpeed = 20f;
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
     private int bulletsShot = 0;
@@ -16,6 +16,8 @@ public class ShootingScript : MonoBehaviour
     private bool hasGun = false;
     public Transform gun;
     private int bulletCount = 0;
+    public GameObject crosshair;
+    private bool show_ch = false; 
     
     public TextMeshProUGUI bulletText;
     private int totalShots = 0;
@@ -23,20 +25,33 @@ public class ShootingScript : MonoBehaviour
  
     public void start() {
         bulletText = GetComponent<TextMeshProUGUI>();
+
     }
     public void Update()
-    { 
+    {
+        if (show_ch){
+            crosshair.SetActive(true);
+        }
+        else{
+            crosshair.SetActive(false);
+        }
         // Debug.Log("Came from stacking");
+        if(hasGun && Input.GetMouseButtonDown(1)){
+            show_ch = !show_ch;
+        }
+
+        // else(){
+        //     crosshair.SetActive(false);
+        // }
         if (hasGun && Input.GetMouseButtonDown(0) && bulletCount > 0)
         {
+            // crosshair.SetActive(true);
             Debug.Log("F Key pressed");
             // bulletsShot++;
             bulletCount --;
             totalShots++;
             bulletText.SetText((bulletCount) +" bullets left" );
             Shoot();
-            
-            
             
         }
         if(bulletCount == 0) {
