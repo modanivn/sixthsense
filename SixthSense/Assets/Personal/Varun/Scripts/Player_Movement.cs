@@ -36,6 +36,7 @@ public class Player_Movement : MonoBehaviour
     private string jumpString = "";
     public GameObject gun;
 
+    public GameObject gameEndTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,8 @@ public class Player_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
+        gameEndTrigger.SetActive(false);
+
         // Debug.Log("sensitivity start(): " + sensitivity);
         // Set the minimum and maximum values of the slider to match the range of values for your public variable
     }

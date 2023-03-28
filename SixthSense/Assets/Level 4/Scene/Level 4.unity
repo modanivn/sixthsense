@@ -9427,6 +9427,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1624137456565311708}
     - target: {fileID: 8479362094281574341, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
+      propertyPath: gameEndTrigger
+      value: 
+      objectReference: {fileID: 1729023885}
+    - target: {fileID: 8479362094281574341, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
       propertyPath: healthBarImage
       value: 
       objectReference: {fileID: 1208056941}
@@ -13001,6 +13005,10 @@ PrefabInstance:
       propertyPath: aimCamera
       value: 
       objectReference: {fileID: 726462382}
+    - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: gameEndTrigger
+      value: 
+      objectReference: {fileID: 1729023885}
     - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: jumpButtonGracePeriod
       value: 0.5

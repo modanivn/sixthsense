@@ -21,7 +21,7 @@ public class EnemyShooter : MonoBehaviour
     private float currentHealth = 1.0f;
     private int numberOfLevels = 4;
     private bool hasbeenHit = false;
-    
+    public GameObject gameEndTrigger;
 
     void OnTriggerEnter(Collider other)
     {
@@ -37,6 +37,8 @@ public class EnemyShooter : MonoBehaviour
             currentHealth -= damage;
             healthBarImage.fillAmount = currentHealth;
             if (currentHealth <= 0) {
+                gameEndTrigger.SetActive(true);
+                gameObject.SetActive(false);
                 healthBarImage.fillAmount =  0;
                 currentHealth = 0.0f;
                 repeatTime = 1000.0f;

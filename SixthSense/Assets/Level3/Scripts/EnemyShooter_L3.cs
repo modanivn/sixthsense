@@ -22,6 +22,7 @@ public class EnemyShooter_L3 : MonoBehaviour
     private int numberOfLevels = 4;
     private bool hasbeenHit = false;
     
+    public GameObject gameEndTrigger;
 
     void OnTriggerEnter(Collider other)
     {
@@ -37,6 +38,8 @@ public class EnemyShooter_L3 : MonoBehaviour
             currentHealth -= damage;
             healthBarImage.fillAmount = currentHealth;
             if (currentHealth <= 0) {
+                gameEndTrigger.SetActive(true);
+                gameObject.SetActive(false);
                 healthBarImage.fillAmount =  0;
                 currentHealth = 0.0f;
                 repeatTime = 1000.0f;
@@ -63,7 +66,7 @@ public class EnemyShooter_L3 : MonoBehaviour
     {
         // FreezeTimerText.text = '';
         FreezeTimerText.gameObject.SetActive(false);
-        
+        // gameEndTrigger = GameObject.FindWithTag("GameEndPlatform");
         if(currentHealth > 0.0f){
             InvokeRepeating("shootProjectile", startTime, repeatTime);
         }

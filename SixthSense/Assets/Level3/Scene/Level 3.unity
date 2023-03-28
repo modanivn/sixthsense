@@ -923,6 +923,7 @@ MonoBehaviour:
   aimCamera: {fileID: 2096278944}
   gun: {fileID: 558437193}
   jumpButtonGracePeriod: 0.3
+  gameEndTrigger: {fileID: 1729023885}
 --- !u!114 &160491282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4140,7 +4141,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Right click mouse to aim
 
-    Left click mouse to shoot'
+    Left click mouse to shoot
+
+    Kill Monster
+    to unlock gate'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9841,6 +9845,7 @@ MonoBehaviour:
   player: {fileID: 160491272}
   FreezeTimerText: {fileID: 1119858473}
   healthBarImage: {fileID: 1842341767}
+  gameEndTrigger: {fileID: 1729023885}
 --- !u!1 &1556157754
 GameObject:
   m_ObjectHideFlags: 0

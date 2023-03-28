@@ -36,7 +36,7 @@ public class Player_Movement_Level3 : MonoBehaviour
     private string jumpString = "";
     
     //public GameObject player;
-
+    public GameObject gameEndTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +46,7 @@ public class Player_Movement_Level3 : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0,90,0);
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
+        gameEndTrigger.SetActive(false);
 
     }
      public string getFallLocations() {
