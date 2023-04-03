@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -186,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28597635}
   m_LocalRotation: {x: 0.12307365, y: 0.7205902, z: -0.13249238, w: 0.6693642}
-  m_LocalPosition: {x: -17.57857, y: 3.2227597, z: 0.00000047683716}
+  m_LocalPosition: {x: -17.57857, y: 3.2227597, z: 0.00000039488077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4966,7 +4966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1227264978190467137, guid: 0e7dbe63016a5480cafa05591cbc9dfb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00000047683716
+      value: 0.00000039488077
       objectReference: {fileID: 0}
     - target: {fileID: 1227264978190467137, guid: 0e7dbe63016a5480cafa05591cbc9dfb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8596,9 +8596,9 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619242242}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f8fac557aba34c148aaa4ad26a3c47d0, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -13013,6 +13013,10 @@ PrefabInstance:
       propertyPath: jumpButtonGracePeriod
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8051666051455772879, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8051666052084373815, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: Penalty
       value: 
@@ -13097,6 +13101,10 @@ PrefabInstance:
       propertyPath: powerUpTextElement
       value: 
       objectReference: {fileID: 2118739668}
+    - target: {fileID: 8734551106004461297, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f8fac557aba34c148aaa4ad26a3c47d0, type: 2}
     - target: {fileID: 8734551106004461303, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: m_Name
       value: Player
