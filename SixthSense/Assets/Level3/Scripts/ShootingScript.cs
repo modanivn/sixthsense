@@ -35,7 +35,6 @@ public class ShootingScript : MonoBehaviour
         else{
             crosshair.SetActive(false);
         }
-        // Debug.Log("Came from stacking");
         if(hasGun && Input.GetMouseButtonDown(1)){
             show_ch = !show_ch;
         }
@@ -46,7 +45,6 @@ public class ShootingScript : MonoBehaviour
         if (hasGun && Input.GetMouseButtonDown(0) && bulletCount > 0)
         {
             // crosshair.SetActive(true);
-            Debug.Log("F Key pressed");
             // bulletsShot++;
             bulletCount --;
             totalShots++;
@@ -113,8 +111,6 @@ public class ShootingScript : MonoBehaviour
             bulletCount += 4;
             bulletText.SetText(bulletCount +  " bullets left");
             // bulletsShot = 0;
-            
-            Debug.Log("Bullets Collected");
             bulletText.enabled = true;
             
             hasGun = true;

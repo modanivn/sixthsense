@@ -28,7 +28,6 @@ public class EnemyShooter : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerBullet"))
         {
             numberOfLevels--;
-            Debug.Log("Monster is Hit");
             Destroy(other.gameObject);
             repeatTime+=0.275f;
             CancelInvoke("shootProjectile");
@@ -48,7 +47,6 @@ public class EnemyShooter : MonoBehaviour
             // Add any additional logic here for when the monster collides with a projectile
         }
         if (other.gameObject.CompareTag("YellowCube")) {
-            Debug.Log("Monster collided with yellow cube ");
             if(currentHealth < 1) {
                 float healthIncrease = 0.1f;
                 currentHealth += healthIncrease;
