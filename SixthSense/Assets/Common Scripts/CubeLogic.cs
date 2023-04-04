@@ -30,7 +30,7 @@ public class CubeLogic : MonoBehaviour
         TimeElapsed.startTime();
     }
 
-    private IEnumerator respawnCube(string cubeType, Transform cubeParent){
+    public IEnumerator respawnCube(string cubeType, Transform cubeParent){
 
         float rTime = normalRespawnTime;
 
