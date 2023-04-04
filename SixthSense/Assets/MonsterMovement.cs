@@ -19,9 +19,6 @@ public class MonsterMovement : MonoBehaviour
         
         startPoint = transform;
         endPoint = GetClosestTargetObject().transform;
-        // journeyLength = Vector3.Distance(startPoint.position, endPoint.position);
-        // Debug.Log(targetObjects.Count);
-        Debug.Log(startPoint.position);
     }
 
     void Update()
@@ -32,7 +29,6 @@ public class MonsterMovement : MonoBehaviour
         {
             startPoint = transform;
             endPoint = closestObject.transform;
-            Debug.Log(startPoint.position);
             journeyLength = Vector3.Distance(startPoint.position, endPoint.position);
             float distCovered = (Time.time - startTime) * speed;
             float fracJourney = distCovered / journeyLength;
@@ -40,19 +36,10 @@ public class MonsterMovement : MonoBehaviour
         }
     }
 
-    // void FixedUpdate()
-    // {
-    //     float distCovered = (Time.time - startTime) * speed;
-    //     float fracJourney = distCovered / journeyLength;
-    //     transform.position = Vector3.Lerp(startPoint.position, endPoint.position, 0.01f);
-    // }
-
     private Transform GetClosestTargetObject()
     {
         Transform closestObject = null;
         float closestDistance = Mathf.Infinity;
-        
-        Debug.Log("Count: " + targetObjects.Count);
         if(targetObjects.Count == 0) {
             return null;
         }
@@ -65,7 +52,6 @@ public class MonsterMovement : MonoBehaviour
                 closestDistance = distance;
             }
         }
-        Debug.Log(closestObject.position);
         return closestObject;
     }   
 
