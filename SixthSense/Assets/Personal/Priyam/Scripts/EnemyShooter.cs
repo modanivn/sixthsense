@@ -39,8 +39,9 @@ public class EnemyShooter : MonoBehaviour
             if (currentHealth <= 0) {
                 gameEndTrigger.SetActive(true);
                 // gameObject.SetActive(false);
-                gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);
-                Destroy(gameObject, 10f);
+                gameObject.transform.position = new Vector3(9000f, 9000f, 9000f);
+                gameObject.GetComponent<MonsterMovement>().speed = 0f;
+                Destroy(gameObject, 5f);
                 healthBarImage.fillAmount =  0;
                 currentHealth = 0.0f;
                 repeatTime = 1000.0f;
