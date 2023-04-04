@@ -136,4 +136,8 @@ public class CubeLogic : MonoBehaviour
     public List<Transform> getActiveCubes(){
         return activeCubes;
     }
+
+    public void removeFromActiveCubes(Transform eatenCube){
+        activeCubes.remove(eatenCube)
+    }
 }
