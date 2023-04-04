@@ -23,7 +23,7 @@ public class CubeLogic : MonoBehaviour
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
     public GameObject[] platforms;
-    public GameObject[] activeCubes;
+    [SerializeField] List<Transform> activeCubes = new List<Transform>();
 
     void Start(){
         TimeElapsed.resetStopwatch();
@@ -52,7 +52,8 @@ public class CubeLogic : MonoBehaviour
 
         switch(cubeType){
             case "YellowCube":
-            Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            Transform clone = Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            activeCubes.Add(clone);
             break;
 
             case "JumpPrefab":
@@ -60,7 +61,6 @@ public class CubeLogic : MonoBehaviour
                 Instantiate(greenCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
                 break;
             }
-            
 
             case "FreezePrefab":
             Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
@@ -75,6 +75,7 @@ public class CubeLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "YellowCube"){
+            activeCubes.Remove(other.gameObject.transform);
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             makeBridgeToMonster();
@@ -130,5 +131,9 @@ public class CubeLogic : MonoBehaviour
             Level_4 level_4 = new Level_4(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString, fallLocation, bulletsShot);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level_4);
         }
+    }
+
+    public List<Transform> getActiveCubes(){
+        return activeCubes;
     }
 }
