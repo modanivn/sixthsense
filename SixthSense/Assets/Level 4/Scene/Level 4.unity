@@ -12107,7 +12107,11 @@ MonoBehaviour:
   - {fileID: 2118752293}
   - {fileID: 1900593744}
   - {fileID: 1415538212}
-  activeCubes: []
+  activeCubes:
+  - {fileID: 1188766350}
+  - {fileID: 1468679386}
+  - {fileID: 1934138546}
+  - {fileID: 2003069048}
 --- !u!1001 &2137388927006247907
 PrefabInstance:
   m_ObjectHideFlags: 0

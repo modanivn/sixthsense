@@ -138,6 +138,6 @@ public class CubeLogic : MonoBehaviour
     }
 
     public void removeFromActiveCubes(Transform eatenCube){
-        activeCubes.remove(eatenCube);
+        activeCubes.Remove(eatenCube);
     }
 }
