@@ -45,10 +45,20 @@ public class EnemyShooter : MonoBehaviour
                 CancelInvoke("shootProjectile");
             // Add any additional logic here for when the monster's health reaches 0
             }
-            
-
             // Add any additional logic here for when the monster collides with a projectile
         }
+        if (other.gameObject.CompareTag("YellowCube")) {
+            Debug.Log("Monster collided with yellow cube ");
+            if(currentHealth < 1) {
+                float healthIncrease = 0.1f;
+                currentHealth += healthIncrease;
+                healthBarImage.fillAmount = currentHealth;
+            }
+            player.GetComponent<CubeLogic>().removeFromActiveCubes(other.gameObject.transform);
+            StartCoroutine(player.GetComponent<CubeLogic>().respawnCube(other.tag,other.transform.parent));
+            Destroy(other.gameObject);
+        }
+        
     }
 
     public void shootProjectile()
