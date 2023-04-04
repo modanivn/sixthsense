@@ -18,10 +18,11 @@ public class EnemyShooter : MonoBehaviour
     private float frozenCountDown = 10.0f;
     private int totalTimesProjectileFrequencyReduced = 1;
     public Image healthBarImage;
-    private float currentHealth = 1.0f;
+    public float currentHealth = 1.0f;
     private int numberOfLevels = 4;
     private bool hasbeenHit = false;
     public GameObject gameEndTrigger;
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -37,7 +38,9 @@ public class EnemyShooter : MonoBehaviour
             healthBarImage.fillAmount = currentHealth;
             if (currentHealth <= 0) {
                 gameEndTrigger.SetActive(true);
-                gameObject.SetActive(false);
+                // gameObject.SetActive(false);
+                gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);
+                Destroy(gameObject, 10f);
                 healthBarImage.fillAmount =  0;
                 currentHealth = 0.0f;
                 repeatTime = 1000.0f;
@@ -56,7 +59,7 @@ public class EnemyShooter : MonoBehaviour
             StartCoroutine(player.GetComponent<CubeLogic>().respawnCube(other.tag,other.transform.parent));
             Destroy(other.gameObject);
         }
-        
+
     }
 
     public void shootProjectile()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterMovement : MonoBehaviour
 {
     private List<Transform> targetObjects;
-    public float speed = 1f;
+    public float speed = 0.001f;
     private Transform startPoint;
     private Transform endPoint;
     private float startTime;
@@ -25,14 +25,14 @@ public class MonsterMovement : MonoBehaviour
     {
         targetObjects = player.GetComponent<CubeLogic>().getActiveCubes();
         Transform closestObject = GetClosestTargetObject();
-        if (closestObject != null)
+        if (closestObject != null && gameObject.GetComponent<EnemyShooter>().currentHealth >= 0f)
         {
             startPoint = transform;
             endPoint = closestObject.transform;
             journeyLength = Vector3.Distance(startPoint.position, endPoint.position);
             float distCovered = (Time.time - startTime) * speed;
             float fracJourney = distCovered / journeyLength;
-            transform.position = Vector3.Lerp(startPoint.position, endPoint.position, 0.03f);
+            transform.position = Vector3.Lerp(startPoint.position, endPoint.position, 0.001f);
         }
     }
 
