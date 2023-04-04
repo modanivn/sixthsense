@@ -49,7 +49,6 @@ public class Player_Movement_Level1 : MonoBehaviour
         {
             // TimeElapsed.subtractTime();
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
-            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             Destroy(other.gameObject);
             // totalNumberOfHits++;
 

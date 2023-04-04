@@ -6,7 +6,7 @@ using Proyecto26;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-public class StackingPrototype3 : MonoBehaviour
+public class CubeLogic : MonoBehaviour
 {
     public Transform bridgeItemPrefab;
     public float bridgeOffset = 1.7f;

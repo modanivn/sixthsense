@@ -43,8 +43,8 @@ public class PanelSwitcher : MonoBehaviour
             if (timer <= 0)
             {
                 TimeElapsed.endTime();
-                int totalNumberOfJumps = gameObject.GetComponent<StackingPrototype3>().getTotalNumberOfJumps();
-                int totalNumberOfFreeze = gameObject.GetComponent<StackingPrototype3>().getTotalNumberOfFreeze();
+                int totalNumberOfJumps = gameObject.GetComponent<CubeLogic>().getTotalNumberOfJumps();
+                int totalNumberOfFreeze = gameObject.GetComponent<CubeLogic>().getTotalNumberOfFreeze();
                 int totalNumberOfFalls = gameObject.GetComponent<Player_Movement>().getTotalNumberOfFalls();
                 int totalNumberOfHits = gameObject.GetComponent<Player_Movement>().getTotalNumberOfHits();
                 List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement>().getHitLocations();

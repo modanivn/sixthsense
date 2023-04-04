@@ -61,7 +61,6 @@ public class Player_Movement : MonoBehaviour
             hitLocations.Add(new List<float>() { gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z });
             // TimeElapsed.subtractTime();
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
-            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             Destroy(other.gameObject);
             totalNumberOfHits++;
 
@@ -165,7 +164,6 @@ public class Player_Movement : MonoBehaviour
             // TimeElapsed.subtractTime();
 
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
-            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
              jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
@@ -207,6 +205,10 @@ public class Player_Movement : MonoBehaviour
 
     public void setPlayerToResetPosition(){
         gameObject.transform.position = new Vector3(-14, 2.5f, 0);
+    }
+
+    public void changeCameraToDefault(){
+        isAiming = false;
     }
 
 }
