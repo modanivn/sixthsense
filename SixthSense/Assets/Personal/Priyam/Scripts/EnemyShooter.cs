@@ -11,7 +11,7 @@ public class EnemyShooter : MonoBehaviour
     //public Transform playerTransform;
     public GameObject player;
     public TextMeshProUGUI FreezeTimerText;
-    private float repeatTime = 0.75f;
+    private float repeatTime = 1.5f;
     private float startTime = 3.0f;
     private float startShootVelocity = 15.0f;
     private float shootMultipler = 12.0f;
