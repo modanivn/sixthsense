@@ -200,4 +200,8 @@ public class Player_Movement_Level3 : MonoBehaviour
         gameObject.transform.position = new Vector3(-14, 2.5f, 0);
     }
 
+    public bool isCameraAiming(){
+        return isAiming;
+    }
+
 }

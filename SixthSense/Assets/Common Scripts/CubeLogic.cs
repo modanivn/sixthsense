@@ -9,7 +9,6 @@ using System.Linq;
 public class CubeLogic : MonoBehaviour
 {
     public Transform bridgeItemPrefab;
-    public float bridgeOffset = 1.7f;
     public float normalRespawnTime = 10.0f;
     public Transform yellowCubePrefab;
     public Transform redCubeAndTextPrefab;
@@ -18,7 +17,6 @@ public class CubeLogic : MonoBehaviour
     public GameObject monster;
     public float powerUprespawnTime = 15.0f;
     private int monsterPlatformCount = 0;
-    public int totalPlatformsNeeded = 4;
     public TextMeshProUGUI gameProgress;
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
@@ -110,12 +108,12 @@ public class CubeLogic : MonoBehaviour
     }
 
     public void makeBridgeToMonster(){
-        if(monsterPlatformCount < totalPlatformsNeeded){
+        if(monsterPlatformCount < platforms.Length){
             Vector3 position = platforms[monsterPlatformCount].transform.position;
             Instantiate(bridgeItemPrefab, position, Quaternion.identity);
             monsterPlatformCount += 1;
         }
-        gameProgress.text = monsterPlatformCount + "/4 Bridge Formed!";
+        gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
     }
 
     public void checkEndCondition(){
