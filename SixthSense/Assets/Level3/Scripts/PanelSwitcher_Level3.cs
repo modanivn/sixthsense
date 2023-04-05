@@ -8,6 +8,7 @@ public class PanelSwitcher_Level3 : MonoBehaviour
     //public float switchTime = 0f;
     public CanvasGroup fromPanel;
     public CanvasGroup toPanel;
+    [SerializeField] GameObject EndGameCanvas;
     public float timer = 60.0f;
     public float popUpTime = 2.0f;
 
@@ -49,7 +50,8 @@ public class PanelSwitcher_Level3 : MonoBehaviour
                 List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement_Level3>().getHitLocations();
                  string fallLocation = gameObject.GetComponent<Player_Movement_Level3>().getFallLocations();
                 string hitLocationsString = Level_4.formatHitLocations(hitLocations);
-                Level_3 level_3 = new Level_3(totalNumberOfFreeze, totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, false, hitLocationsString, fallLocation);
+                int bulletsShot = gameObject.GetComponent<ShootingScript>().getBulletsShot();
+                Level_3 level_3 = new Level_3(totalNumberOfFreeze, totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, false, hitLocationsString, fallLocation, bulletsShot);
                 RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/3/.json",level_3);
                 switchpanel();
 
@@ -87,11 +89,12 @@ public class PanelSwitcher_Level3 : MonoBehaviour
 
     public void switchpanel(){
         switchStarted = true;
-        fromPanel.alpha = 0f;
-        fromPanel.interactable = false;
-        fromPanel.blocksRaycasts = false;
-        toPanel.alpha = 1f;
-        toPanel.interactable = true;
-        toPanel.blocksRaycasts = true;
+        EndGameCanvas.SetActive(true);
+        // fromPanel.alpha = 0f;
+        // fromPanel.interactable = false;
+        // fromPanel.blocksRaycasts = false;
+        // toPanel.alpha = 1f;
+        // toPanel.interactable = true;
+        // toPanel.blocksRaycasts = true;
     }
 }

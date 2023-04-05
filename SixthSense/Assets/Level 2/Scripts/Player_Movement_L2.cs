@@ -152,7 +152,7 @@ public class Player_Movement_L2 : MonoBehaviour
     }
 
     public void setPlayerToResetPosition(){
-        gameObject.transform.position = new Vector3(-14, 2.5f, 0);
+        gameObject.transform.position = new Vector3(-14.09f, 2.5f, 1.91f);
     }
 
 }

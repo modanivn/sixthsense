@@ -1435,6 +1435,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 64177589}
     - target: {fileID: 5967417849167271747, guid: 90ae590901eb89f4e88f1201e3bece73, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967417849167271747, guid: 90ae590901eb89f4e88f1201e3bece73, type: 3}
       propertyPath: sensitivity
       value: 4
       objectReference: {fileID: 0}
@@ -1476,6 +1480,7 @@ MonoBehaviour:
   normalRespawnTime: 10
   yellowCubePrefab: {fileID: 4429364504576408682, guid: 27d34b6949ebad2478e30d8d091c8df9, type: 3}
   redCubeAndTextPrefab: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
+  bulletPrefab: {fileID: 0}
   greenCubeAndTextPrefab: {fileID: 2504218280534900286, guid: 724ca72b972d44839a5a6f7b191aa06c, type: 3}
   monster: {fileID: 437707536}
   powerUprespawnTime: 15
@@ -1484,6 +1489,11 @@ MonoBehaviour:
   foodPlatform: {fileID: 1065577281}
   gameProgress: {fileID: 1530126580}
   foodAvailable: {fileID: 1852316547}
+  playerw: {fileID: 0}
+  platform1: {fileID: 0}
+  platform2: {fileID: 0}
+  platform3: {fileID: 0}
+  platform4: {fileID: 0}
 --- !u!114 &160491286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1509,7 @@ MonoBehaviour:
   bridge: {fileID: 961722087}
   rotateSpeedMultiplier: 5
   jumpForceMultiplier: 1.5
-  textElement: {fileID: 52257510}
+  powerUpTextElement: {fileID: 0}
   powerUpTime: 10
 --- !u!114 &160491292
 MonoBehaviour:
@@ -1515,6 +1525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fromPanel: {fileID: 73242094}
   toPanel: {fileID: 949124815}
+  EndGameCanvas: {fileID: 0}
   timer: 300
   popUpTime: 2
   timerText: {fileID: 1285397596}
@@ -9368,7 +9379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0f06ac1fe9a52448212c66d128bd0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScenePanel: {fileID: 0}
+  nextLevelCanvas: {fileID: 0}
   player: {fileID: 160491272}
 --- !u!1 &1761943431
 GameObject:

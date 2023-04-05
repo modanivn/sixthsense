@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Proyecto26;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Cinemachine;
 
 public class Player_Movement_Level3 : MonoBehaviour
 {
@@ -20,6 +22,10 @@ public class Player_Movement_Level3 : MonoBehaviour
     public int totalNumberOfFalls;
     public List<List<float>> hitLocations = new List<List<float>>();
 
+    private bool isAiming = false;
+    public CinemachineVirtualCamera aimCamera;
+    public GameObject gun;
+
     public float jumpButtonGracePeriod;
     private float lastGroundedTime;
     private float jumpPressedTime;
@@ -30,7 +36,7 @@ public class Player_Movement_Level3 : MonoBehaviour
     private string jumpString = "";
     
     //public GameObject player;
-
+    public GameObject gameEndTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +46,7 @@ public class Player_Movement_Level3 : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0,90,0);
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
+        gameEndTrigger.SetActive(false);
 
     }
      public string getFallLocations() {
@@ -92,6 +99,29 @@ public class Player_Movement_Level3 : MonoBehaviour
         // {
         //     Jump();
         // }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            isAiming = !isAiming;
+        }
+
+        if (isAiming)
+        {
+            aimCamera.Priority = 20;
+            aimCamera.enabled = true;
+            // turn.x += Input.GetAxis("Mouse X") * sensitivity;
+            turn.y -= Input.GetAxis("Mouse Y") * sensitivity;
+            turn.y = Mathf.Clamp(turn.y, -20f, 20f);
+            // head.transform.localRotation = Quaternion.Euler(turn.y, turn.x, 0);
+            gun.transform.localRotation = Quaternion.Euler(turn.y, 180, 0);
+        }
+        else
+        {
+            aimCamera.Priority = 1;
+            aimCamera.enabled = false;
+            gun.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            turn.y = 0;
+        }
 
         if(IsGrounded())
         {
@@ -168,6 +198,10 @@ public class Player_Movement_Level3 : MonoBehaviour
 
     public void setPlayerToResetPosition(){
         gameObject.transform.position = new Vector3(-14, 2.5f, 0);
+    }
+
+    public bool isCameraAiming(){
+        return isAiming;
     }
 
 }

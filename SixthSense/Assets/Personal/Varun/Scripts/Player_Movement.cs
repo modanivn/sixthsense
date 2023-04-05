@@ -4,34 +4,30 @@ using UnityEngine;
 using Proyecto26;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class Player_Movement : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] float movementSpeed = 6f;
     [SerializeField] float jumpForce = 5f;
-
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
     public Vector2 turn;
     public Vector3 deltaMove;
     public float sensitivity = 4.0f;
-
+    private bool isAiming = false;
+    public CinemachineVirtualCamera aimCamera;
     public int totalNumberOfHits;
     public int totalNumberOfFalls;
     public List<List<float>> hitLocations = new List<List<float>>();
-
     public float jumpButtonGracePeriod;
     private float lastGroundedTime;
     private float jumpPressedTime;
-
-     private float jumpX;
+    private float jumpX;
     private float jumpZ;
-
     private string jumpString = "";
-    //public GameObject player;
-
-    // Start is called before the first frame update
+    public GameObject gun;
     void Start()
     {
         TimeElapsed.resetStopwatch();
@@ -39,8 +35,6 @@ public class Player_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
-        // Debug.Log("sensitivity start(): " + sensitivity);
-        // Set the minimum and maximum values of the slider to match the range of values for your public variable
     }
      public string getFallLocations() {
         return jumpString;
@@ -51,22 +45,12 @@ public class Player_Movement : MonoBehaviour
         if(other.gameObject.tag == "Projectile")
         {
             hitLocations.Add(new List<float>() { gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z });
-            // TimeElapsed.subtractTime();
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
-            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             Destroy(other.gameObject);
             totalNumberOfHits++;
 
         }
-        
     }
-    
-    // public void UpdateSensitivity(float value)
-    // {
-        // This function will be called whenever the slider value changes
-        // It will set the value of the public variable to the slider value
-    //     sensitivity = value;
-    // }
 
     public int getTotalNumberOfHits() {
         return totalNumberOfHits;
@@ -86,19 +70,41 @@ public class Player_Movement : MonoBehaviour
 
         float horizontalInput = -Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-
-        // rb.velocity = new Vector3(verticalInput * movementSpeed, rb.velocity.y, horizontalInput * movementSpeed);
         sensitivity = PlayerPrefs.GetFloat("sensitivity");
-        // Debug.Log("sensitivity: " + sensitivity);
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         transform.localRotation = Quaternion.Euler(0,turn.x,0);
         deltaMove = new Vector3(horizontalInput,0,-verticalInput) * movementSpeed * Time.deltaTime;
         transform.Translate(deltaMove);
 
+        if (Input.GetMouseButtonDown(1))
+        {
+            isAiming = !isAiming;
+        }
+
+        if(aimCamera != null){
+            if (isAiming)
+            {
+                aimCamera.Priority = 20;
+                aimCamera.enabled = true;
+                turn.y -= Input.GetAxis("Mouse Y") * sensitivity;
+                turn.y = Mathf.Clamp(turn.y, -20f, 20f);
+                gun.transform.localRotation = Quaternion.Euler(turn.y, 180, 0);
+            }
+            else
+            {
+                aimCamera.Priority = 1;
+                aimCamera.enabled = false;
+                gun.transform.localRotation = Quaternion.Euler(0, 180, 0);
+                turn.y = 0;
+            }
+        }
+
+
+        
 
         if(IsGrounded())
         {
-             jumpX = transform.position.x;
+            jumpX = transform.position.x;
             jumpZ = transform.position.z;
             lastGroundedTime = Time.time;
         }
@@ -110,30 +116,13 @@ public class Player_Movement : MonoBehaviour
 
         if (Mathf.Abs(lastGroundedTime - jumpPressedTime) <= jumpButtonGracePeriod)
         {
-            // Debug.Log("Jump");
             Jump();
             jumpPressedTime = -2f;
             lastGroundedTime = 0f;
         }
-        // if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        // {
-        //     Jump();
-        // }
-
 
         if (transform.position.y < -5.0f){
-            
-            // TimeElapsed.endTime();
-            // Level level = new Level(false, TimeElapsed._stopWatch.ElapsedMilliseconds, gameObject.GetComponent<StackingPrototype3>()._cubeList.Count);
-            // RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/0/.json", level);
-            // gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
-
-            // UnityEditor.EditorApplication.isPlaying = false;
-            //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            // TimeElapsed.subtractTime();
-
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
-            gameObject.GetComponent<StackingPrototype3>().emptyPlayerStack();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
              jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
@@ -143,25 +132,11 @@ public class Player_Movement : MonoBehaviour
     void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-        // jumpSound.Play();
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        // if (collision.gameObject.CompareTag("Enemy Head"))
-        // {
-        //     Destroy(collision.transform.parent.gameObject);
-        //     Jump();
-        // }
     }
 
     bool IsGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
-    }
-
-    void Rotation(){
-        // transform.Rotate(new Vector3(0,Input.GetAxis("Mouse X")*4f,0));
     }
 
     public void addForce(float multiplier){
@@ -175,6 +150,14 @@ public class Player_Movement : MonoBehaviour
 
     public void setPlayerToResetPosition(){
         gameObject.transform.position = new Vector3(-14, 2.5f, 0);
+    }
+
+    public void changeCameraToDefault(){
+        isAiming = false;
+    }
+
+    public bool isCameraAiming(){
+        return isAiming;
     }
 
 }

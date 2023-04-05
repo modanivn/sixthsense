@@ -16,7 +16,8 @@ public class Level_4
     public string hitLocations;
     public string fallLocation;
     //public int cubesCollected;
-    public Level_4(int totalNumberOfJumps, int totalNumberOfFreeze, int totalNumberOfHits, int totalNumberOfFalls, float timeToComplete, bool isComplete, string hitLocations, string fallLocation)
+    public int bulletsShot;
+    public Level_4(int totalNumberOfJumps, int totalNumberOfFreeze, int totalNumberOfHits, int totalNumberOfFalls, float timeToComplete, bool isComplete, string hitLocations, string fallLocation, int bulletsShot)
     {
         this.totalNumberOfJumps = totalNumberOfJumps;
         this.totalNumberOfFreeze = totalNumberOfFreeze;
@@ -27,6 +28,7 @@ public class Level_4
         this.isComplete = isComplete;
         this.hitLocations = hitLocations;
         this.fallLocation = fallLocation;
+        this.bulletsShot = bulletsShot;
         //this.cubesCollected = cubesCollected;
     }
 

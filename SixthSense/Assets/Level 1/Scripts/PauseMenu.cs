@@ -7,9 +7,15 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject sensitivityMenu;
+    [SerializeField] GameObject controlsMenu;
+    // [SerializeField] GameObject player;
+
+
     public void Pause() {
+        Debug.Log("Inside Pause Menu");
         pauseMenu.SetActive(true);
         sensitivityMenu.SetActive(false);
+        controlsMenu.SetActive(false);
         Time.timeScale = 0f;
     }
     public void Resume() {
@@ -21,10 +27,15 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(sceneId);
     }
     public void Quit() {
+        // player.GetComponent<Player_Movement>().changeCameraToDefault();
         SceneManager.LoadScene(0);
     }
     public void OpenSensitivityCanvas() {
         sensitivityMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+    }
+    public void OpenControlsCanvas() {
+        controlsMenu.SetActive(true);
         pauseMenu.SetActive(false);
     }
 }

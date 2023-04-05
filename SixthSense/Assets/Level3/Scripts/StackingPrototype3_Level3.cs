@@ -17,12 +17,13 @@ public class StackingPrototype3_Level3 : MonoBehaviour
     private int _cubeListIndexCounter = 0;
     Collider m_Collider;
     public GameObject head;
-    public Transform bridgeEnd;
+    // public Transform bridgeEnd;
     public Transform bridgeItemPrefab;
-    public float bridgeOffset = 1.7f;
+    // public float bridgeOffset = 1.7f;
     public float normalRespawnTime = 10.0f;
     public Transform yellowCubePrefab;
     public Transform redCubeAndTextPrefab;
+    public Transform bulletPrefab;
     public Transform greenCubeAndTextPrefab;
     public GameObject monster;
     public float powerUprespawnTime = 15.0f;
@@ -58,12 +59,17 @@ public class StackingPrototype3_Level3 : MonoBehaviour
         yield return new WaitForSeconds(rTime);
 
         Vector3 temp = cubeParent.position;
-        temp.y += 0.8f;
+        if(cubeType == "Bullet"){
+            temp.y += 0.4f;
+        }
+        else{
+            temp.y += 0.8f;
+        }
         Vector3 respawnPosition = temp;
 
         switch(cubeType){
             case "YellowCube":
-            Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            // Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
 
             case "JumpPrefab":
@@ -76,6 +82,10 @@ public class StackingPrototype3_Level3 : MonoBehaviour
 
             case "FreezePrefab":
             Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            break;
+
+            case "Bullet":
+            Instantiate(bulletPrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
         }
     }
@@ -121,12 +131,29 @@ public class StackingPrototype3_Level3 : MonoBehaviour
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             gameObject.GetComponent<NatkhatCubes_Level3>().funWithCube(3);
         }
+
+        else if(other.tag == "Bullet"){
+            
+            //Debug.Log("in on trigger");
+            Destroy(other.gameObject);
+            //Debug.Log(other);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent)); 
+        }
+
         else if(other.tag == "FreezePrefab"){
             totalNumberOfFreeze++;
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             monster.GetComponent<EnemyShooter_L3>().freezeProjectile();
         }
+
+        // else if(other.tag == "Gun"){
+        //     totalNumberOfFreeze++;
+        //     Destroy(other.gameObject);
+        //     StartCoroutine(respawnCube(other.tag,other.transform.parent));
+        //     monster.GetComponent<EnemyShooter_L3>().freezeProjectile();
+        // }
+
         else if(other.tag == "Food"){
             emptyPlayerStack();
             other.gameObject.transform.position = head.transform.position;
@@ -229,7 +256,8 @@ public class StackingPrototype3_Level3 : MonoBehaviour
             List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement_Level3>().getHitLocations();
             string hitLocationsString = Level_4.formatHitLocations(hitLocations);
             string fallLocation = gameObject.GetComponent<Player_Movement_Level3>().getFallLocations();
-            Level_3 level_3 = new Level_3(getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString, fallLocation);
+            int bulletsShot = gameObject.GetComponent<ShootingScript>().getBulletsShot();
+            Level_3 level_3 = new Level_3(getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString, fallLocation, bulletsShot);
             RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/3/.json",level_3);
             //Debug.Log("Food Fed");
             // gameObject.GetComponent<PanelSwitcher_Level3>().switchpanel();

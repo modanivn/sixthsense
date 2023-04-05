@@ -5,16 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class FeedMonsterTrigger : MonoBehaviour
 {
-    public CanvasGroup nextScenePanel;
+    // public CanvasGroup nextScenePanel;
+    [SerializeField] GameObject nextLevelCanvas;
     public GameObject player;
     private void OnTriggerEnter(Collider other){
         if(other.tag == "Player"){
-            player.GetComponent<StackingPrototype3>().checkEndCondition();
-            nextScenePanel.alpha = 1f;
+            player.GetComponent<CubeLogic>().checkEndCondition();
+            nextLevelCanvas.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
     public void nextScene() {
         SceneManager.LoadScene(0);
-        nextScenePanel.alpha = 0f;
+        Time.timeScale = 1f;
     }
 }

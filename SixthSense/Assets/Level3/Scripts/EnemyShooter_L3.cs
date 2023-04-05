@@ -11,9 +11,46 @@ public class EnemyShooter_L3 : MonoBehaviour
     //public Transform playerTransform;
     public GameObject player;
     public TextMeshProUGUI FreezeTimerText;
-    private float repeatTime = 1.25f;
-    private float startTime = 1.0f;
+    private float repeatTime = 0.75f;
+    private float startTime = 3.0f;
+    private float startShootVelocity = 15.0f;
+    private float shootMultipler = 12.0f;
     private float frozenCountDown = 10.0f;
+    private int totalTimesProjectileFrequencyReduced = 1;
+    public Image healthBarImage;
+    private float currentHealth = 1.0f;
+    private int numberOfLevels = 4;
+    private bool hasbeenHit = false;
+    
+    public GameObject gameEndTrigger;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerBullet"))
+        {
+            numberOfLevels--;
+            Debug.Log("Monster is Hit");
+            Destroy(other.gameObject);
+            repeatTime+=0.275f;
+            CancelInvoke("shootProjectile");
+            InvokeRepeating("shootProjectile", startTime, repeatTime);
+            float damage = 0.25f; // set the amount of damage to be inflicted
+            currentHealth -= damage;
+            healthBarImage.fillAmount = currentHealth;
+            if (currentHealth <= 0) {
+                gameEndTrigger.SetActive(true);
+                gameObject.SetActive(false);
+                healthBarImage.fillAmount =  0;
+                currentHealth = 0.0f;
+                repeatTime = 1000.0f;
+                CancelInvoke("shootProjectile");
+            // Add any additional logic here for when the monster's health reaches 0
+            }
+            
+
+            // Add any additional logic here for when the monster collides with a projectile
+        }
+    }
 
     public void shootProjectile()
     {
@@ -22,14 +59,17 @@ public class EnemyShooter_L3 : MonoBehaviour
         Vector3 direction = player.transform.position - transform.position;
 
         Rigidbody projectileRigidBody = projectile.GetComponent<Rigidbody>();
-        projectileRigidBody.velocity = direction.normalized * 15;
+        projectileRigidBody.velocity = direction.normalized * shootMultipler;
     }
 
     void Start()
     {
         // FreezeTimerText.text = '';
         FreezeTimerText.gameObject.SetActive(false);
-        InvokeRepeating("shootProjectile", startTime, repeatTime);
+        // gameEndTrigger = GameObject.FindWithTag("GameEndPlatform");
+        if(currentHealth > 0.0f){
+            InvokeRepeating("shootProjectile", startTime, repeatTime);
+        }
 
     }
 
@@ -57,11 +97,32 @@ public class EnemyShooter_L3 : MonoBehaviour
         FreezeTimerText.text = "";
         FreezeTimerText.gameObject.SetActive(false);
         CancelInvoke("UpdateCountdown");
-        InvokeRepeating("shootProjectile", startTime, repeatTime);
+        if(currentHealth > 0.0f){
+            InvokeRepeating("shootProjectile", startTime, repeatTime);
+        }
    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+   public void reduceProjectileVelocity(){
+
+        if(numberOfLevels > totalTimesProjectileFrequencyReduced){
+            Debug.Log("Health decresed by ");
+            Debug.Log(numberOfLevels);
+            float reducible = (repeatTime/numberOfLevels) * 2;
+            repeatTime += reducible;
+            CancelInvoke("shootProjectile");
+            InvokeRepeating("shootProjectile", startTime, repeatTime);
+            // totalTimesProjectileFrequencyReduced += 1;
+            float percentageReduce = 1/(float)numberOfLevels;
+            currentHealth = currentHealth - percentageReduce;
+            healthBarImage.fillAmount =  currentHealth;
+            
+        }
+        else{
+            healthBarImage.fillAmount =  0;
+            currentHealth = 0.0f;
+            repeatTime = 1000.0f;
+            CancelInvoke("shootProjectile");
+        }
+        return;
+   }
 }

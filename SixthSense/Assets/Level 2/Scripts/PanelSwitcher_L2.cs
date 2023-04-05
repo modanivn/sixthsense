@@ -7,6 +7,7 @@ public class PanelSwitcher_L2 : MonoBehaviour
     //public float switchTime = 0f;
     public CanvasGroup fromPanel;
     public CanvasGroup toPanel;
+    [SerializeField] GameObject EndGameCanvas;
     public float timer = 60.0f;
     public float popUpTime = 2.0f;
 
@@ -63,7 +64,7 @@ public class PanelSwitcher_L2 : MonoBehaviour
         // Debug.Log("method called : "  + timer);
         int minutes = Mathf.FloorToInt(timer / 60f);
         int seconds = Mathf.FloorToInt(timer % 60f);
-        timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = "Timer: " + string.Format("{0:00}:{1:00}", minutes, seconds);
         InvokeRepeating("Countdown",0.0f,1.0f);
         // if(popUpTime<=0f){
         //     popUpTime = 3.0f;
@@ -86,11 +87,12 @@ public class PanelSwitcher_L2 : MonoBehaviour
 
     public void switchpanel(){
         switchStarted = true;
-        fromPanel.alpha = 0f;
-        fromPanel.interactable = false;
-        fromPanel.blocksRaycasts = false;
-        toPanel.alpha = 1f;
-        toPanel.interactable = true;
-        toPanel.blocksRaycasts = true;
+        EndGameCanvas.SetActive(true);
+        // fromPanel.alpha = 0f;
+        // fromPanel.interactable = false;
+        // fromPanel.blocksRaycasts = false;
+        // toPanel.alpha = 1f;
+        // toPanel.interactable = true;
+        // toPanel.blocksRaycasts = true;
     }
 }

@@ -35,6 +35,8 @@ public class Stacking_level_2 : MonoBehaviour
     private bool foodCollected = false;
     public TextMeshProUGUI gameProgress;
     public TextMeshProUGUI foodAvailable;
+    public GameObject platform1;
+    public GameObject platform2;
     
     private int totalNumberOfJumps;
 
@@ -59,7 +61,7 @@ public class Stacking_level_2 : MonoBehaviour
 
         switch(cubeType){
             case "YellowCube":
-            Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            // Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
 
             case "JumpPrefab":
@@ -161,15 +163,22 @@ public class Stacking_level_2 : MonoBehaviour
     public void makeBridgeToMonster(){
         if(monsterPlatformCount <= totalPlatformsNeeded){
             foreach(GameObject currentStackItem in _cubeList){
-                if(monsterPlatformCount >= totalPlatformsNeeded){
+                if(monsterPlatformCount > totalPlatformsNeeded){
                     break;
                 }
                 else{
-                    Instantiate(bridgeItemPrefab, bridgeEnd.position, bridgeEnd.rotation);
-                    Vector3 temp = bridgeEnd.position;
-                    temp.x += bridgeOffset;
-                    bridgeEnd.position = temp;
-                    monsterPlatformCount += 1;
+                    if(monsterPlatformCount==0){
+
+                        Vector3 position = platform1.transform.position;
+                        Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+                        monsterPlatformCount += 1;
+                    }
+
+                    else if (monsterPlatformCount==1){
+                        Vector3 position = platform2.transform.position;
+                        Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+                        monsterPlatformCount += 1;                
+                    }
                 }
         }
         }
@@ -179,7 +188,6 @@ public class Stacking_level_2 : MonoBehaviour
             // spawnFoodItem();
             // foodAvailable.text = "Food available to feed the monster!";
         }
-
         gameProgress.text = monsterPlatformCount + "/2 Yellow Cubes Collected";
     }
 
