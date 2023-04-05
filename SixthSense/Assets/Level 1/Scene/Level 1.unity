@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -373,7 +373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28597635}
   m_LocalRotation: {x: -0.049924593, y: -0.70534223, z: -0.049924605, w: 0.7053421}
-  m_LocalPosition: {x: -17.57857, y: 3.2227597, z: 0.00000047683716}
+  m_LocalPosition: {x: -17.57857, y: 3.2227597, z: 0.00000039488077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -922,108 +922,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1624137456706895825, guid: 90ae590901eb89f4e88f1201e3bece73, type: 3}
   m_PrefabInstance: {fileID: 160491271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &160491293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160491272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc080591850546d2a41aa972f8e2905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &160491300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160491272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f801fd1852bb5499d8e03314fedcb4e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubeElement: {fileID: 1720526945}
-  _cubeList: []
-  head: {fileID: 1110600219}
-  bridgeEnd: {fileID: 0}
-  bridgeItemPrefab: {fileID: 5824297460516156512, guid: 3d6e3e51519aaf2479968bd20d78a6cb, type: 3}
-  bridgeOffset: 4
-  normalRespawnTime: 10
-  yellowCubePrefab: {fileID: 4429364504576408682, guid: 27d34b6949ebad2478e30d8d091c8df9, type: 3}
-  redCubeAndTextPrefab: {fileID: 0}
-  greenCubeAndTextPrefab: {fileID: 0}
-  monster: {fileID: 0}
-  powerUprespawnTime: 15
-  totalPlatformsNeeded: 4
-  foodPrefab: {fileID: 6658535657435225041, guid: 8b86072137304314fbf153dcc75186eb, type: 3}
-  foodPlatform: {fileID: 1065577281}
-  gameProgress: {fileID: 1530126580}
-  foodAvailable: {fileID: 1852316547}
-  platform1: {fileID: 1663378960}
-  platform2: {fileID: 1354004523}
---- !u!114 &160491301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160491272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fee23cc535d214e17a5badf434718e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 6
-  jumpForce: 5
-  groundCheck: {fileID: 160491273}
-  ground:
-    serializedVersion: 2
-    m_Bits: 64
-  turn: {x: 0, y: 0}
-  deltaMove: {x: 0, y: 0, z: 0}
-  sensitivity: 4
-  totalNumberOfFalls: 0
-  jumpButtonGracePeriod: 0.5
---- !u!114 &160491302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160491272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21cfc4f4b826b44dab71417b4274b431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bridge: {fileID: 961722087}
-  rotateSpeedMultiplier: 5
-  jumpForceMultiplier: 1.5
-  textElement: {fileID: 52257510}
-  powerUpTime: 10
---- !u!114 &160491308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160491272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52d09fd7c4e8744009174a0cbfef6a21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fromPanel: {fileID: 73242094}
-  toPanel: {fileID: 0}
-  EndGameCanvas: {fileID: 838523850}
-  timer: 150
-  popUpTime: 2
-  timerText: {fileID: 1285397596}
-  Penalty: {fileID: 414814734}
 --- !u!108 &160491309
 Light:
   m_ObjectHideFlags: 0
@@ -1086,6 +984,93 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &160491310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160491272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc925fd33947144458e6a4e866085f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndGameCanvas: {fileID: 838523850}
+  timer: 60
+  popUpTime: 2
+  timerText: {fileID: 1285397596}
+  Penalty: {fileID: 414814734}
+--- !u!114 &160491311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160491272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae291ff5fe7a7f4b8925446fdfb6ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 6
+  jumpForce: 5
+  groundCheck: {fileID: 160491273}
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
+  turn: {x: 0, y: 0}
+  deltaMove: {x: 0, y: 0, z: 0}
+  sensitivity: 4
+  aimCamera: {fileID: 0}
+  totalNumberOfHits: 0
+  totalNumberOfFalls: 0
+  jumpButtonGracePeriod: 0
+  gun: {fileID: 0}
+--- !u!114 &160491312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160491272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c882eb15f41864498af6f5d835f5ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bridge: {fileID: 961722087}
+  rotateSpeedMultiplier: 5
+  jumpForceMultiplier: 1.5
+  powerUpTextElement: {fileID: 52257510}
+  powerUpTime: 10
+--- !u!114 &160491313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160491272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8152eb5002cba7e439dae4dc6fb84b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bridgeItemPrefab: {fileID: 5824297460516156512, guid: 3d6e3e51519aaf2479968bd20d78a6cb, type: 3}
+  normalRespawnTime: 10
+  yellowCubePrefab: {fileID: 4429364504576408682, guid: 27d34b6949ebad2478e30d8d091c8df9, type: 3}
+  redCubeAndTextPrefab: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
+  bulletPrefab: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+  greenCubeAndTextPrefab: {fileID: 2504218280534900286, guid: 724ca72b972d44839a5a6f7b191aa06c, type: 3}
+  monster: {fileID: 0}
+  powerUprespawnTime: 15
+  gameProgress: {fileID: 1530126580}
+  platforms:
+  - {fileID: 1663378960}
+  - {fileID: 1354004523}
+  activeCubes:
+  - {fileID: 2003069048}
+  - {fileID: 1188766350}
 --- !u!1 &186101789
 GameObject:
   m_ObjectHideFlags: 0
@@ -4880,7 +4865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1227264978190467137, guid: 0e7dbe63016a5480cafa05591cbc9dfb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00000047683716
+      value: 0.00000039488077
       objectReference: {fileID: 0}
     - target: {fileID: 1227264978190467137, guid: 0e7dbe63016a5480cafa05591cbc9dfb, type: 3}
       propertyPath: m_LocalRotation.w

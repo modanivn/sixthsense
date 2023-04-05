@@ -13,8 +13,7 @@ public class FeedMonsterTrigger_Level1 : MonoBehaviour
     public GameObject player;
     private void OnTriggerEnter(Collider other){
         if(other.tag == "Player"){
-            player.GetComponent<StackingPrototype3_Level1>().checkEndCondition();
-            // nextScenePanel.alpha = 1f;
+            player.GetComponent<CubeLogic>().checkEndCondition();
             nextLevelCanvas.SetActive(true);
             Time.timeScale = 0f;
         }
@@ -23,6 +22,5 @@ public class FeedMonsterTrigger_Level1 : MonoBehaviour
     public void nextScene() {
         SceneManager.LoadScene(3);
         Time.timeScale = 1f;
-        // nextScenePanel.alpha = 0f;
     }
 }
