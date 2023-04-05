@@ -32,7 +32,7 @@ public class MonsterMovement : MonoBehaviour
             journeyLength = Vector3.Distance(startPoint.position, endPoint.position);
             float distCovered = (Time.time - startTime) * speed;
             float fracJourney = distCovered / journeyLength;
-            transform.position = Vector3.Lerp(startPoint.position, endPoint.position, 0.00115f);
+            transform.position = Vector3.Lerp(startPoint.position, endPoint.position, 0.02f);
         }
     }
 
