@@ -28,7 +28,6 @@ public class Player_Movement : MonoBehaviour
     private float jumpZ;
     private string jumpString = "";
     public GameObject gun;
-    public GameObject gameEndTrigger;
     void Start()
     {
         TimeElapsed.resetStopwatch();
@@ -36,7 +35,6 @@ public class Player_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
-        gameEndTrigger.SetActive(false);
     }
      public string getFallLocations() {
         return jumpString;
@@ -83,21 +81,24 @@ public class Player_Movement : MonoBehaviour
             isAiming = !isAiming;
         }
 
-        if (isAiming)
-        {
-            aimCamera.Priority = 20;
-            aimCamera.enabled = true;
-            turn.y -= Input.GetAxis("Mouse Y") * sensitivity;
-            turn.y = Mathf.Clamp(turn.y, -20f, 20f);
-            gun.transform.localRotation = Quaternion.Euler(turn.y, 180, 0);
+        if(aimCamera != null){
+            if (isAiming)
+            {
+                aimCamera.Priority = 20;
+                aimCamera.enabled = true;
+                turn.y -= Input.GetAxis("Mouse Y") * sensitivity;
+                turn.y = Mathf.Clamp(turn.y, -20f, 20f);
+                gun.transform.localRotation = Quaternion.Euler(turn.y, 180, 0);
+            }
+            else
+            {
+                aimCamera.Priority = 1;
+                aimCamera.enabled = false;
+                gun.transform.localRotation = Quaternion.Euler(0, 180, 0);
+                turn.y = 0;
+            }
         }
-        else
-        {
-            aimCamera.Priority = 1;
-            aimCamera.enabled = false;
-            gun.transform.localRotation = Quaternion.Euler(0, 180, 0);
-            turn.y = 0;
-        }
+
 
         
 

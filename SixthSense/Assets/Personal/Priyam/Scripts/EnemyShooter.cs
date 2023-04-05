@@ -16,6 +16,7 @@ public class EnemyShooter : MonoBehaviour
     private float frozenCountDown = 10.0f;
     public Image healthBarImage;
     public float currentHealth = 1.0f;
+    public GameObject gameEndTrigger;
 
 
     void OnTriggerEnter(Collider other)
@@ -87,6 +88,9 @@ public class EnemyShooter : MonoBehaviour
             InvokeRepeating("shootProjectile", startTime, repeatTime);
         }
         else{
+            gameEndTrigger.SetActive(true);
+            gameObject.transform.position = new Vector3(1000.0f, 1000.0f, 1000.0f);
+            Object.Destroy(gameObject, 10.0f);
             CancelInvoke("shootProjectile");
         }
         return;

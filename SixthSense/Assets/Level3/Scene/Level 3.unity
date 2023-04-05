@@ -1088,7 +1088,6 @@ MonoBehaviour:
   totalNumberOfFalls: 0
   jumpButtonGracePeriod: 0.3
   gun: {fileID: 558437193}
-  gameEndTrigger: {fileID: 1729023885}
 --- !u!114 &160491291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9629,7 +9628,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8476490397818195108, guid: 8f2791a8654dc4ec3b50f04b6e47ae5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9736,6 +9735,7 @@ MonoBehaviour:
   FreezeTimerText: {fileID: 1119858473}
   healthBarImage: {fileID: 1842341767}
   currentHealth: 1
+  gameEndTrigger: {fileID: 1729023885}
 --- !u!1 &1556157754
 GameObject:
   m_ObjectHideFlags: 0
@@ -10741,7 +10741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1729023886
 Transform:
   m_ObjectHideFlags: 0

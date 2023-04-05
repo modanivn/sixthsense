@@ -25,26 +25,29 @@ public class ShootingScript : MonoBehaviour
     }
     public void Update()
     {
-        bool isAiming = gameObject.GetComponent<Player_Movement>().isCameraAiming();
+        if(gun != null){
+            bool isAiming = gameObject.GetComponent<Player_Movement>().isCameraAiming();
 
-        if (isAiming){
-            crosshair.SetActive(true);
-        }
-        else{
-            crosshair.SetActive(false);
+            if (isAiming){
+                crosshair.SetActive(true);
+            }
+            else{
+                crosshair.SetActive(false);
+            }
+
+            if (Input.GetMouseButtonDown(0) && bulletCount > 0)
+            {
+                bulletCount --;
+                totalShots++;
+                bulletText.SetText((bulletCount) +" bullets left" );
+                Shoot();
+                
+            }
+            if(bulletCount == 0) {
+                bulletText.enabled = false;
+            }
         }
 
-        if (Input.GetMouseButtonDown(0) && bulletCount > 0)
-        {
-            bulletCount --;
-            totalShots++;
-            bulletText.SetText((bulletCount) +" bullets left" );
-            Shoot();
-            
-        }
-        if(bulletCount == 0) {
-            bulletText.enabled = false;
-        }
     }
 
     public int getBulletsShot() {

@@ -15,8 +15,8 @@ public class CubeLogic : MonoBehaviour
     public Transform bulletPrefab;
     public Transform greenCubeAndTextPrefab;
     public GameObject monster;
-    public float powerUprespawnTime = 15.0f;
     private int monsterPlatformCount = 0;
+    public float powerUprespawnTime = 15.0f;
     public TextMeshProUGUI gameProgress;
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
@@ -123,11 +123,11 @@ public class CubeLogic : MonoBehaviour
             int totalNumberOfFalls = gameObject.GetComponent<Player_Movement>().getTotalNumberOfFalls();
             float totalTimeTaken = TimeElapsed._stopWatch.ElapsedMilliseconds + (5000.0f*totalNumberOfFalls) + (5000.0f*totalNumberOfHits);
             List<List<float>> hitLocations = gameObject.GetComponent<Player_Movement>().getHitLocations();
-            string hitLocationsString = Level_4.formatHitLocations(hitLocations);
+            string hitLocationsString = LevelAnalytics.formatHitLocations(hitLocations);
             string fallLocation = gameObject.GetComponent<Player_Movement>().getFallLocations();
             int bulletsShot = gameObject.GetComponent<ShootingScript>().getBulletsShot();
-            Level_4 level_4 = new Level_4(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString, fallLocation, bulletsShot);
-            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",level_4);
+            LevelAnalytics levelAnalytics = new LevelAnalytics(getTotalNumberOfJumps(), getTotalNumberOfFreeze(), totalNumberOfHits, totalNumberOfFalls, TimeElapsed._stopWatch.ElapsedMilliseconds, true, hitLocationsString, fallLocation, bulletsShot);
+            RestClient.Post("https://unityanalytics-d1032-default-rtdb.firebaseio.com/4/.json",levelAnalytics);
         }
     }
 
