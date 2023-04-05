@@ -982,23 +982,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1624137456706895825, guid: 90ae590901eb89f4e88f1201e3bece73, type: 3}
   m_PrefabInstance: {fileID: 160491271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &160491280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160491272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90ffc6622fac44a7b60b996b5bc6699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bridge: {fileID: 961722087}
-  rotateSpeedMultiplier: 5
-  jumpForceMultiplier: 1.5
-  powerUpTextElement: {fileID: 806669725}
-  powerUpTime: 10
 --- !u!114 &160491288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +1135,23 @@ MonoBehaviour:
   popUpTime: 2
   timerText: {fileID: 786770750}
   Penalty: {fileID: 1607269818}
+--- !u!114 &160491293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160491272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c882eb15f41864498af6f5d835f5ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bridge: {fileID: 961722087}
+  rotateSpeedMultiplier: 5
+  jumpForceMultiplier: 1.5
+  powerUpTextElement: {fileID: 806669725}
+  powerUpTime: 10
 --- !u!4 &163919772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
