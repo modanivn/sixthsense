@@ -1536,7 +1536,7 @@ MonoBehaviour:
   aimCamera: {fileID: 0}
   totalNumberOfHits: 0
   totalNumberOfFalls: 0
-  jumpButtonGracePeriod: 0
+  jumpButtonGracePeriod: 0.5
   gun: {fileID: 0}
 --- !u!114 &160491313
 MonoBehaviour:
