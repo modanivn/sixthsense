@@ -7,6 +7,15 @@ public class Cube : MonoBehaviour
     [SerializeField] private float followSpeed;
     [SerializeField] float speed = 150f;
 
+     void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerBullet"))
+        {
+            Debug.Log("Bullet Hit Cube");
+            
+        }
+    }
+
     public void UpdateCubePosition(Transform followedCube, bool isFollowStart)
     {
         StartCoroutine(StartFollowingToLastCubePosition(followedCube, isFollowStart));
