@@ -53,8 +53,13 @@ public class Player_Movement : MonoBehaviour
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
             Destroy(other.gameObject);
             totalNumberOfHits++;
-
         }
+        if(other.gameObject.tag == "dangerCube")
+        {
+            gameObject.GetComponent<PanelSwitcher>().reduceTime();
+            Destroy(other.gameObject);
+        }
+
     }
 
     public int getTotalNumberOfHits() {
