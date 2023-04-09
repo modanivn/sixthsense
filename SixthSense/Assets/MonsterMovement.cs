@@ -11,6 +11,7 @@ public class MonsterMovement : MonoBehaviour
     private float startTime;
     private float journeyLength;
     public GameObject player;
+    public float monsterSpeed = 4.0f;
 
     void Start()
     {
@@ -29,11 +30,10 @@ public class MonsterMovement : MonoBehaviour
         {
             startPoint = transform;
             endPoint = closestObject.transform;
-            journeyLength = Vector3.Distance(startPoint.position, endPoint.position);
-            float distCovered = (Time.time - startTime) * speed;
-            float fracJourney = distCovered / journeyLength;
-            transform.position = Vector3.Lerp(startPoint.position, endPoint.position, 0.001f);
-            // transform.rotation = Quaternion.LookRotation (new Vector3(endPoint.position.x,endPoint.position.y,endPoint.position.z),Vector3.up);
+            Vector3 direction = (endPoint.position - startPoint.position).normalized;
+            transform.position = transform.position + (direction * (monsterSpeed * Time.deltaTime));
+            Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
+            transform.rotation = rotation;
         }
     }
 
