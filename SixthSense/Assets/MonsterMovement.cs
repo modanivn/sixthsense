@@ -33,6 +33,7 @@ public class MonsterMovement : MonoBehaviour
             float distCovered = (Time.time - startTime) * speed;
             float fracJourney = distCovered / journeyLength;
             transform.position = Vector3.Lerp(startPoint.position, endPoint.position, 0.001f);
+            // transform.rotation = Quaternion.LookRotation (new Vector3(endPoint.position.x,endPoint.position.y,endPoint.position.z),Vector3.up);
         }
     }
 
