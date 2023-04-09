@@ -38,6 +38,8 @@ public class Player_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
+        Screen.lockCursor = true;
+
     }
      public string getFallLocations() {
         return jumpString;
