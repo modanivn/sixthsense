@@ -6,13 +6,28 @@ public class Cube : MonoBehaviour
 {
     [SerializeField] private float followSpeed;
     [SerializeField] float speed = 150f;
+    
+
+    private Material originalMaterial;
+    private Material currentMaterial;
+    private bool isChangingMaterial = false;
+    public Material redMaterial;
+    private string originalTag;
+
+
+    void Start()
+    {
+        Renderer renderer = GetComponent<Renderer>();
+        originalMaterial = renderer.material;
+        currentMaterial = originalMaterial;
+        originalTag = gameObject.tag;
+    }
 
      void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerBullet"))
+        if (other.gameObject.CompareTag("PlayerBullet") && !isChangingMaterial)
         {
-            Debug.Log("Bullet Hit Cube");
-            
+            StartCoroutine(ChangeMaterialForSeconds(redMaterial, 10f));
         }
     }
 
@@ -31,6 +46,19 @@ public class Cube : MonoBehaviour
                 followedCube.position.y + 0.1f,
                 Mathf.Lerp(transform.position.z, followedCube.position.z, followSpeed * Time.deltaTime));
         }
+    }
+
+    IEnumerator ChangeMaterialForSeconds(Material newMaterial, float duration)
+    {
+        isChangingMaterial = true;
+        currentMaterial = newMaterial;
+        GetComponent<Renderer>().material = currentMaterial;
+        gameObject.tag = "dangerCube";
+        yield return new WaitForSeconds(duration);
+        currentMaterial = originalMaterial;
+        GetComponent<Renderer>().material = currentMaterial;
+        gameObject.tag = originalTag;
+        isChangingMaterial = false;
     }
 
     public void update() {
