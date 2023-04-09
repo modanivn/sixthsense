@@ -90,7 +90,6 @@ public class CubeLogic : MonoBehaviour
             StartCoroutine(respawnCube(other.tag,other.transform.parent)); 
         }
 
-
         else if(other.tag == "FreezePrefab"){
             totalNumberOfFreeze++;
             Destroy(other.gameObject);

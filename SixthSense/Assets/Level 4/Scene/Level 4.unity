@@ -4290,6 +4290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreezePrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1442453423111612214, guid: f442db95438394ff790749629bfd8d88, type: 3}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: d5a7b4349160dbf4bb8d07c6f183085a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f442db95438394ff790749629bfd8d88, type: 3}
 --- !u!4 &816503263 stripped
