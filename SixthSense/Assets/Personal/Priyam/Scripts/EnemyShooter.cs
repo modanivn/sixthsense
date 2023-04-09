@@ -56,10 +56,10 @@ public class EnemyShooter : MonoBehaviour
    {
         FreezeTimerText.gameObject.SetActive(true);
         CancelInvoke("shootProjectile");
-        frozenCountDown = 10.0f;
+        frozenCountDown = 9.0f;
         FreezeTimerText.text = "Monster Frozen for " + frozenCountDown.ToString() + " seconds.";
-        InvokeRepeating("UpdateCountdown", 0.0f, 1.0f);
         Invoke("unfreezeProjectile",10.0f);
+        InvokeRepeating("UpdateCountdown", 0.0f, 1.0f);
    }
 
    void UpdateCountdown() {
