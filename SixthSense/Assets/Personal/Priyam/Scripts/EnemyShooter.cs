@@ -27,12 +27,19 @@ public class EnemyShooter : MonoBehaviour
             decreaseMonsterHealth();
             
         }
-        if (other.gameObject.CompareTag("YellowCube")) {
+        if (other.gameObject.CompareTag("dangerCube")) {
+            decreaseMonsterHealth();
+            player.GetComponent<CubeLogic>().removeFromActiveCubes(other.gameObject.transform);
+            StartCoroutine(player.GetComponent<CubeLogic>().respawnCube("YellowCube",other.transform.parent));
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.CompareTag("YellowCube")) {
             increaseMonsterHealth();
             player.GetComponent<CubeLogic>().removeFromActiveCubes(other.gameObject.transform);
             StartCoroutine(player.GetComponent<CubeLogic>().respawnCube(other.tag,other.transform.parent));
             Destroy(other.gameObject);
         }
+
     }
 
     public void shootProjectile()
