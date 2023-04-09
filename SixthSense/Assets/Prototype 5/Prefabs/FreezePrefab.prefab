@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6777430304385661995}
   - component: {fileID: 792532137888571049}
   - component: {fileID: 7739448348515474598}
-  m_Layer: 6
+  - component: {fileID: 4395550467119308196}
+  m_Layer: 7
   m_Name: FreezeCube
-  m_TagString: Untagged
+  m_TagString: RedCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,11 +93,26 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843346260584602276}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.9999999, y: 0.99999994, z: 0.99999976}
   m_Center: {x: -0.0000009567298, y: 0.00000017881393, z: -0.0000038176777}
+--- !u!114 &4395550467119308196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843346260584602276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a6e6d03cb9ac74cae2e88c098608ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followSpeed: 20
+  speed: 150
+  redMaterial: {fileID: 0}
 --- !u!1 &1442453421458324533
 GameObject:
   m_ObjectHideFlags: 0
