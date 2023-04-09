@@ -16980,6 +16980,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 264290385}
     - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: respawnX
+      value: -10.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: respawnY
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: respawnZ
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: aimCamera
       value: 
       objectReference: {fileID: 726462382}

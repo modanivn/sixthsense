@@ -28,6 +28,9 @@ public class Player_Movement : MonoBehaviour
     private float jumpZ;
     private string jumpString = "";
     public GameObject gun;
+    public float respawnX = -14.0f;
+    public float respawnY = 2.5f;
+    public float respawnZ = 0f;
     void Start()
     {
         TimeElapsed.resetStopwatch();
@@ -149,7 +152,7 @@ public class Player_Movement : MonoBehaviour
     }
 
     public void setPlayerToResetPosition(){
-        gameObject.transform.position = new Vector3(-14, 2.5f, 0);
+        gameObject.transform.position = new Vector3(respawnX, respawnY, respawnZ);
     }
 
     public void changeCameraToDefault(){
