@@ -19779,6 +19779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterHealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 5702657196118779411, guid: 2e9fbaa90723341279131414adedc530, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5702657196290963044, guid: 2e9fbaa90723341279131414adedc530, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -8987,6 +8987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterHealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 5702657196118779411, guid: 2e9fbaa90723341279131414adedc530, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e9fbaa90723341279131414adedc530, type: 3}
 --- !u!224 &1385296526 stripped
