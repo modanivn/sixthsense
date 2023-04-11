@@ -14,7 +14,6 @@ public class CubeLogic : MonoBehaviour
     public Transform redCubeAndTextPrefab;
     public Transform bulletPrefab;
     public Transform greenCubeAndTextPrefab;
-    public GameObject monster;
     private int monsterPlatformCount = 0;
     public float powerUprespawnTime = 15.0f;
     public TextMeshProUGUI gameProgress;
@@ -22,6 +21,8 @@ public class CubeLogic : MonoBehaviour
     private int totalNumberOfJumps;
     public GameObject[] platforms;
     [SerializeField] List<Transform> activeCubes = new List<Transform>();
+    [SerializeField] List<GameObject> monsters = new List<GameObject>();
+
 
     void Start(){
         TimeElapsed.resetStopwatch();
@@ -95,7 +96,9 @@ public class CubeLogic : MonoBehaviour
             totalNumberOfFreeze++;
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
-            monster.GetComponent<EnemyShooter>().freezeProjectile();
+            foreach(GameObject monster in monsters){
+                monster.GetComponent<EnemyShooter>().freezeProjectile();
+            }
         }
     }
 

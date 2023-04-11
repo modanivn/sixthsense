@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterMovement : MonoBehaviour
 {
     private List<Transform> targetObjects;
-    public float speed = 0.001f;
+    // public float speed = 0.001f;
     private Transform startPoint;
     private Transform endPoint;
     private float startTime;
