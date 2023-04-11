@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -186,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28597635}
   m_LocalRotation: {x: 0.12307365, y: 0.7205902, z: -0.13249238, w: 0.6693642}
-  m_LocalPosition: {x: -17.57857, y: 3.2227597, z: 0.00000047683716}
+  m_LocalPosition: {x: -17.57857, y: 3.2227597, z: 0.00000039488077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1266,7 +1266,6 @@ GameObject:
   - component: {fileID: 159890022}
   - component: {fileID: 159890021}
   - component: {fileID: 159890020}
-  - component: {fileID: 159890024}
   m_Layer: 5
   m_Name: NextLevelCanvas
   m_TagString: Untagged
@@ -1356,21 +1355,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &159890024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159890018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba0f06ac1fe9a52448212c66d128bd0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneToLoad: 6
-  nextLevelCanvas: {fileID: 159890018}
-  player: {fileID: 1624137456565311708}
 --- !u!1 &190886794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,7 +3557,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 159890024}
+      - m_Target: {fileID: 1729023891}
         m_TargetAssemblyTypeName: FeedMonsterTrigger, Assembly-CSharp
         m_MethodName: nextScene
         m_Mode: 1
@@ -5420,7 +5404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1227264978190467137, guid: 0e7dbe63016a5480cafa05591cbc9dfb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00000047683716
+      value: 0.00000039488077
       objectReference: {fileID: 0}
     - target: {fileID: 1227264978190467137, guid: 0e7dbe63016a5480cafa05591cbc9dfb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12152,7 +12136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d75edf63682343609ded2803c5f9ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   player: {fileID: 1624137456565311708}
   monsterSpeed: 4
 --- !u!114 &2022523184
@@ -13148,7 +13131,6 @@ MonoBehaviour:
   redCubeAndTextPrefab: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
   bulletPrefab: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
   greenCubeAndTextPrefab: {fileID: 2853566590130333187, guid: beb9b2e4df23142e2b5e499da45f69a3, type: 3}
-  monster: {fileID: 2022523181}
   powerUprespawnTime: 15
   gameProgress: {fileID: 2025922909}
   platforms:
@@ -13161,6 +13143,7 @@ MonoBehaviour:
   - {fileID: 1468679386}
   - {fileID: 1934138546}
   - {fileID: 2003069048}
+  monsters: []
 --- !u!114 &1624137456565311738
 MonoBehaviour:
   m_ObjectHideFlags: 0
