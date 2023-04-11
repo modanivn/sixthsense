@@ -9,7 +9,23 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject sensitivityMenu;
     [SerializeField] GameObject controlsMenu;
     // [SerializeField] GameObject player;
+    bool pauseGameToggle = true;
 
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (pauseGameToggle) 
+            {
+                Pause();
+            } 
+            else 
+            {
+                Resume();
+            }
+            pauseGameToggle = !pauseGameToggle;
+        }
+    }
 
     public void Pause() {
         Debug.Log("Inside Pause Menu");
@@ -38,4 +54,5 @@ public class PauseMenu : MonoBehaviour
         controlsMenu.SetActive(true);
         pauseMenu.SetActive(false);
     }
+
 }
