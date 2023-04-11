@@ -14,7 +14,7 @@ public class EnemyShooter : MonoBehaviour
     private float startShootVelocity = 15.0f;
     private float shootMultipler = 12.0f;
     private float frozenCountDown = 10.0f;
-    public Image healthBarImage;
+    public Slider monsterHealth;
     public float currentHealth = 1.0f;
     public GameObject gameEndTrigger;
 
@@ -88,7 +88,7 @@ public class EnemyShooter : MonoBehaviour
         float healthDecreses = 0.2f;
         currentHealth -= healthDecreses;
         currentHealth = (float)System.Math.Round(Mathf.Max(0.0f,currentHealth),1);
-        healthBarImage.fillAmount = currentHealth;
+        monsterHealth.value = currentHealth;
         if(currentHealth > 0.0f){
             repeatTime = Mathf.Abs(1.5f + (1.0f-currentHealth));
             CancelInvoke("shootProjectile");
@@ -107,7 +107,7 @@ public class EnemyShooter : MonoBehaviour
         float healthIncrease = 0.1f;
         currentHealth += healthIncrease;
         currentHealth = Mathf.Min(1.0f,currentHealth);
-        healthBarImage.fillAmount = currentHealth;
+        monsterHealth.value = currentHealth;
         repeatTime = Mathf.Abs(1.5f + (1.0f-currentHealth));
         CancelInvoke("shootProjectile");
         InvokeRepeating("shootProjectile", startTime, repeatTime);
