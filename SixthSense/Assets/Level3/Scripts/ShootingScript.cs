@@ -75,7 +75,6 @@ public class ShootingScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            Debug.Log(bulletCount);
             initialbullet = bulletCount;
             Transform parentTransform = bulletbar.transform;
             bulletCount += 4;

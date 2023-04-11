@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FeedMonsterTrigger : MonoBehaviour
 {
+    public int nextSceneToLoad = 0;
     // public CanvasGroup nextScenePanel;
     [SerializeField] GameObject nextLevelCanvas;
     public GameObject player;
@@ -12,11 +13,12 @@ public class FeedMonsterTrigger : MonoBehaviour
         if(other.tag == "Player"){
             player.GetComponent<CubeLogic>().checkEndCondition();
             nextLevelCanvas.SetActive(true);
+            Screen.lockCursor = false;
             Time.timeScale = 0f;
         }
     }
     public void nextScene() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(nextSceneToLoad);
         Time.timeScale = 1f;
     }
 }
