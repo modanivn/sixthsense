@@ -99,6 +99,12 @@ public class EnemyShooter : MonoBehaviour
             gameObject.transform.position = new Vector3(1000.0f, 1000.0f, 1000.0f);
             Object.Destroy(gameObject, 10.0f);
             CancelInvoke("shootProjectile");
+            // Freeze power up should must be destroyed with the monster
+            GameObject freezePowerUp = GameObject.FindGameObjectWithTag("FreezePrefab");
+            if (freezePowerUp != null)
+            {
+                Destroy(freezePowerUp);
+            }
         }
         return;
    }
