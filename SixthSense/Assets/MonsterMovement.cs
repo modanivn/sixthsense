@@ -46,11 +46,13 @@ public class MonsterMovement : MonoBehaviour
         }
         foreach (Transform targetObject in targetObjects)
         {
-            float distance = Vector3.Distance(transform.position, targetObject.position);
-            if (distance < closestDistance)
-            {
-                closestObject = targetObject;
-                closestDistance = distance;
+            if(targetObject != null){
+                float distance = Vector3.Distance(transform.position, targetObject.position);
+                if (distance < closestDistance)
+                {
+                    closestObject = targetObject;
+                    closestDistance = distance;
+                }
             }
         }
         return closestObject;

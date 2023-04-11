@@ -55,6 +55,8 @@ public class Player_Movement : MonoBehaviour
         if(other.gameObject.tag == "dangerCube")
         {
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
+            gameObject.GetComponent<CubeLogic>().removeFromActiveCubes(other.gameObject.transform);
+            StartCoroutine(gameObject.GetComponent<CubeLogic>().respawnCube("YellowCube",other.transform.parent));
             Destroy(other.gameObject);
         }
 
