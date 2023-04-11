@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FeedMonsterTrigger : MonoBehaviour
 {
-    public int nextSceneToLoad = 6;
+    public int nextSceneToLoad;
     // public CanvasGroup nextScenePanel;
     [SerializeField] GameObject nextLevelCanvas;
     public GameObject player;

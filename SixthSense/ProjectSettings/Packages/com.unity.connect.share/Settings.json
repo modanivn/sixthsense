@@ -21,7 +21,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"G:/Study/Spring 2023/Games/Game Builds/Prototype 9.01;G:/Study/Spring 2023/Games/Game Builds/TestBuild;G:/Study/Spring 2023/Games/Game Builds/Prototype 8.02;G:/Study/Spring 2023/Games/Game Builds/Prototype 8.01;G:/Study/Spring 2023/Games/Game Builds/Sixth Sense 7.01;/Users/rishikeshjaadhav/CSCI526/sixthsense-project/prototype/SixthSense/WebGL Builds;G:/Study/Spring 2023/Games/Game Builds/Prototype 4.6;G:/Study/Spring 2023/Games/Game Builds/Prototype 4.02;G:/Study/Spring 2023/Games/Game Builds/Prototype 4.01;G:/Study/Spring 2023/Games/Game Builds/Varun Proto 3.2\"}"
+                "value": "{\"m_Value\":\"G:/Study/Spring 2023/Games/Game Builds/Prototype 9.02;G:/Study/Spring 2023/Games/Game Builds/Prototype 9.01;G:/Study/Spring 2023/Games/Game Builds/TestBuild;G:/Study/Spring 2023/Games/Game Builds/Prototype 8.02;G:/Study/Spring 2023/Games/Game Builds/Prototype 8.01;G:/Study/Spring 2023/Games/Game Builds/Sixth Sense 7.01;/Users/rishikeshjaadhav/CSCI526/sixthsense-project/prototype/SixthSense/WebGL Builds;G:/Study/Spring 2023/Games/Game Builds/Prototype 4.6;G:/Study/Spring 2023/Games/Game Builds/Prototype 4.02;G:/Study/Spring 2023/Games/Game Builds/Prototype 4.01\"}"
             }
         ]
     }
