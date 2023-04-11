@@ -18,10 +18,12 @@ public class PauseMenu : MonoBehaviour
             if (pauseGameToggle) 
             {
                 Pause();
+                Screen.lockCursor = false;
             } 
             else 
             {
                 Resume();
+                Screen.lockCursor = true;
             }
             pauseGameToggle = !pauseGameToggle;
         }
