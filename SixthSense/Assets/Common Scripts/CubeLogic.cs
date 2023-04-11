@@ -97,7 +97,9 @@ public class CubeLogic : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             foreach(GameObject monster in monsters){
-                monster.GetComponent<EnemyShooter>().freezeProjectile();
+                if(monster!=null){
+                    monster.GetComponent<EnemyShooter>().freezeProjectile();
+                }
             }
         }
     }

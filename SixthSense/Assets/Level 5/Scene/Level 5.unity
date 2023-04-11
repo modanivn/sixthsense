@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10771,7 +10771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d75edf63682343609ded2803c5f9ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   player: {fileID: 1624137456565311708}
   monsterSpeed: 5
 --- !u!1 &1253084524
@@ -17680,7 +17679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d75edf63682343609ded2803c5f9ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   player: {fileID: 1624137456565311708}
   monsterSpeed: 5
 --- !u!114 &2022523184
@@ -19432,7 +19430,6 @@ MonoBehaviour:
   redCubeAndTextPrefab: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
   bulletPrefab: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
   greenCubeAndTextPrefab: {fileID: 2853566590130333187, guid: 0de15001819de4c0abb5e8ea8d8fe511, type: 3}
-  monster: {fileID: 2022523181}
   powerUprespawnTime: 15
   gameProgress: {fileID: 2025922909}
   platforms:
@@ -19451,6 +19448,9 @@ MonoBehaviour:
   - {fileID: 877128780}
   - {fileID: 2139388690}
   - {fileID: 1468679386}
+  monsters:
+  - {fileID: 2022523181}
+  - {fileID: 1252538792}
 --- !u!114 &1624137456565311745
 MonoBehaviour:
   m_ObjectHideFlags: 0
