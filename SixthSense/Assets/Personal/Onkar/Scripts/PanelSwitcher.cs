@@ -7,7 +7,7 @@ using System.Linq;
 public class PanelSwitcher : MonoBehaviour
 {
     [SerializeField] GameObject EndGameCanvas;
-    public float timer = 60.0f;
+    public float timer = 420.0f;
     public float popUpTime = 2.0f;
     private bool switchStarted = false;
     public TextMeshProUGUI timerText;

@@ -19761,6 +19761,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8051666052084373815, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: timer
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051666052084373815, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: Penalty
       value: 
       objectReference: {fileID: 1667875244}
