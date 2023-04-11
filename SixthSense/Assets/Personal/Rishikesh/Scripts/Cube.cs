@@ -25,7 +25,7 @@ public class Cube : MonoBehaviour
 
      void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerBullet") && !isChangingMaterial)
+        if (gameObject.tag == "YellowCube" && other.gameObject.CompareTag("PlayerBullet") && !isChangingMaterial)
         {
             StartCoroutine(ChangeMaterialForSeconds(redMaterial, 10f));
         }
