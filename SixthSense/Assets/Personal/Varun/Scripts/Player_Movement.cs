@@ -167,7 +167,9 @@ public class Player_Movement : MonoBehaviour
         currentFuel = Mathf.Min(maxJetPackFuel,currentFuel);
         flame1.SetActive(false);
         flame2.SetActive(false);
-        fuelIndicator.value = (currentFuel/maxJetPackFuel);
+        if(fuelIndicator != null){
+            fuelIndicator.value = (currentFuel/maxJetPackFuel);
+        }
     }
 
     void Jump()
