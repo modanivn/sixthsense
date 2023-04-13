@@ -22,6 +22,7 @@ TagManager:
   - crosshair
   - dangerCube
   - Jetpack
+  - TimePrefab
   layers:
   - Default
   - TransparentFX
