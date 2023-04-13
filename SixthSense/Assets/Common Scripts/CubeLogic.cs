@@ -115,7 +115,7 @@ public class CubeLogic : MonoBehaviour
         else if(other.tag == "TimePrefab"){
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
-            Debug.Log("Time works");
+            gameObject.GetComponent<PanelSwitcher>().increaseTimePowerup();
         }
     }
 

@@ -53,6 +53,25 @@ public class PanelSwitcher : MonoBehaviour
         InvokeRepeating("Countdown",0.0f,1.0f);
     }
 
+    public void increaseTimePowerup(){
+        timer += 10.0f;
+        int minutes = Mathf.FloorToInt(timer / 60f);
+        int seconds = Mathf.FloorToInt(timer % 60f);
+        timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        InvokeRepeating("UpCountdown",0.0f,1.0f);
+    }
+
+    void UpCountdown(){
+
+        Penalty.text = "+10 seconds";
+        popUpTime -= 1.0f;
+        if(popUpTime<=0f){
+            popUpTime = 2.0f;
+            CancelInvoke("UpCountdown");
+            Penalty.text = "";
+        }
+    }
+
     void Countdown(){
 
         Penalty.text = "-5 seconds";
