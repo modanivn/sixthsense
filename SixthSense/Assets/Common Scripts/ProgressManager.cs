@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class ProgressManager : MonoBehaviour
 {
-    public Image[] cubeImages;
-    public Sprite solidCube;
+    // public Image[] cubeImages;
+    // public Sprite solidCube;
 
+    public Slider progressSlider;
 
 
     private int cubesCollected = 0;
@@ -17,23 +18,27 @@ public class ProgressManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+            progressSlider = GameObject.Find("ProgressSlider").GetComponent<Slider>();
+            progressSlider.maxValue = totalCubes;
+            progressSlider.value = 0;
        
-         foreach (Image cubeImage in cubeImages)
-        {
-            cubeImage.color = new Color(1f, 1f, 1f, 0.5f); // Set each cube to be translucent
-        }
     }
 
     public void CollectCube()
     {
         cubesCollected++;
-        if (cubesCollected <= totalCubes)
-        {
-            for (int i = 0; i < cubesCollected; i++)
-            {
-                cubeImages[i].sprite = solidCube; // Set the Image components to be solid up to the number of cubes collected
-            }
+        
+        float fillAmount = (float)cubesCollected / progressSlider.maxValue;
+        progressSlider.value = fillAmount;
+        if(cubesCollected == totalCubes) {
+            progressSlider.fillRect.GetComponent<Image>().color = Color.green;
         }
+        if(cubesCollected < totalCubes) {
+            progressSlider.fillRect.GetComponent<Image>().color = Color.yellow;
+        }
+        
+       
+       
     }
 
     // Update is called once per frame
