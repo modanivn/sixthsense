@@ -12525,6 +12525,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1308762374}
     - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: jetPackPrefab
+      value: 
+      objectReference: {fileID: 2404873460476524272, guid: 78e1fe7cc14351b41b3e3a8b547e4bfe, type: 3}
+    - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: gameEndTrigger
       value: 
       objectReference: {fileID: 1729023885}

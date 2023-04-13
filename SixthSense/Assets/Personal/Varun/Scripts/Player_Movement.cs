@@ -38,6 +38,7 @@ public class Player_Movement : MonoBehaviour
     private float currentFuel;
     public Slider fuelIndicator;
     public GameObject jetPack;
+    public GameObject jetPackPrefab;
     void Start()
     {
         TimeElapsed.resetStopwatch();
@@ -116,9 +117,6 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-
-        
-
         if(IsGrounded())
         {
             jumpX = transform.position.x;
@@ -151,6 +149,11 @@ public class Player_Movement : MonoBehaviour
             setPlayerToResetPosition();
             totalNumberOfFalls++;
              jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            dropJetPack();
         }
     }
 
@@ -219,9 +222,10 @@ public class Player_Movement : MonoBehaviour
     }
 
     public void dropJetPack(){
-        if(jetPack != null){
+        if(jetPack != null && hasJetpack && jetPackPrefab != null){
             hasJetpack = false;
             jetPack.SetActive(false);
+            Instantiate(jetPackPrefab, new Vector3(gameObject.transform.position.x + 1f,gameObject.transform.position.y + 0.3f,gameObject.transform.position.z), Quaternion.identity);
         }
     }
 
