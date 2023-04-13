@@ -28,7 +28,7 @@ public class ProgressManager : MonoBehaviour
     {
         cubesCollected++;
         
-        float fillAmount = (float)cubesCollected / progressSlider.maxValue;
+        float fillAmount = (float)(cubesCollected / progressSlider.maxValue) * totalCubes;
         progressSlider.value = fillAmount;
         if(cubesCollected == totalCubes) {
             progressSlider.fillRect.GetComponent<Image>().color = Color.green;
