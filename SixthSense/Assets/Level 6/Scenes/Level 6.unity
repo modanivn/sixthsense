@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1218,6 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0f06ac1fe9a52448212c66d128bd0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneToLoad: 0
   nextLevelCanvas: {fileID: 159890018}
   player: {fileID: 1624137456565311708}
 --- !u!1 &190886794
@@ -6196,17 +6197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1208056941 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5702657196872434680, guid: 2e9fbaa90723341279131414adedc530, type: 3}
-  m_PrefabInstance: {fileID: 5702657197812055957}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1209740931
 GameObject:
   m_ObjectHideFlags: 0
@@ -9006,6 +8996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0f06ac1fe9a52448212c66d128bd0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneToLoad: 0
   nextLevelCanvas: {fileID: 159890018}
   player: {fileID: 1624137456565311708}
 --- !u!1 &1788124369
@@ -10600,7 +10591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d75edf63682343609ded2803c5f9ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   player: {fileID: 1624137456565311708}
   monsterSpeed: 4
 --- !u!114 &2022523184
@@ -10618,7 +10608,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 4419053175390648095, guid: c81eb9d96cad7439bbac16d9b760091a, type: 3}
   player: {fileID: 1624137456565311708}
   FreezeTimerText: {fileID: 1984834606}
-  healthBarImage: {fileID: 1208056941}
+  monsterHealth: {fileID: 0}
   currentHealth: 1
   gameEndTrigger: {fileID: 1729023885}
 --- !u!1 &2025922906
@@ -11766,6 +11756,7 @@ MonoBehaviour:
   gun: {fileID: 1619242243}
   crosshair: {fileID: 969990351}
   bulletText: {fileID: 1020660551}
+  bulletbar: {fileID: 0}
 --- !u!114 &1624137456565311737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11784,7 +11775,6 @@ MonoBehaviour:
   redCubeAndTextPrefab: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
   bulletPrefab: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
   greenCubeAndTextPrefab: {fileID: 2504218280534900286, guid: 724ca72b972d44839a5a6f7b191aa06c, type: 3}
-  monster: {fileID: 2022523181}
   powerUprespawnTime: 15
   gameProgress: {fileID: 2025922909}
   platforms:
@@ -11797,6 +11787,7 @@ MonoBehaviour:
   - {fileID: 1468679386}
   - {fileID: 0}
   - {fileID: 0}
+  monsters: []
 --- !u!1001 &2137388927006247907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12185,6 +12176,14 @@ PrefabInstance:
       propertyPath: head
       value: 
       objectReference: {fileID: 264290385}
+    - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: respawnX
+      value: -10.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
+      propertyPath: respawnZ
+      value: -12.23
+      objectReference: {fileID: 0}
     - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: aimCamera
       value: 

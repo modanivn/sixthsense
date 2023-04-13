@@ -31,6 +31,7 @@ public class Player_Movement : MonoBehaviour
     public float respawnX = -14.0f;
     public float respawnY = 2.5f;
     public float respawnZ = 0f;
+    private bool hasJetpack = true;
     void Start()
     {
         TimeElapsed.resetStopwatch();
@@ -125,11 +126,15 @@ public class Player_Movement : MonoBehaviour
             jumpPressedTime = Time.time;
         }
 
-        if (Mathf.Abs(lastGroundedTime - jumpPressedTime) <= jumpButtonGracePeriod)
+        if (Mathf.Abs(lastGroundedTime - jumpPressedTime) <= jumpButtonGracePeriod && !hasJetpack)
         {
             Jump();
             jumpPressedTime = -2f;
             lastGroundedTime = 0f;
+        }
+
+        if(Input.GetAxis("Jump") > 0f && hasJetpack){
+            rb.AddForce(rb.transform.up * 0.2f, ForceMode.Impulse);
         }
 
         if (transform.position.y < -5.0f){
