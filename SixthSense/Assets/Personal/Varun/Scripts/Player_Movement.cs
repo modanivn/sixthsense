@@ -157,16 +157,23 @@ public class Player_Movement : MonoBehaviour
         currentFuel -= Time.deltaTime;
         currentFuel = Mathf.Max(0.0f,currentFuel);
         rb.AddForce(rb.transform.up * 0.2f, ForceMode.Impulse);
-        flame1.SetActive(true);
-        flame2.SetActive(true);
-        fuelIndicator.value = (currentFuel/maxJetPackFuel);
+
+        if(flame1 != null && flame2 != null){
+            flame1.SetActive(true);
+            flame2.SetActive(true);
+        }
+        if(fuelIndicator != null){
+            fuelIndicator.value = (currentFuel/maxJetPackFuel);
+        }
     }
 
     private void jetPackStall(){
         currentFuel += (Time.deltaTime * 0.5f);
         currentFuel = Mathf.Min(maxJetPackFuel,currentFuel);
-        flame1.SetActive(false);
-        flame2.SetActive(false);
+        if(flame1 != null && flame2 != null){
+            flame1.SetActive(false);
+            flame2.SetActive(false);
+        }
         if(fuelIndicator != null){
             fuelIndicator.value = (currentFuel/maxJetPackFuel);
         }
