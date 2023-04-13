@@ -14,6 +14,7 @@ public class CubeLogic : MonoBehaviour
     public Transform redCubeAndTextPrefab;
     public Transform bulletPrefab;
     public Transform greenCubeAndTextPrefab;
+    public Transform TimePrefab;
     private int monsterPlatformCount = 0;
     public float powerUprespawnTime = 15.0f;
     public TextMeshProUGUI gameProgress;
@@ -33,7 +34,7 @@ public class CubeLogic : MonoBehaviour
 
         float rTime = normalRespawnTime;
 
-        if(cubeType == "FreezePrefab" || cubeType == "JumpPrefab" || cubeType == "Bullet"){
+        if(cubeType == "FreezePrefab" || cubeType == "JumpPrefab" || cubeType == "Bullet" || cubeType == "TimePrefab"){
             rTime = powerUprespawnTime;
         }
         
@@ -44,7 +45,7 @@ public class CubeLogic : MonoBehaviour
         if(cubeType == "Bullet"){
             temp.y += 0.4f;
         }
-        else{
+        else if(cubeType!="TimePrefab") {
             temp.y += 0.8f;
         }
         Vector3 respawnPosition = temp;
@@ -63,6 +64,10 @@ public class CubeLogic : MonoBehaviour
 
             case "FreezePrefab":
             Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            break;
+
+            case "TimePrefab":
+            Instantiate(TimePrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
 
             case "Bullet":
@@ -105,6 +110,12 @@ public class CubeLogic : MonoBehaviour
 
         else if(other.tag == "Jetpack"){
             gameObject.GetComponent<Player_Movement>().gotJetPack();
+        }
+
+        else if(other.tag == "TimePrefab"){
+            Destroy(other.gameObject);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent));
+            Debug.Log("Time works");
         }
     }
 
