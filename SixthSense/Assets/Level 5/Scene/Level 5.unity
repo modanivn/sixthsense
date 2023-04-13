@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1233,6 +1233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack
       objectReference: {fileID: 0}
+    - target: {fileID: 2404873460476524272, guid: 78e1fe7cc14351b41b3e3a8b547e4bfe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2404873460476524275, guid: 78e1fe7cc14351b41b3e3a8b547e4bfe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1279,11 +1283,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e1fe7cc14351b41b3e3a8b547e4bfe, type: 3}
---- !u!1 &133782141 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2404873460329410498, guid: 78e1fe7cc14351b41b3e3a8b547e4bfe, type: 3}
-  m_PrefabInstance: {fileID: 125609893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &139104353
 GameObject:
   m_ObjectHideFlags: 0
@@ -9838,11 +9837,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142843402}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1144058114 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2404873459769046019, guid: 78e1fe7cc14351b41b3e3a8b547e4bfe, type: 3}
-  m_PrefabInstance: {fileID: 125609893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1144603647
 GameObject:
   m_ObjectHideFlags: 0
@@ -19964,11 +19958,11 @@ PrefabInstance:
     - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: flame1
       value: 
-      objectReference: {fileID: 1144058114}
+      objectReference: {fileID: 0}
     - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: flame2
       value: 
-      objectReference: {fileID: 133782141}
+      objectReference: {fileID: 0}
     - target: {fileID: 4426411126376320623, guid: faf8d7c57600b2045aa02c8a00109d08, type: 3}
       propertyPath: respawnX
       value: -10.07

@@ -37,6 +37,7 @@ public class Player_Movement : MonoBehaviour
     public float maxJetPackFuel = 5.0f;
     private float currentFuel;
     public Slider fuelIndicator;
+    public GameObject jetPack;
     void Start()
     {
         TimeElapsed.resetStopwatch();
@@ -211,11 +212,17 @@ public class Player_Movement : MonoBehaviour
     }
 
     public void gotJetPack(){
-        hasJetpack = true;
+        if(jetPack != null){
+            hasJetpack = true;
+            jetPack.SetActive(true);
+        }
     }
 
     public void dropJetPack(){
-        hasJetpack = false;
+        if(jetPack != null){
+            hasJetpack = false;
+            jetPack.SetActive(false);
+        }
     }
 
 }
