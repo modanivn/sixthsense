@@ -21,6 +21,7 @@ TagManager:
   - PlayerBullet
   - crosshair
   - dangerCube
+  - Jetpack
   layers:
   - Default
   - TransparentFX

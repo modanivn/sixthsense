@@ -31,7 +31,12 @@ public class Player_Movement : MonoBehaviour
     public float respawnX = -14.0f;
     public float respawnY = 2.5f;
     public float respawnZ = 0f;
-    private bool hasJetpack = true;
+    private bool hasJetpack = false;
+    public GameObject flame1;
+    public GameObject flame2;
+    public float maxJetPackFuel = 5.0f;
+    private float currentFuel;
+    public Slider fuelIndicator;
     void Start()
     {
         TimeElapsed.resetStopwatch();
@@ -39,6 +44,7 @@ public class Player_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastGroundedTime = 0f;
         jumpPressedTime = -2f;
+        currentFuel = maxJetPackFuel;
     }
      public string getFallLocations() {
         return jumpString;
@@ -78,7 +84,6 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         float horizontalInput = -Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         sensitivity = PlayerPrefs.GetFloat("sensitivity");
@@ -133,8 +138,11 @@ public class Player_Movement : MonoBehaviour
             lastGroundedTime = 0f;
         }
 
-        if(Input.GetAxis("Jump") > 0f && hasJetpack){
-            rb.AddForce(rb.transform.up * 0.2f, ForceMode.Impulse);
+        if(Input.GetAxis("Jump") > 0f && hasJetpack && currentFuel > 0.2f){
+            jetPackFly();
+        }
+        else{
+            jetPackStall();
         }
 
         if (transform.position.y < -5.0f){
@@ -143,6 +151,23 @@ public class Player_Movement : MonoBehaviour
             totalNumberOfFalls++;
              jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
         }
+    }
+
+    private void jetPackFly(){
+        currentFuel -= Time.deltaTime;
+        currentFuel = Mathf.Max(0.0f,currentFuel);
+        rb.AddForce(rb.transform.up * 0.2f, ForceMode.Impulse);
+        flame1.SetActive(true);
+        flame2.SetActive(true);
+        fuelIndicator.value = (currentFuel/maxJetPackFuel);
+    }
+
+    private void jetPackStall(){
+        currentFuel += (Time.deltaTime * 0.5f);
+        currentFuel = Mathf.Min(maxJetPackFuel,currentFuel);
+        flame1.SetActive(false);
+        flame2.SetActive(false);
+        fuelIndicator.value = (currentFuel/maxJetPackFuel);
     }
 
     void Jump()
@@ -174,6 +199,14 @@ public class Player_Movement : MonoBehaviour
 
     public bool isCameraAiming(){
         return isAiming;
+    }
+
+    public void gotJetPack(){
+        hasJetpack = true;
+    }
+
+    public void dropJetPack(){
+        hasJetpack = false;
     }
 
 }

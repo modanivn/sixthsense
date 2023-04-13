@@ -102,6 +102,10 @@ public class CubeLogic : MonoBehaviour
                 }
             }
         }
+
+        else if(other.tag == "Jetpack"){
+            gameObject.GetComponent<Player_Movement>().gotJetPack();
+        }
     }
 
     public int getTotalNumberOfFreeze() {
