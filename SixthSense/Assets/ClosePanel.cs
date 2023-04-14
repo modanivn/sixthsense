@@ -5,21 +5,26 @@ using UnityEngine;
 public class ClosePanel : MonoBehaviour
 {
     public GameObject currentPanel;
+    public GameObject nextPanel;
     public GameObject pauseCanvas;
 
     void Update()
     {
         if (currentPanel.activeSelf)
         {
-            
-            // Check if any key is pressed
+            Time.timeScale = 0f;
             if (Input.anyKeyDown)
             {
-                Debug.Log("key pressed!!!!");
-                // Deactivate the panel
                 currentPanel.SetActive(false);
+                nextPanel.SetActive(true);
+            }
+        }
+
+        else if(nextPanel.activeSelf) {
+            if (Input.anyKeyDown)
+            {
+                nextPanel.SetActive(false);
                 pauseCanvas.SetActive(true);
-                Debug.Log("after pause panellll");
                 Time.timeScale = 1f;
             }
             else {
