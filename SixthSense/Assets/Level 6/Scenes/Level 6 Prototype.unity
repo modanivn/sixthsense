@@ -10287,6 +10287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4429364504576408683, guid: 27d34b6949ebad2478e30d8d091c8df9, type: 3}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 9418a5fcbafe84543998bd7c831a9ee1, type: 2}
     - target: {fileID: 4429364504576408726, guid: 27d34b6949ebad2478e30d8d091c8df9, type: 3}
       propertyPath: m_Name
       value: Yellow Cube
