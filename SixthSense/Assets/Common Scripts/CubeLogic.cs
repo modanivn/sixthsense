@@ -79,7 +79,7 @@ public class CubeLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "YellowCube"){
-            gameObject.GetComponent<ProgressManager>().CollectCube();
+            // gameObject.GetComponent<ProgressManager>().CollectCube();
             activeCubes.Remove(other.gameObject.transform);
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
