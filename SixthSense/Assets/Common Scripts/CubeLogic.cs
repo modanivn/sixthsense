@@ -13,6 +13,9 @@ public class CubeLogic : MonoBehaviour
     public Transform yellowCubePrefab;
     public Transform redCubeAndTextPrefab;
     public Transform bulletPrefab;
+    public Transform translucentBridgePrefab;
+    public Transform ycminimapPrefab;
+    public Transform jumpminimapPrefab;
     public Transform greenCubeAndTextPrefab;
     public Transform TimePrefab;
     private int monsterPlatformCount = 0;
@@ -53,12 +56,20 @@ public class CubeLogic : MonoBehaviour
         switch(cubeType){
             case "YellowCube":
             Transform clone = Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            if (ycminimapPrefab!= null){
+                Quaternion rotation = clone.rotation * Quaternion.Euler(90f, 0f, 0f);
+                Instantiate(ycminimapPrefab, clone.position, rotation, clone);
+            }
             activeCubes.Add(clone);
             break;
 
             case "JumpPrefab":
             {
-                Instantiate(greenCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+                Transform jumpclone = Instantiate(greenCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+                if (jumpminimapPrefab!= null){
+                    Quaternion jrotation = jumpclone.rotation * Quaternion.Euler(90f, 0f, 0f);
+                    Instantiate(jumpminimapPrefab, jumpclone.position, jrotation, jumpclone);
+                }
                 break;
             }
 
@@ -79,7 +90,7 @@ public class CubeLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "YellowCube"){
-            // gameObject.GetComponent<ProgressManager>().CollectCube();
+            gameObject.GetComponent<ProgressManager>().CollectCube();
             activeCubes.Remove(other.gameObject.transform);
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
@@ -103,19 +114,13 @@ public class CubeLogic : MonoBehaviour
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             foreach(GameObject monster in monsters){
                 if(monster!=null){
-                    if(monster.GetComponent<EnemyShooter>() != null){
-                        monster.GetComponent<EnemyShooter>().freezeProjectile();
-                    }
-                    if(monster.GetComponent<MonsterMovement>() != null){
-                        monster.GetComponent<MonsterMovement>().stopMonsterMovement();
-                    }
+                    monster.GetComponent<EnemyShooter>().freezeProjectile();
                 }
             }
         }
 
         else if(other.tag == "Jetpack"){
             gameObject.GetComponent<Player_Movement>().gotJetPack();
-            Destroy(other.gameObject);
         }
 
         else if(other.tag == "TimePrefab"){
@@ -137,6 +142,9 @@ public class CubeLogic : MonoBehaviour
         if(monsterPlatformCount < platforms.Length){
             Vector3 position = platforms[monsterPlatformCount].transform.position;
             Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+            if (translucentBridgePrefab!= null){
+                Instantiate(translucentBridgePrefab, position, Quaternion.Euler(90, 90, 0));
+            }
             monsterPlatformCount += 1;
         }
         gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
@@ -165,3 +173,4 @@ public class CubeLogic : MonoBehaviour
         activeCubes.Remove(eatenCube);
     }
 }
+
