@@ -12,28 +12,38 @@ public class MonsterMovement : MonoBehaviour
     private float journeyLength;
     public GameObject player;
     public float monsterSpeed = 4.0f;
+    private float originalMonsterSpeed = 0;
+
+    IEnumerator startMonsterMovementAfter(int secs)
+    {
+        yield return new WaitForSeconds(secs);
+        startMonsterMovement();
+        
+    }
 
     void Start()
     {
         startTime = Time.time;
         targetObjects = player.GetComponent<CubeLogic>().getActiveCubes();
-        
         startPoint = transform;
         endPoint = GetClosestTargetObject().transform;
+        originalMonsterSpeed = monsterSpeed;
     }
 
     void Update()
     {
-        targetObjects = player.GetComponent<CubeLogic>().getActiveCubes();
-        Transform closestObject = GetClosestTargetObject();
-        if (closestObject != null && gameObject.GetComponent<EnemyShooter>().currentHealth > 0f)
-        {
-            startPoint = transform;
-            endPoint = closestObject.transform;
-            Vector3 direction = (endPoint.position - startPoint.position).normalized;
-            transform.position = transform.position + (direction * (monsterSpeed * Time.deltaTime));
-            Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
-            transform.rotation = rotation;
+        if(monsterSpeed > 0.0f){
+            targetObjects = player.GetComponent<CubeLogic>().getActiveCubes();
+            Transform closestObject = GetClosestTargetObject();
+            if (closestObject != null && gameObject.GetComponent<EnemyShooter>().currentHealth > 0f)
+            {
+                startPoint = transform;
+                endPoint = closestObject.transform;
+                Vector3 direction = (endPoint.position - startPoint.position).normalized;
+                transform.position = transform.position + (direction * (monsterSpeed * Time.deltaTime));
+                Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
+                transform.rotation = rotation;
+            }
         }
     }
 
@@ -56,6 +66,15 @@ public class MonsterMovement : MonoBehaviour
             }
         }
         return closestObject;
-    }   
+    }  
+
+    public void stopMonsterMovement(){
+        monsterSpeed = 0.0f;
+        StartCoroutine(startMonsterMovementAfter(10));
+    }
+
+    public void startMonsterMovement(){
+        monsterSpeed = originalMonsterSpeed;
+    } 
 
 }

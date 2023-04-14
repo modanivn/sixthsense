@@ -104,6 +104,7 @@ public class CubeLogic : MonoBehaviour
             foreach(GameObject monster in monsters){
                 if(monster!=null){
                     monster.GetComponent<EnemyShooter>().freezeProjectile();
+                    monster.GetComponent<MonsterMovement>().stopMonsterMovement();
                 }
             }
         }
