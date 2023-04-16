@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class ProgressManager : MonoBehaviour
@@ -30,6 +31,10 @@ public class ProgressManager : MonoBehaviour
         
         float fillAmount = (float)(cubesCollected / progressSlider.maxValue) * totalCubes;
         progressSlider.value = fillAmount;
+        // float percentage = (cubesCollected / totalCubes) * 100;
+        float percentage = (float)cubesCollected / totalCubes * 100;
+        progressSlider.transform.Find("Progress").GetComponent<TextMeshProUGUI>().text = percentage.ToString("F0") + "%";
+
         if(cubesCollected == totalCubes) {
             progressSlider.fillRect.GetComponent<Image>().color = Color.green;
         }
