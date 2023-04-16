@@ -33,7 +33,10 @@ public class ProgressManager : MonoBehaviour
         progressSlider.value = fillAmount;
         // float percentage = (cubesCollected / totalCubes) * 100;
         float percentage = (float)cubesCollected / totalCubes * 100;
-        progressSlider.transform.Find("Progress").GetComponent<TextMeshProUGUI>().text = percentage.ToString("F0") + "%";
+        if(percentage <= 100) {
+            progressSlider.transform.Find("Progress").GetComponent<TextMeshProUGUI>().text = percentage.ToString("F0") + "%";
+        }
+        
 
         if(cubesCollected == totalCubes) {
             progressSlider.fillRect.GetComponent<Image>().color = Color.green;
