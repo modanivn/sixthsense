@@ -23,6 +23,7 @@ TagManager:
   - dangerCube
   - Jetpack
   - TimePrefab
+  - BlueCylinder
   layers:
   - Default
   - TransparentFX
