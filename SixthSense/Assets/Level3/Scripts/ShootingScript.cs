@@ -43,19 +43,19 @@ public class ShootingScript : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && bulletCount > 0)
             {
-                Transform parentTransform = bulletbar.transform;
-                Transform childTransform = parentTransform.GetChild(bulletCount-1);
-                Image childImage = childTransform.GetComponent<Image>();
-                childImage.color = Color.white;
+                // Transform parentTransform = bulletbar.transform;
+                // Transform childTransform = parentTransform.GetChild(bulletCount-1);
+                // Image childImage = childTransform.GetComponent<Image>();
+                // childImage.color = Color.white;
                 bulletCount --;
                 totalShots++;
-                // bulletText.SetText((bulletCount) +" bullets left" );
+                bulletText.SetText((bulletCount) +" " );
                 Shoot();
                 
             }
-            if(bulletCount == 0) {
-                bulletText.enabled = false;
-            }
+            // if(bulletCount == 0) {
+            //     bulletText.enabled = false;
+            // }
         }
 
     }
@@ -75,18 +75,18 @@ public class ShootingScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            initialbullet = bulletCount;
-            Transform parentTransform = bulletbar.transform;
+            // initialbullet = bulletCount;
+            // Transform parentTransform = bulletbar.transform;
             bulletCount += 4;
             if (bulletCount>8){
                 bulletCount = 8;
             }
-            for (int i = initialbullet; i < bulletCount; i++) {
-                Transform childTransform = parentTransform.GetChild(i);
-                Image childImage = childTransform.GetComponent<Image>();
-                childImage.color = Color.green;
-            }
-            // bulletText.SetText(bulletCount +  " bullets left");
+            // for (int i = initialbullet; i < bulletCount; i++) {
+            //     Transform childTransform = parentTransform.GetChild(i);
+            //     Image childImage = childTransform.GetComponent<Image>();
+            //     childImage.color = Color.green;
+            // }
+            bulletText.SetText(bulletCount +  " ");
             bulletText.enabled = true;
         }
     }

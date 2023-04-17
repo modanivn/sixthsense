@@ -17,6 +17,7 @@ public class EnemyShooter : MonoBehaviour
     public Slider monsterHealth;
     public float currentHealth = 1.0f;
     public GameObject gameEndTrigger;
+    public Transform enemybulletMiniMap;
 
 
     void OnTriggerEnter(Collider other)
@@ -45,6 +46,7 @@ public class EnemyShooter : MonoBehaviour
     public void shootProjectile()
     {
         GameObject projectile = Instantiate(projectilePrefab, transform.position + new Vector3(0,0.25f,0), Quaternion.identity);
+        Transform childObject = Instantiate(enemybulletMiniMap, projectile.transform);
         Vector3 direction = player.transform.position - transform.position;
         Rigidbody projectileRigidBody = projectile.GetComponent<Rigidbody>();
         projectileRigidBody.velocity = direction.normalized * shootMultipler;
