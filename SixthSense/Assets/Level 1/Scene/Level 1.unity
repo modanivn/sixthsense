@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -373,7 +373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28597635}
   m_LocalRotation: {x: -0.049924593, y: -0.70534223, z: -0.049924605, w: 0.7053421}
-  m_LocalPosition: {x: -17.57857, y: 3.2227597, z: 0.00000039488077}
+  m_LocalPosition: {x: -17.57857, y: 3.2227597, z: 0.00000047683716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -773,10 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45cf6ff36adea4367a9385df6440b285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeImages:
-  - {fileID: 142076697}
-  - {fileID: 1043805205}
-  solidCube: {fileID: 21300000, guid: a67b58d6cddcd4345b1e001340de5a76, type: 3}
+  progressSlider: {fileID: 0}
   totalCubes: 2
 --- !u!1 &142076695
 GameObject:
@@ -1064,6 +1061,12 @@ MonoBehaviour:
   respawnX: -14
   respawnY: 2.5
   respawnZ: 0
+  flame1: {fileID: 0}
+  flame2: {fileID: 0}
+  maxJetPackFuel: 5
+  fuelIndicator: {fileID: 0}
+  jetPack: {fileID: 0}
+  jetPackPrefab: {fileID: 0}
 --- !u!114 &160491312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,7 +1101,11 @@ MonoBehaviour:
   yellowCubePrefab: {fileID: 4429364504576408682, guid: 27d34b6949ebad2478e30d8d091c8df9, type: 3}
   redCubeAndTextPrefab: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
   bulletPrefab: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+  translucentBridgePrefab: {fileID: 0}
+  ycminimapPrefab: {fileID: 0}
+  jumpminimapPrefab: {fileID: 0}
   greenCubeAndTextPrefab: {fileID: 2504218280534900286, guid: 724ca72b972d44839a5a6f7b191aa06c, type: 3}
+  TimePrefab: {fileID: 0}
   powerUprespawnTime: 15
   gameProgress: {fileID: 1530126580}
   platforms:
@@ -1134,15 +1141,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160491272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45cf6ff36adea4367a9385df6440b285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeImages:
-  - {fileID: 142076697}
-  - {fileID: 1043805205}
-  solidCube: {fileID: 21300000, guid: a67b58d6cddcd4345b1e001340de5a76, type: 3}
+  progressSlider: {fileID: 0}
   totalCubes: 2
 --- !u!1 &186101789
 GameObject:
@@ -4923,7 +4927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1227264978190467137, guid: 0e7dbe63016a5480cafa05591cbc9dfb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00000039488077
+      value: 0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 1227264978190467137, guid: 0e7dbe63016a5480cafa05591cbc9dfb, type: 3}
       propertyPath: m_LocalRotation.w
