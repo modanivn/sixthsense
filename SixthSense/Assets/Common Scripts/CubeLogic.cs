@@ -16,6 +16,8 @@ public class CubeLogic : MonoBehaviour
     public Transform translucentBridgePrefab;
     public Transform ycminimapPrefab;
     public Transform jumpminimapPrefab;
+    public Transform bulletminimapPrefab;
+    public Transform freezeminimapPrefab;
     public Transform greenCubeAndTextPrefab;
     public Transform TimePrefab;
     private int monsterPlatformCount = 0;
@@ -74,7 +76,12 @@ public class CubeLogic : MonoBehaviour
             }
 
             case "FreezePrefab":
-            Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            Transform freezeclone = Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            if (freezeminimapPrefab!= null){
+                Quaternion frotation = freezeclone.rotation * Quaternion.Euler(90f, 90f, 0f);
+                Instantiate(freezeminimapPrefab, freezeclone.position, frotation, freezeclone);
+            }
+
             break;
 
             case "TimePrefab":
@@ -82,7 +89,11 @@ public class CubeLogic : MonoBehaviour
             break;
 
             case "Bullet":
-            Instantiate(bulletPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            Transform bulletclone = Instantiate(bulletPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            if (bulletminimapPrefab!= null){
+                Quaternion brotation = bulletclone.rotation * Quaternion.Euler(90f, 90f, 0f);
+                Instantiate(bulletminimapPrefab, bulletclone.position, brotation, bulletclone);
+            }
             break;
         }
     }
