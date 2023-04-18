@@ -1089,6 +1089,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1624137456706895835, guid: 90ae590901eb89f4e88f1201e3bece73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624137456706895835, guid: 90ae590901eb89f4e88f1201e3bece73, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -1265,10 +1269,13 @@ MonoBehaviour:
   - {fileID: 1143288195}
   - {fileID: 1789118261}
   jetpackplatforms: []
+  jetpackbridgeItemPrefab: {fileID: 0}
+  translucentjetpackBridgePrefab: {fileID: 0}
   activeCubes:
   - {fileID: 1934138546}
   - {fileID: 1468679386}
   - {fileID: 607405961}
+  activeSpheres: []
   monsters:
   - {fileID: 136768946}
 --- !u!114 &160491292
@@ -1288,6 +1295,8 @@ MonoBehaviour:
   popUpTime: 2
   timerText: {fileID: 1614483261}
   Penalty: {fileID: 429299470}
+  PlusTime: {fileID: 0}
+  PlusTimeImage: {fileID: 0}
   PenaltyImage: {fileID: 880596927}
 --- !u!114 &160491293
 MonoBehaviour:
@@ -1319,7 +1328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressSlider: {fileID: 482895865}
-  totalCubes: 3
 --- !u!4 &163919772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
@@ -7830,7 +7838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &950780026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7925,9 +7933,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed798449c896342e5aba9a2d56b15ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPanel: {fileID: 1673326239}
-  nextPanel: {fileID: 0}
-  pauseCanvas: {fileID: 1616652863}
+  panels:
+  - {fileID: 1673326239}
+  - {fileID: 1616652863}
+  player: {fileID: 160491272}
 --- !u!1 &960967508
 GameObject:
   m_ObjectHideFlags: 0
@@ -12384,7 +12393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressSlider: {fileID: 0}
-  totalCubes: 3
 --- !u!1 &1550771715
 GameObject:
   m_ObjectHideFlags: 0
@@ -13186,7 +13194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1616652864
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13332,7 +13340,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
