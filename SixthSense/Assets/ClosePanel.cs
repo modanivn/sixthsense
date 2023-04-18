@@ -4,32 +4,33 @@ using UnityEngine;
 
 public class ClosePanel : MonoBehaviour
 {
-    public GameObject currentPanel;
-    public GameObject nextPanel;
-    public GameObject pauseCanvas;
+    public List<GameObject> panels;
+    public GameObject player;
+    private int currentPanelIndex = 0;
+
+    void Start()
+    {
+        SetActivePanel(currentPanelIndex);
+    }
 
     void Update()
     {
-        if (currentPanel.activeSelf)
+        if (Input.anyKeyDown)
         {
-            Time.timeScale = 0f;
-            if (Input.anyKeyDown)
-            {
-                currentPanel.SetActive(false);
-                nextPanel.SetActive(true);
-            }
+            SetActivePanel(currentPanelIndex + 1);
         }
+    }
 
-        else if(nextPanel.activeSelf) {
-            if (Input.anyKeyDown)
-            {
-                nextPanel.SetActive(false);
-                pauseCanvas.SetActive(true);
-                Time.timeScale = 1f;
-            }
-            else {
-                Time.timeScale = 0f;
-            }
+    void SetActivePanel(int index)
+    {
+        if (index >= 0 && index < panels.Count)
+        {
+            panels[currentPanelIndex].SetActive(false);
+            panels[index].SetActive(true);
+            currentPanelIndex = index;
+        }
+        if(index == (panels.Count - 1) && !player.activeSelf) {
+            player.SetActive(true);
         }
     }
 }
