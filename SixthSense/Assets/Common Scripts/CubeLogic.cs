@@ -168,9 +168,9 @@ public class CubeLogic : MonoBehaviour
         if(monsterPlatformCount < platforms.Length){
             Vector3 position = platforms[monsterPlatformCount].transform.position;
             Instantiate(bridgeItemPrefab, position, Quaternion.identity);
-            // if (translucentBridgePrefab!= null){
-            //     Instantiate(translucentBridgePrefab, position, Quaternion.Euler(90, 90, 0));
-            // }
+            if (translucentBridgePrefab!= null){
+                Instantiate(translucentBridgePrefab, position, Quaternion.Euler(90, 90, 0));
+            }
             monsterPlatformCount += 1;
         }
         gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
@@ -180,9 +180,9 @@ public class CubeLogic : MonoBehaviour
         if(jetpackPlatformCount < jetpackplatforms.Length){
             Vector3 position = jetpackplatforms[jetpackPlatformCount].transform.position;
             Instantiate(jetpackbridgeItemPrefab, position, Quaternion.identity);
-            // if (translucentjetpackBridgePrefab!= null){
-            //     Instantiate(translucentjetpackBridgePrefab, position, Quaternion.Euler(90, 90, 0));
-            // }
+            if (translucentjetpackBridgePrefab!= null){
+                Instantiate(translucentjetpackBridgePrefab, position, Quaternion.Euler(90, 90, 0));
+            }
             jetpackPlatformCount += 1;
         }
     }
