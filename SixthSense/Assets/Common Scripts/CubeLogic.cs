@@ -26,6 +26,7 @@ public class CubeLogic : MonoBehaviour
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
     public GameObject[] platforms;
+    public GameObject[] jetpackplatforms;
     [SerializeField] List<Transform> activeCubes = new List<Transform>();
     [SerializeField] List<GameObject> monsters = new List<GameObject>();
 

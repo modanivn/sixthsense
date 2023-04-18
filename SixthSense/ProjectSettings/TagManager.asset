@@ -24,6 +24,7 @@ TagManager:
   - Jetpack
   - TimePrefab
   - BlueCylinder
+  - YellowSphere
   layers:
   - Default
   - TransparentFX
