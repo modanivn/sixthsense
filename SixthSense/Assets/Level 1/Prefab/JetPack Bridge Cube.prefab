@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8470888807696919436}
   - component: {fileID: 2281858047798789652}
   m_Layer: 6
-  m_Name: Blue Cylinder
+  m_Name: JetPack Bridge Cube
   m_TagString: BlueCylinder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3455834861680006413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.06, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.4, z: 0.4}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.4, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d0b21db7972fd4a6889aac7e5a013b47, type: 2}
+  - {fileID: 2100000, guid: 9fa240a6147784ca8b77947e34e60605, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
