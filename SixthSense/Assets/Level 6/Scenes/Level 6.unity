@@ -15595,7 +15595,7 @@ MonoBehaviour:
   FreezeTimerText: {fileID: 1258714059}
   monsterHealth: {fileID: 872919913}
   currentHealth: 1
-  gameEndTrigger: {fileID: 0}
+  gameEndTrigger: {fileID: 1729023885}
   enemybulletMiniMap: {fileID: 174138193912007513, guid: 2a486081f267a4e37bae52a06a1b6767, type: 3}
 --- !u!114 &1029579250
 MonoBehaviour:
@@ -15707,7 +15707,7 @@ MonoBehaviour:
   FreezeTimerText: {fileID: 1258714059}
   monsterHealth: {fileID: 1798246289}
   currentHealth: 1
-  gameEndTrigger: {fileID: 0}
+  gameEndTrigger: {fileID: 1729023885}
   enemybulletMiniMap: {fileID: 174138193912007513, guid: 2a486081f267a4e37bae52a06a1b6767, type: 3}
 --- !u!114 &1036038045
 MonoBehaviour:
