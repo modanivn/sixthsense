@@ -21,13 +21,18 @@ public class CubeLogic : MonoBehaviour
     public Transform greenCubeAndTextPrefab;
     public Transform TimePrefab;
     private int monsterPlatformCount = 0;
+    private int jetpackPlatformCount = 0;
     public float powerUprespawnTime = 15.0f;
     public TextMeshProUGUI gameProgress;
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
     public GameObject[] platforms;
     public GameObject[] jetpackplatforms;
+    public Transform yellowSpherePrefab;
+    public Transform jetpackbridgeItemPrefab;
+    public Transform translucentjetpackBridgePrefab;
     [SerializeField] List<Transform> activeCubes = new List<Transform>();
+    [SerializeField] List<Transform> activeSpheres = new List<Transform>();
     [SerializeField] List<GameObject> monsters = new List<GameObject>();
 
 
@@ -64,6 +69,15 @@ public class CubeLogic : MonoBehaviour
                 Instantiate(ycminimapPrefab, clone.position, rotation, clone);
             }
             activeCubes.Add(clone);
+            break;
+
+            case "YellowSphere":
+            Transform jetClone = Instantiate(yellowSpherePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            // if (ycminimapPrefab!= null){
+            //     Quaternion rotation = clone.rotation * Quaternion.Euler(90f, 0f, 0f);
+            //     Instantiate(ycminimapPrefab, clone.position, rotation, clone);
+            // }
+            activeSpheres.Add(jetClone);
             break;
 
             case "JumpPrefab":
@@ -107,6 +121,13 @@ public class CubeLogic : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             makeBridgeToMonster();
+        }
+        else if(other.tag == "YellowSphere"){
+            // gameObject.GetComponent<ProgressManager>().CollectCube();
+            activeSpheres.Remove(other.gameObject.transform);
+            Destroy(other.gameObject);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent));
+            makeBridgeToJetpack();
         }
         else if(other.tag == "JumpPrefab"){
             totalNumberOfJumps++;
@@ -160,6 +181,18 @@ public class CubeLogic : MonoBehaviour
             monsterPlatformCount += 1;
         }
         gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
+    }
+
+    public void makeBridgeToJetpack(){
+        if(jetpackPlatformCount < jetpackplatforms.Length){
+            Vector3 position = jetpackplatforms[jetpackPlatformCount].transform.position;
+            Instantiate(jetpackbridgeItemPrefab, position, Quaternion.identity);
+            if (translucentjetpackBridgePrefab!= null){
+                Instantiate(translucentjetpackBridgePrefab, position, Quaternion.Euler(90, 90, 0));
+            }
+            jetpackPlatformCount += 1;
+        }
+        // gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
     }
 
     public void checkEndCondition(){
