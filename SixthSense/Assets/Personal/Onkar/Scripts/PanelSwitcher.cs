@@ -21,7 +21,12 @@ public class PanelSwitcher : MonoBehaviour
         TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
         PenaltyImage.enabled = false;
-        PlusTimeImage.enabled = false;
+        // PlusTimeImage.enabled = false;
+
+        // Check if PlusTimeImage and PlusTime text are not null, then enable them
+        if (PlusTimeImage != null && PlusTime != null) {
+            PlusTimeImage.enabled = false;
+        }
     }
 
     void Update()
@@ -64,19 +69,32 @@ public class PanelSwitcher : MonoBehaviour
         int minutes = Mathf.FloorToInt(timer / 60f);
         int seconds = Mathf.FloorToInt(timer % 60f);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        InvokeRepeating("UpCountdown",0.0f,1.0f);
+        // InvokeRepeating("UpCountdown",0.0f,1.0f);
+
+        if (PlusTimeImage != null && PlusTime != null) {
+            InvokeRepeating("UpCountdown", 0.0f, 1.0f);
+        }
     }
 
     void UpCountdown(){
 
         PlusTime.text = "+10";
-        PlusTimeImage.enabled = true;
+        // PlusTimeImage.enabled = true;
+
+        if (PlusTimeImage != null) {
+            PlusTimeImage.enabled = true;
+        }
+
         popUpTime -= 1.0f;
         if(popUpTime<=0f){
             popUpTime = 2.0f;
             CancelInvoke("UpCountdown");
             PlusTime.text = "";
-            PlusTimeImage.enabled = false;
+            // PlusTimeImage.enabled = false;
+
+            if (PlusTimeImage != null && PlusTime != null) {
+                PlusTimeImage.enabled = false;
+            }
         }
     }
 
