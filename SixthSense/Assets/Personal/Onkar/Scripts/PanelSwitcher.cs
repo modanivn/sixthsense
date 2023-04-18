@@ -3,6 +3,7 @@ using TMPro;
 using Proyecto26;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 public class PanelSwitcher : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class PanelSwitcher : MonoBehaviour
     private bool switchStarted = false;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI Penalty;
+    public Image PenaltyImage;
 
     void Start(){
         TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
+        PenaltyImage.enabled = false;
     }
 
     void Update()
@@ -25,7 +28,7 @@ public class PanelSwitcher : MonoBehaviour
             timer -= Time.deltaTime;
             int minutes = Mathf.FloorToInt(timer / 60f);
             int seconds = Mathf.FloorToInt(timer % 60f);
-            timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
             if (timer <= 0)
             {
                 TimeElapsed.endTime();
@@ -49,7 +52,7 @@ public class PanelSwitcher : MonoBehaviour
         timer -= 5.0f;
         int minutes = Mathf.FloorToInt(timer / 60f);
         int seconds = Mathf.FloorToInt(timer % 60f);
-        timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         InvokeRepeating("Countdown",0.0f,1.0f);
     }
 
@@ -57,13 +60,13 @@ public class PanelSwitcher : MonoBehaviour
         timer += 10.0f;
         int minutes = Mathf.FloorToInt(timer / 60f);
         int seconds = Mathf.FloorToInt(timer % 60f);
-        timerText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         InvokeRepeating("UpCountdown",0.0f,1.0f);
     }
 
     void UpCountdown(){
 
-        Penalty.text = "+10 seconds";
+        Penalty.text = "+10";
         popUpTime -= 1.0f;
         if(popUpTime<=0f){
             popUpTime = 2.0f;
@@ -74,12 +77,14 @@ public class PanelSwitcher : MonoBehaviour
 
     void Countdown(){
 
-        Penalty.text = "-5 seconds";
+        Penalty.text = "-5";
+        PenaltyImage.enabled = true;
         popUpTime -= 1.0f;
         if(popUpTime<=0f){
             popUpTime = 2.0f;
             CancelInvoke("Countdown");
             Penalty.text = "";
+            PenaltyImage.enabled = false;
         }
     }
 

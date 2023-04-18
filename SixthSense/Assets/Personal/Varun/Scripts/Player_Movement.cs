@@ -145,7 +145,7 @@ public class Player_Movement : MonoBehaviour
         }
 
         if (transform.position.y < -5.0f){
-            // gameObject.GetComponent<PanelSwitcher>().reduceTime();
+            gameObject.GetComponent<PanelSwitcher>().reduceTime();
             // gameObject.GetComponent<Timer>().reduceTime();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
