@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ShootingScript : MonoBehaviour
 {
     public GameObject projectilePrefab;
-    public float projectileSpeed = 60f;
+    public float projectileSpeed = 80f;
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
     private int bulletsShot = 0;

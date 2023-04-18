@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22748,7 +22748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4419053175390648095, guid: 80fc505fb32374e8cb3405f669d4167b, type: 3}
-  projectileSpeed: 20
+  projectileSpeed: 60
   fireRate: 0.5
   gun: {fileID: 1619242243}
   crosshair: {fileID: 969990351}
@@ -22790,7 +22790,6 @@ MonoBehaviour:
   - {fileID: 2110730182}
   - {fileID: 1268279743}
   jetpackplatforms: []
-  yellowSpherePrefab: {fileID: 0}
   jetpackbridgeItemPrefab: {fileID: 0}
   translucentjetpackBridgePrefab: {fileID: 0}
   activeCubes:
