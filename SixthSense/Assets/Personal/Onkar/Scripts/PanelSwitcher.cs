@@ -13,12 +13,15 @@ public class PanelSwitcher : MonoBehaviour
     private bool switchStarted = false;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI Penalty;
+    public TextMeshProUGUI PlusTime;
+    public Image PlusTimeImage;
     public Image PenaltyImage;
 
     void Start(){
         TimeElapsed.resetStopwatch();
         TimeElapsed.startTime();
         PenaltyImage.enabled = false;
+        PlusTimeImage.enabled = false;
     }
 
     void Update()
@@ -66,12 +69,14 @@ public class PanelSwitcher : MonoBehaviour
 
     void UpCountdown(){
 
-        Penalty.text = "+10";
+        PlusTime.text = "+10";
+        PlusTimeImage.enabled = true;
         popUpTime -= 1.0f;
         if(popUpTime<=0f){
             popUpTime = 2.0f;
             CancelInvoke("UpCountdown");
-            Penalty.text = "";
+            PlusTime.text = "";
+            PlusTimeImage.enabled = false;
         }
     }
 
