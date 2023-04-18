@@ -15364,7 +15364,7 @@ MonoBehaviour:
   monsterHealth: {fileID: 872919913}
   currentHealth: 1
   gameEndTrigger: {fileID: 0}
-  enemybulletMiniMap: {fileID: 0}
+  enemybulletMiniMap: {fileID: 174138193912007513, guid: 2a486081f267a4e37bae52a06a1b6767, type: 3}
 --- !u!114 &1029579250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15476,7 +15476,7 @@ MonoBehaviour:
   monsterHealth: {fileID: 1798246289}
   currentHealth: 1
   gameEndTrigger: {fileID: 0}
-  enemybulletMiniMap: {fileID: 0}
+  enemybulletMiniMap: {fileID: 174138193912007513, guid: 2a486081f267a4e37bae52a06a1b6767, type: 3}
 --- !u!114 &1036038045
 MonoBehaviour:
   m_ObjectHideFlags: 0
