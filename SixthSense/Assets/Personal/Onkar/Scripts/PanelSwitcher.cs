@@ -78,7 +78,7 @@ public class PanelSwitcher : MonoBehaviour
 
     void UpCountdown(){
 
-        PlusTime.text = "+10";
+        PlusTime.text = "+30";
         // PlusTimeImage.enabled = true;
 
         if (PlusTimeImage != null) {
