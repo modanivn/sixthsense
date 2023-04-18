@@ -65,7 +65,7 @@ public class PanelSwitcher : MonoBehaviour
     }
 
     public void increaseTimePowerup(){
-        timer += 10.0f;
+        timer += 30.0f;
         int minutes = Mathf.FloorToInt(timer / 60f);
         int seconds = Mathf.FloorToInt(timer % 60f);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
