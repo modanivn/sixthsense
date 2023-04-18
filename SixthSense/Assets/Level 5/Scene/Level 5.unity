@@ -17916,7 +17916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0f06ac1fe9a52448212c66d128bd0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneToLoad: 0
+  nextSceneToLoad: 7
   nextLevelCanvas: {fileID: 159890018}
   player: {fileID: 1624137456565311708}
 --- !u!1 &1788124369
@@ -22816,7 +22816,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressSlider: {fileID: 555703309}
-  totalCubes: 8
 --- !u!1001 &2137388927006247907
 PrefabInstance:
   m_ObjectHideFlags: 0
