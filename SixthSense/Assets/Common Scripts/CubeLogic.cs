@@ -209,5 +209,9 @@ public class CubeLogic : MonoBehaviour
     public void removeFromActiveCubes(Transform eatenCube){
         activeCubes.Remove(eatenCube);
     }
+
+    public int getTotalCube(){
+        return platforms.Length;
+    }
 }
 
