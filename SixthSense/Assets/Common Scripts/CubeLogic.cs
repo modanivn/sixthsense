@@ -167,6 +167,7 @@ public class CubeLogic : MonoBehaviour
     public void makeBridgeToMonster(){
         if(monsterPlatformCount < platforms.Length){
             Vector3 position = platforms[monsterPlatformCount].transform.position;
+            platforms[monsterPlatformCount].SetActive(false);
             Instantiate(bridgeItemPrefab, position, Quaternion.identity);
             if (translucentBridgePrefab!= null){
                 Instantiate(translucentBridgePrefab, position, Quaternion.Euler(90, 90, 0));
