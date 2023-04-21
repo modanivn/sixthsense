@@ -1651,7 +1651,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7871967420194850903, guid: 78e1fe7cc14351b41b3e3a8b547e4bfe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 78e1fe7cc14351b41b3e3a8b547e4bfe, type: 3}
 --- !u!1 &125609894 stripped
 GameObject:
@@ -3992,6 +3993,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 374823620}
     m_Modifications:
+    - target: {fileID: 2644418650215074899, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4036,9 +4041,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7592446309777955310, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7609027543808176360, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
       propertyPath: m_Name
       value: Bullet Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459265082648691708, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533250818251416132, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
@@ -17282,6 +17299,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2129199922}
     m_Modifications:
+    - target: {fileID: 2644418650215074899, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4861023124645551178, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -17326,9 +17347,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7592446309777955310, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7609027543808176360, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
       propertyPath: m_Name
       value: Bullet Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459265082648691708, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533250818251416132, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
