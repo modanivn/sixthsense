@@ -1328,6 +1328,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressSlider: {fileID: 482895865}
+--- !u!114 &160491295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160491272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdef067de4104402cbc5328cfcc33c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshProComponent: {fileID: 1614483261}
 --- !u!4 &163919772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
@@ -16555,6 +16568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdef067de4104402cbc5328cfcc33c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMeshProComponent: {fileID: 0}
 --- !u!114 &2070333188
 MonoBehaviour:
   m_ObjectHideFlags: 0

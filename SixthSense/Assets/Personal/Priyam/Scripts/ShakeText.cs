@@ -5,21 +5,21 @@ using TMPro;
 
 public class ShakeText : MonoBehaviour
 {
-    private float shakeDuration = 2f;
-    private float shakeAmount = 7f;
+    private float shakeDuration = 1.25f;
+    private float shakeAmount = 4f;
 
     private Vector3 originalPosition;
-    private TextMeshProUGUI textMeshProComponent;
+    public TextMeshProUGUI textMeshProComponent;
 
-    private void Start()
+    public void Start()
     {
-        textMeshProComponent = GetComponent<TextMeshProUGUI>();
+        // textMeshProComponent = GetComponent<TextMeshProUGUI>();
         originalPosition = textMeshProComponent.rectTransform.localPosition;
 
         StartCoroutine(Shake());
     }
 
-    private IEnumerator Shake()
+    public IEnumerator Shake()
     {
         float elapsed = 0f;
 

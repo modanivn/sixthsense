@@ -58,12 +58,14 @@ public class Player_Movement : MonoBehaviour
         {
             hitLocations.Add(new List<float>() { gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z });
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
+            gameObject.GetComponent<ShakeText>().Start();
             Destroy(other.gameObject);
             totalNumberOfHits++;
         }
         if(other.gameObject.tag == "dangerCube")
         {
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
+            gameObject.GetComponent<ShakeText>().Start();
             gameObject.GetComponent<CubeLogic>().removeFromActiveCubes(other.gameObject.transform);
             StartCoroutine(gameObject.GetComponent<CubeLogic>().respawnCube("YellowCube",other.transform.parent));
             Destroy(other.gameObject);
@@ -146,7 +148,7 @@ public class Player_Movement : MonoBehaviour
 
         if (transform.position.y < -5.0f){
             gameObject.GetComponent<PanelSwitcher>().reduceTime();
-            // gameObject.GetComponent<Timer>().reduceTime();
+            gameObject.GetComponent<ShakeText>().Start();
             setPlayerToResetPosition();
             totalNumberOfFalls++;
              jumpString += "[" + jumpX.ToString() + ", " + jumpZ.ToString() + " ], ";
