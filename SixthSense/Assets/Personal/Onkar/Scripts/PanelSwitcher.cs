@@ -113,6 +113,7 @@ public class PanelSwitcher : MonoBehaviour
 
     public void switchpanel(){
         switchStarted = true;
+        Screen.lockCursor = false;
         EndGameCanvas.SetActive(true);
     }
 }
