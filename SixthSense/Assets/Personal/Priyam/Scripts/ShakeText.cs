@@ -5,7 +5,7 @@ using TMPro;
 
 public class ShakeText : MonoBehaviour
 {
-    private float shakeDuration = 1.25f;
+    private float shakeDuration = 1f;
     private float shakeAmount = 4f;
 
     private Vector3 originalPosition;
