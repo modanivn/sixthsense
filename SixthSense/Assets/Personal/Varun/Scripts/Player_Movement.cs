@@ -161,7 +161,7 @@ public class Player_Movement : MonoBehaviour
     private void jetPackFly(){
         currentFuel -= Time.deltaTime;
         currentFuel = Mathf.Max(0.0f,currentFuel);
-        rb.AddForce(rb.transform.up * 0.2f, ForceMode.Impulse);
+        rb.AddForce(rb.transform.up * 1.2f, ForceMode.Impulse);
 
         if(flame1 != null && flame2 != null){
             flame1.SetActive(true);
