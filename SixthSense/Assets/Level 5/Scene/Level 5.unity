@@ -1167,6 +1167,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 392720941376149364, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -294
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_text
+      value: Adds 30 seconds to the clock
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.10034709
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.32814956
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.5188679
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279915652
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941397669362, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941397669372, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_Color.b
+      value: 0.13412248
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941397669372, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18919103
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941397669372, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_Color.r
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720941429277520, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_text
+      value: This time, there are two monsters.
+      objectReference: {fileID: 0}
+    - target: {fileID: 392720942633805464, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
+      propertyPath: m_text
+      value: '[Press any key to continue]'
+      objectReference: {fileID: 0}
     - target: {fileID: 392720943154030314, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
       propertyPath: m_Pivot.x
       value: 0
