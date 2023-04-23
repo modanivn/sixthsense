@@ -465,6 +465,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23b800efb34cd4855b0db95f032b53a6, type: 3}
+--- !u!1 &43258212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8372532397614912361, guid: 23b800efb34cd4855b0db95f032b53a6, type: 3}
+  m_PrefabInstance: {fileID: 43258211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &49721918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1500,6 @@ MonoBehaviour:
   greenCubeAndTextPrefab: {fileID: 2853566590130333187, guid: beb9b2e4df23142e2b5e499da45f69a3, type: 3}
   TimePrefab: {fileID: 0}
   powerUprespawnTime: 15
-  gameProgress: {fileID: 0}
   platforms:
   - {fileID: 545733833}
   - {fileID: 1143288195}
@@ -1586,6 +1590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 2063134646}
+  triggerObject: {fileID: 43258212}
 --- !u!4 &163919772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1442453421458324530, guid: f442db95438394ff790749629bfd8d88, type: 3}
