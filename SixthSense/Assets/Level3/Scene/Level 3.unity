@@ -6617,7 +6617,7 @@ GameObject:
   - component: {fileID: 748469264}
   - component: {fileID: 748469263}
   m_Layer: 5
-  m_Name: GuidancePanelNew
+  m_Name: BulletGuidancePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8520,7 +8520,7 @@ GameObject:
   - component: {fileID: 950780026}
   - component: {fileID: 950780030}
   m_Layer: 5
-  m_Name: GuidanceCanvas
+  m_Name: PregameGuidance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17338,12 +17338,12 @@ GameObject:
   - component: {fileID: 2063134648}
   - component: {fileID: 2063134647}
   m_Layer: 5
-  m_Name: GuidanceCanvasNew
+  m_Name: BulletGuidance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2063134647
 MonoBehaviour:
   m_ObjectHideFlags: 0
