@@ -23,7 +23,7 @@ public class CubeLogic : MonoBehaviour
     private int monsterPlatformCount = 0;
     private int jetpackPlatformCount = 0;
     public float powerUprespawnTime = 15.0f;
-    public TextMeshProUGUI gameProgress;
+    // public TextMeshProUGUI gameProgress;
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
     public GameObject[] platforms;
@@ -174,7 +174,7 @@ public class CubeLogic : MonoBehaviour
             }
             monsterPlatformCount += 1;
         }
-        gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
+        // gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
     }
 
     public void makeBridgeToJetpack(){
