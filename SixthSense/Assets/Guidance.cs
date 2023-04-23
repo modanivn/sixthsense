@@ -10,7 +10,7 @@ public class Guidance : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == triggerObject.tag && !hasTriggered)
+        if (!hasTriggered && other.tag == triggerObject.tag)
         {
             // Time.timeScale = 0f; // Pause the game time
             panel.SetActive(true); // Show the panel

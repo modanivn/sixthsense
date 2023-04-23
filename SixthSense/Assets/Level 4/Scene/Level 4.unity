@@ -11354,6 +11354,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1529411434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7609027543808176360, guid: dbdb9499a7d4ccb4cb4d6889034cc4ba, type: 3}
+  m_PrefabInstance: {fileID: 297287309}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1533344591
 GameObject:
   m_ObjectHideFlags: 0
@@ -16161,6 +16166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1234913464}
+  triggerObject: {fileID: 1529411434}
 --- !u!1001 &2137388927006247907
 PrefabInstance:
   m_ObjectHideFlags: 0
