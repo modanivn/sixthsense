@@ -15,6 +15,7 @@ public class Guidance : MonoBehaviour
             // Time.timeScale = 0f; // Pause the game time
             panel.SetActive(true); // Show the panel
             hasTriggered = true; // Set the flag to true
+            gameObject.GetComponent<PanelSwitcher>().pauseTimer();
         }
     }
 
@@ -24,6 +25,7 @@ public class Guidance : MonoBehaviour
         {
             panel.SetActive(false); // Hide the panel
             // Time.timeScale = 1f; // Resume the game time
+            gameObject.GetComponent<PanelSwitcher>().resumeTimer();
         }
     }
 

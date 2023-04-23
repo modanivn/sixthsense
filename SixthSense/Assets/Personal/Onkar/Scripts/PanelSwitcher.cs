@@ -57,11 +57,13 @@ public class PanelSwitcher : MonoBehaviour
     }
 
     public void reduceTime(){
-        timer -= 5.0f;
-        int minutes = Mathf.FloorToInt(timer / 60f);
-        int seconds = Mathf.FloorToInt(timer % 60f);
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        InvokeRepeating("Countdown",0.0f,1.0f);
+        if(!switchStarted) {
+            timer -= 5.0f;
+            int minutes = Mathf.FloorToInt(timer / 60f);
+            int seconds = Mathf.FloorToInt(timer % 60f);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            InvokeRepeating("Countdown",0.0f,1.0f);
+        }
     }
 
     public void increaseTimePowerup(){
@@ -115,5 +117,12 @@ public class PanelSwitcher : MonoBehaviour
         switchStarted = true;
         Screen.lockCursor = false;
         EndGameCanvas.SetActive(true);
+    }
+
+    public void pauseTimer() {
+        switchStarted = true;
+    }
+    public void resumeTimer() {
+        switchStarted = false;
     }
 }
