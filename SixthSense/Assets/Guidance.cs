@@ -6,10 +6,11 @@ public class Guidance : MonoBehaviour
 {
     public GameObject panel;
     private bool hasTriggered = false;
+    public GameObject triggerObject;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet") && !hasTriggered)
+        if (other.tag == triggerObject.tag && !hasTriggered)
         {
             // Time.timeScale = 0f; // Pause the game time
             panel.SetActive(true); // Show the panel

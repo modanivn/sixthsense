@@ -8101,6 +8101,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2155093207232712684, guid: 409e867a26b6d4c819c8e9ecc5203cf6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 694
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155093207232712684, guid: 409e867a26b6d4c819c8e9ecc5203cf6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 463
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155093207232712691, guid: 409e867a26b6d4c819c8e9ecc5203cf6, type: 3}
+      propertyPath: m_text
+      value: '[Press any key to continue]'
+      objectReference: {fileID: 0}
     - target: {fileID: 2155093208149029059, guid: 409e867a26b6d4c819c8e9ecc5203cf6, type: 3}
       propertyPath: m_Name
       value: GuidanceCanvas
