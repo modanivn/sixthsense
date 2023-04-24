@@ -12915,7 +12915,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 0.56078434, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16517,7 +16517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_fontSize
-      value: 40
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_margin.x
@@ -16533,19 +16533,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.13122198
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.09927912
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.9150943
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_fontSizeBase
-      value: 40
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -16553,7 +16553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 512
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 6604658777578062812, guid: 5c76e8b492ddf4d398277c99b854561c, type: 3}
       propertyPath: m_HorizontalAlignment
