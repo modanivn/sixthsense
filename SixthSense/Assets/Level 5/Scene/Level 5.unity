@@ -1173,23 +1173,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
       propertyPath: m_text
-      value: Adds 30 seconds to the clock
+      value: Collect for +30s on the clock.
       objectReference: {fileID: 0}
     - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.10034709
+      value: 0.1721698
       objectReference: {fileID: 0}
     - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.32814956
+      value: 0.58444136
       objectReference: {fileID: 0}
     - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.5188679
+      value: 0.6886792
       objectReference: {fileID: 0}
     - target: {fileID: 392720941376149365, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4279915652
+      value: 4281111984
       objectReference: {fileID: 0}
     - target: {fileID: 392720941397669362, guid: c83be09b691dc4ecd928e3d11de79b76, type: 3}
       propertyPath: m_IsActive
