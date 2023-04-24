@@ -1730,7 +1730,6 @@ MonoBehaviour:
   greenCubeAndTextPrefab: {fileID: 2853566590130333187, guid: 0de15001819de4c0abb5e8ea8d8fe511, type: 3}
   TimePrefab: {fileID: 0}
   powerUprespawnTime: 15
-  gameProgress: {fileID: 0}
   platforms:
   - {fileID: 2040014896}
   - {fileID: 1621206264}
@@ -8335,7 +8334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grab that jump power up and boost your bounce to new heights!
+  m_text: Collect to boost your jump!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
