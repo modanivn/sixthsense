@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ShootingScript : MonoBehaviour
 {
     public GameObject projectilePrefab;
-    public float projectileSpeed = 20f;
+    public float projectileSpeed = 80f;
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
     private int bulletsShot = 0;
@@ -19,6 +20,11 @@ public class ShootingScript : MonoBehaviour
     public TextMeshProUGUI bulletText;
     private int totalShots = 0;
     private int bulletCollectedCount = 0;
+    public GameObject bulletbar;
+    private int initialbullet = 0;
+
+    
+
  
     public void start() {
         bulletText = GetComponent<TextMeshProUGUI>();
@@ -37,15 +43,19 @@ public class ShootingScript : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && bulletCount > 0)
             {
+                // Transform parentTransform = bulletbar.transform;
+                // Transform childTransform = parentTransform.GetChild(bulletCount-1);
+                // Image childImage = childTransform.GetComponent<Image>();
+                // childImage.color = Color.white;
                 bulletCount --;
                 totalShots++;
-                bulletText.SetText((bulletCount) +" bullets left" );
+                bulletText.SetText((bulletCount) +" " );
                 Shoot();
                 
             }
-            if(bulletCount == 0) {
-                bulletText.enabled = false;
-            }
+            // if(bulletCount == 0) {
+            //     bulletText.enabled = false;
+            // }
         }
 
     }
@@ -65,8 +75,18 @@ public class ShootingScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
+            // initialbullet = bulletCount;
+            // Transform parentTransform = bulletbar.transform;
             bulletCount += 4;
-            bulletText.SetText(bulletCount +  " bullets left");
+            if (bulletCount>8){
+                bulletCount = 8;
+            }
+            // for (int i = initialbullet; i < bulletCount; i++) {
+            //     Transform childTransform = parentTransform.GetChild(i);
+            //     Image childImage = childTransform.GetComponent<Image>();
+            //     childImage.color = Color.green;
+            // }
+            bulletText.SetText(bulletCount +  " ");
             bulletText.enabled = true;
         }
     }

@@ -13,15 +13,28 @@ public class CubeLogic : MonoBehaviour
     public Transform yellowCubePrefab;
     public Transform redCubeAndTextPrefab;
     public Transform bulletPrefab;
+    public Transform translucentBridgePrefab;
+    public Transform ycminimapPrefab;
+    public Transform jumpminimapPrefab;
+    public Transform bulletminimapPrefab;
+    public Transform freezeminimapPrefab;
     public Transform greenCubeAndTextPrefab;
-    public GameObject monster;
+    public Transform TimePrefab;
     private int monsterPlatformCount = 0;
+    private int jetpackPlatformCount = 0;
     public float powerUprespawnTime = 15.0f;
-    public TextMeshProUGUI gameProgress;
+    // public TextMeshProUGUI gameProgress;
     private int totalNumberOfFreeze;
     private int totalNumberOfJumps;
     public GameObject[] platforms;
+    public GameObject[] jetpackplatforms;
+    // public Transform yellowSpherePrefab;
+    public Transform jetpackbridgeItemPrefab;
+    public Transform translucentjetpackBridgePrefab;
     [SerializeField] List<Transform> activeCubes = new List<Transform>();
+    [SerializeField] List<Transform> activeSpheres = new List<Transform>();
+    [SerializeField] List<GameObject> monsters = new List<GameObject>();
+
 
     void Start(){
         TimeElapsed.resetStopwatch();
@@ -32,7 +45,7 @@ public class CubeLogic : MonoBehaviour
 
         float rTime = normalRespawnTime;
 
-        if(cubeType == "FreezePrefab" || cubeType == "JumpPrefab" || cubeType == "Bullet"){
+        if(cubeType == "FreezePrefab" || cubeType == "JumpPrefab" || cubeType == "Bullet" || cubeType == "TimePrefab"){
             rTime = powerUprespawnTime;
         }
         
@@ -43,29 +56,53 @@ public class CubeLogic : MonoBehaviour
         if(cubeType == "Bullet"){
             temp.y += 0.4f;
         }
-        else{
+        else if(cubeType!="TimePrefab") {
             temp.y += 0.8f;
         }
         Vector3 respawnPosition = temp;
 
         switch(cubeType){
             case "YellowCube":
-            Transform clone = Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
-            activeCubes.Add(clone);
-            break;
+            {
+                Transform clone = Instantiate(yellowCubePrefab, respawnPosition, cubeParent.rotation, cubeParent);
+                if (ycminimapPrefab!= null){
+                    Quaternion rotation = clone.rotation * Quaternion.Euler(90f, 0f, 0f);
+                    Instantiate(ycminimapPrefab, clone.position, rotation, clone);
+                }
+                activeCubes.Add(clone);
+                break;
+            }
+
 
             case "JumpPrefab":
             {
-                Instantiate(greenCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+                Transform jumpclone = Instantiate(greenCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+                if (jumpminimapPrefab!= null){
+                    Quaternion jrotation = jumpclone.rotation * Quaternion.Euler(90f, 0f, 0f);
+                    Instantiate(jumpminimapPrefab, jumpclone.position, jrotation, jumpclone);
+                }
                 break;
             }
 
             case "FreezePrefab":
-            Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            Transform freezeclone = Instantiate(redCubeAndTextPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            if (freezeminimapPrefab!= null){
+                Quaternion frotation = freezeclone.rotation * Quaternion.Euler(90f, 90f, 0f);
+                Instantiate(freezeminimapPrefab, freezeclone.position, frotation, freezeclone);
+            }
+
+            break;
+
+            case "TimePrefab":
+            Instantiate(TimePrefab, respawnPosition, cubeParent.rotation, cubeParent);
             break;
 
             case "Bullet":
-            Instantiate(bulletPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            Transform bulletclone = Instantiate(bulletPrefab, respawnPosition, cubeParent.rotation, cubeParent);
+            if (bulletminimapPrefab!= null){
+                Quaternion brotation = bulletclone.rotation * Quaternion.Euler(90f, 90f, 0f);
+                Instantiate(bulletminimapPrefab, bulletclone.position, brotation, bulletclone);
+            }
             break;
         }
     }
@@ -73,10 +110,15 @@ public class CubeLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "YellowCube"){
+            gameObject.GetComponent<ProgressManager>().CollectCube();
             activeCubes.Remove(other.gameObject.transform);
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
             makeBridgeToMonster();
+        }
+        else if(other.tag == "BlueCylinder"){
+            Destroy(other.gameObject);
+            makeBridgeToJetpack();
         }
         else if(other.tag == "JumpPrefab"){
             totalNumberOfJumps++;
@@ -90,12 +132,27 @@ public class CubeLogic : MonoBehaviour
             StartCoroutine(respawnCube(other.tag,other.transform.parent)); 
         }
 
-
         else if(other.tag == "FreezePrefab"){
             totalNumberOfFreeze++;
             Destroy(other.gameObject);
             StartCoroutine(respawnCube(other.tag,other.transform.parent));
-            monster.GetComponent<EnemyShooter>().freezeProjectile();
+            foreach(GameObject monster in monsters){
+                if(monster!=null){
+                    monster.GetComponent<EnemyShooter>().freezeProjectile();
+                    monster.GetComponent<MonsterMovement>().stopMonsterMovement();
+                }
+            }
+        }
+
+        else if(other.tag == "Jetpack"){
+            Destroy(other.gameObject);
+            gameObject.GetComponent<Player_Movement>().gotJetPack();
+        }
+
+        else if(other.tag == "TimePrefab"){
+            Destroy(other.gameObject);
+            StartCoroutine(respawnCube(other.tag,other.transform.parent));
+            gameObject.GetComponent<PanelSwitcher>().increaseTimePowerup();
         }
     }
 
@@ -110,10 +167,25 @@ public class CubeLogic : MonoBehaviour
     public void makeBridgeToMonster(){
         if(monsterPlatformCount < platforms.Length){
             Vector3 position = platforms[monsterPlatformCount].transform.position;
+            platforms[monsterPlatformCount].SetActive(false);
             Instantiate(bridgeItemPrefab, position, Quaternion.identity);
+            if (translucentBridgePrefab!= null){
+                Instantiate(translucentBridgePrefab, position, Quaternion.Euler(90, 90, 0));
+            }
             monsterPlatformCount += 1;
         }
-        gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
+        // gameProgress.text = monsterPlatformCount + "/ " + platforms.Length.ToString() +" Bridge Formed!";
+    }
+
+    public void makeBridgeToJetpack(){
+        if(jetpackPlatformCount < jetpackplatforms.Length){
+            Vector3 position = jetpackplatforms[jetpackPlatformCount].transform.position;
+            Instantiate(jetpackbridgeItemPrefab, position, Quaternion.identity);
+            if (translucentjetpackBridgePrefab!= null){
+                Instantiate(translucentjetpackBridgePrefab, position, Quaternion.Euler(90, 90, 0));
+            }
+            jetpackPlatformCount += 1;
+        }
     }
 
     public void checkEndCondition(){
@@ -138,4 +210,9 @@ public class CubeLogic : MonoBehaviour
     public void removeFromActiveCubes(Transform eatenCube){
         activeCubes.Remove(eatenCube);
     }
+
+    public int getTotalCube(){
+        return platforms.Length;
+    }
 }
+

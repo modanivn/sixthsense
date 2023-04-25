@@ -112,3 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followSpeed: 20
   speed: 150
+  redMaterial: {fileID: 2100000, guid: 9418a5fcbafe84543998bd7c831a9ee1, type: 2}

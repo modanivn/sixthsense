@@ -1,0 +1,3215 @@
+fileFormatVersion: 2
+guid: 0f040d818864244b7bbb055fbf2edf57
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10033
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7938439b3897c4afdaf56039b29fae23
+      internalID: 340740426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 10033
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4232c73a4535e4c8a9692d01d79529c8
+      internalID: 1078244399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 10033
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d2958845c154ec699894d908e3c80f
+      internalID: 333789351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 10033
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b609e5bfe75f34d11a7dd7bdcfc21913
+      internalID: 387721136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 10033
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f13718ef1a34e219d6c5a9a1f1eb62
+      internalID: -1816490085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 10033
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ea61666656d4475b7afe39706e873c
+      internalID: -1350617115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 10033
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d077adcf8f1409dace788f3071021f
+      internalID: -2052223372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9506
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d187a13d9f44077b15050649715de0
+      internalID: 927331841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 9506
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726fc114d434c4e53baa13b395d406f7
+      internalID: 1678766960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 9506
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701f817ad713f4f0e93774ae55acede3
+      internalID: 1167710821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 9506
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9e02b17a7d54e82aa1302956937c84
+      internalID: -1149868252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 9506
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de25d2a824f7a44d79bdc2bda5d57baa
+      internalID: 1817756194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 9506
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe710cdb8935646969c0b7b1b63e02cd
+      internalID: -1305460418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 9506
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96526a993617d40acb47ef1e2f57f28a
+      internalID: -583832472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8979
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb9a47178e3546cf88cb8776801730f
+      internalID: 1232510904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 8979
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fdabcfe23b94b99a31fa8cf8b35ef7
+      internalID: -915356956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 8979
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a4d3c1822c94e85a70f02972a95499
+      internalID: -1522842969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 8979
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02497783aa2834748bc4bd7cbd50241e
+      internalID: 481260073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 8979
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf8ebe6033ef4656ae9b75442801a2c
+      internalID: 550093649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 8979
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd37b03e6ff6a4079a1033f3c55d908c
+      internalID: -1208243037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 8979
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e14b97fdd074799a85d820750b4eb6
+      internalID: 57661002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8452
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c2212a297c34339998f63da84b9f50
+      internalID: -1634007514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 8452
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7109aaf13776a42d88b4e62498028a57
+      internalID: 1687966265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 8452
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ff06ccdd10e475e95be8545635794f
+      internalID: 650167472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 8452
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b19ab9501404374b6bd0bd1ffe82f3
+      internalID: 361271391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 8452
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2502c5c951f44f93ab21e48e0686be6
+      internalID: 271432979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 8452
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6f45e32c3e1409dbe55ac24b61442e
+      internalID: 2023752252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 8452
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83c117f9b8754f59b172a8f2f3d6b3f
+      internalID: -1671354998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7925
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905ed1b8cce494f4db0ce7fb940848cb
+      internalID: -243439951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 7925
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafb6eb77b4e94a1ea2ef62b84ca8715
+      internalID: 713308719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7925
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06676e893ac3b4115ac41509f669bfe9
+      internalID: -1474611915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 7925
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2be97a5182341549b1a65e130dd326
+      internalID: -1334289831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7925
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4382c012f5827466d88df060c7db74fb
+      internalID: 262938742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7925
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5d3999da5ea4ba4949b929049718ac
+      internalID: 162178644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 7925
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1ab3d34933a4d28b1ebaa83fae31b8
+      internalID: -2105967714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7398
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1298c2721d6c427bb4fef0aa62d479d
+      internalID: -1024603687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 7398
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7648dec4682ed47a78194b29d40fe52d
+      internalID: -1473445685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7398
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41389556c1c4478aa7780be02b00c96
+      internalID: -841221133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 7398
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175727a65c3aa46ab9d7696ad8c8f4ca
+      internalID: -96101846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7398
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0734b821b943843af845db50355371cd
+      internalID: 182901491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7398
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3821e9c3e165490cb8bdd7a58fb5441
+      internalID: -780882795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 7398
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889850523e097468a8ae77ca2e684ae2
+      internalID: -1891177821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6871
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2faa88481c61419aa846dc89656d332
+      internalID: -663985723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 6871
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a96c7a22c82f4268a3658dffc2bd0e6
+      internalID: -1075826003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 6871
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5813f9bc004424905bc7a7d4fdc4ab37
+      internalID: 1290573255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 6871
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d3867ce2a544259a034efb592daf47
+      internalID: 687016303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6871
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b83f5d57c3840668ad08fca597fd09
+      internalID: 1609611682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6871
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10646d9f42044f74970107b54bdfdd1
+      internalID: 1411263592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6871
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d069b27611e94080887db486c30f513
+      internalID: -2065894759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6344
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fccd5568c164a0393a2d1840dfda59
+      internalID: -1194715918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 6344
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717c6b48a66c6480c81dfe190f7b50d6
+      internalID: -2016009539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 6344
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441c3c3b496104534b750f091b37ba38
+      internalID: -1437075595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 6344
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe70364f7798d46bba61023f924b8141
+      internalID: -1305183734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6344
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ec54d3a63a84de785c5a9625ec07ab
+      internalID: 1341435110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6344
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716f0e0e906084484be866b0b50d5359
+      internalID: 363930733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6344
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dcccad4f5734ee48acde2a14fda8dd
+      internalID: 439276757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5817
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698edace960984b05b3e28d5896eae7d
+      internalID: 2004030526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 5817
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175ec73fadbc4481d9868d6ae4fa2609
+      internalID: -1195219680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5817
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9653301059d4b8890956f0dc0dcf32
+      internalID: -1008408555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5817
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f028ed914660466f9b3195efc2d4105
+      internalID: 1252563869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5817
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73dd8523752148d89501d1810d87847
+      internalID: 2105046446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5817
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1482dc34bd1a34757b712b898e70eb7d
+      internalID: -1775077891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5817
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fda17a1b4444671a70283d1b371eb8
+      internalID: -934748699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5290
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f99ce21df5d452d998a4259413601f
+      internalID: 1656777131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 5290
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f201203d166049e6b21ba51fe77f986
+      internalID: -2009151470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5290
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507eb8787528f42b3be51d8209b9da76
+      internalID: -1588897703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5290
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ac866468e3a414abaa98e51b0054d5
+      internalID: 1100129770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5290
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6d0cf2233f2409c814325d8c6f7519
+      internalID: 643254747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5290
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3dc5984aab8468cb050e6db7dfb5c9
+      internalID: 998984479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5290
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b950beef0e8441391fdf6b7483398c
+      internalID: -1407418335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4763
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21611d1684c44436698ae3239fa4e419
+      internalID: 87143493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 4763
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de9311521be24f2d93f193d33946977
+      internalID: -1699605568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4763
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbafcd20bed74408821a88f10d2091c
+      internalID: -19812446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 4763
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58611aab479554df79b1bafc8aa7b64e
+      internalID: 1736262598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4763
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39724407ccf43498497014d3e07e4bf6
+      internalID: -2093057951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4763
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8a79496c95c443c95a1e73e5d7f677
+      internalID: -312548086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4763
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf1d921e616943f8a8ab087bf750bce
+      internalID: 1879633770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4236
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379b0e36f97554110b0ae1db603900a9
+      internalID: -1583293762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 4236
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c1ed595a3844ef486639db06076042
+      internalID: 1662545412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4236
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d583e5ae00383467da33d64bbd8707de
+      internalID: -1262558477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 4236
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9a64ca10878497d9083cc8757a4012
+      internalID: 746746529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4236
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16c3837c5a35429a97e50ecffbc4840
+      internalID: -1379451584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4236
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d2c58ccabdf4e828c8ce2bea9ac7cc
+      internalID: 491509243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4236
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f48a8b4f35c740899fda347e35f451d
+      internalID: -1244339216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3709
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc456884b72204869848feea0dcadcf8
+      internalID: 1354920205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 3709
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16dc19cdd005247bc9155bc14b8ba36e
+      internalID: 977278712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3709
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5049720cd16274a9c8241e1e0f3e7234
+      internalID: 705480656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3709
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d390850fd26146539b57beb490e1855
+      internalID: 1378276747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3709
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e58f47bd90747bc83b463f4184c176
+      internalID: 1867186145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3709
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc330c59a72c3427fbef909b228324ed
+      internalID: -1923659920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3709
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd216934c9518419488ffd3c65eb084f
+      internalID: 1856770935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3182
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c526f04409acd4612b64f565573a9f26
+      internalID: 1349271763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 3182
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489ed16e3ad084007911b83fac69b7ad
+      internalID: -370489914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_93
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3182
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7df43fe7b694433a1ab980d3f0cdd6
+      internalID: -1088257242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_94
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3182
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7d140e9988b4707bf45b0f5c6a6e79
+      internalID: 671228072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_95
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3182
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9555f090c9ace4cc2877fdfb02ceb5ea
+      internalID: 1505796539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_96
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3182
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62022ad7ecc54f74a5aae93623132b6
+      internalID: -1485350534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_97
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3182
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c328a65ae4db41ab8b2e3b3aaee8ee0
+      internalID: 440091327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2655
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5301ed1fb15c438b917cffd240f6749
+      internalID: -1200046748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_99
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2655
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd08352e6dad74e7fa47e68fc7b54bdd
+      internalID: 1389346400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_100
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2655
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df646cffe47cb4515a5700247b0fb4e5
+      internalID: 526300673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_101
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2655
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bfa29e676f543ad8521cf58130791b
+      internalID: 626934330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_102
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2655
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a415b373e5e4e1f9b26db1b9e7274d
+      internalID: 1000171458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_103
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2655
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78ca296f877a41e4a7c4076ea43cde6
+      internalID: -394825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_104
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2655
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d5eec26cb19402e873d4f85bf41066
+      internalID: 1672970617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2128
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e772603ffe9b2432995644fba00120aa
+      internalID: 1691959286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_106
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2128
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7202baa39a3cd48c2b5075b673ab05e7
+      internalID: 696902671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_107
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2128
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f6ab60f56144a328e54614b7aefad5
+      internalID: 343929521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_108
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2128
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361bcc724efb64bf99a572b23b0adae1
+      internalID: -542428619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_109
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2128
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df3ae4ecb2e0494dba34ff88a008e27
+      internalID: 2947357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_110
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2128
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11bce97254b148a9addc15eade9027f
+      internalID: -75961901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_111
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2128
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e889f8a2275c4f8e9337fd69720967d
+      internalID: 535227737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1601
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd08747698a394a068b427f2a75f4ccb
+      internalID: 1685869316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_113
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1601
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900fdff7c092c48d0ad103d67cc51969
+      internalID: -59018874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_114
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1601
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9d3926df9904d9eba23a8e7922c038
+      internalID: 1707125584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_115
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1601
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff52975cd5301458e8b49b2ee7958ca4
+      internalID: -611343738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_116
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1601
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5636d52ac6842c2bd290cd3f8d9cc4
+      internalID: 311156541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_117
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1601
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4d5833e6301422d8dc0c41353b8866
+      internalID: -721175879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_118
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1601
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6944e31877ea544e9b624a6578da331c
+      internalID: -2034052229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1074
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1fa2dc16192415b902e218402843e1
+      internalID: 1356761726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_120
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1074
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b3bbf161a2640bcbd042143d14d422
+      internalID: -1608201070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_121
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1074
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffece12cb09174b8fa27799282c98206
+      internalID: -478607389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_122
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1074
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196165f73fb1c46b1839f5f51b175968
+      internalID: -562823718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_123
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1074
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9575c9e42584d70b23b3ef2068bdba
+      internalID: 1683247693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_124
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1074
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e07ea03d59554bfe9b894487c7a8053
+      internalID: 1641682231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_125
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1074
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53519d654b694350b968be587ee9b2d
+      internalID: 785388974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 547
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8139e6159318048bb93d6ce0f6354342
+      internalID: -814128015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_127
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 547
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753cf2ac2b7b04566ad7aa399dd225c0
+      internalID: 132924446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_128
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 547
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0903972a8d36427f84eaf1f057c1a14
+      internalID: -1394465544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_129
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 547
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b544ed81686194758b160765c073be0b
+      internalID: 402889301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_130
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 547
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b48c6dea9a64925a33a11396ff520d
+      internalID: 551185710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_131
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 547
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2820a6c053af24a1688ed0bb30b708cf
+      internalID: 2084639778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_132
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 547
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aeae929d626c491792e9a908723224e
+      internalID: 607773843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d1598a69c944c97813825ca53e8018
+      internalID: 1116227256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_134
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 20
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43c7a9401e674672be05d946e9f795b
+      internalID: -852367605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_135
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 20
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85788d7b2e13447328aa2174828dc872
+      internalID: -1473520072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_136
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 20
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ae3667fbf26416ead7c48897c35182
+      internalID: -90118006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_137
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 20
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a31b5864be7465eb4305068e85efc9
+      internalID: -1667733571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_138
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 20
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058a578fe933d4dcba102d1131adedfd
+      internalID: -574080150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootCube2_spritesheet_139
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 20
+        width: 480
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57a99d30218341168772925090e1008
+      internalID: -188739432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7892e49540e8e4fefbf75d80f6b9d59c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ShootCube2_spritesheet_0: 340740426
+      ShootCube2_spritesheet_1: 1078244399
+      ShootCube2_spritesheet_10: -1149868252
+      ShootCube2_spritesheet_100: 526300673
+      ShootCube2_spritesheet_101: 626934330
+      ShootCube2_spritesheet_102: 1000171458
+      ShootCube2_spritesheet_103: -394825
+      ShootCube2_spritesheet_104: 1672970617
+      ShootCube2_spritesheet_105: 1691959286
+      ShootCube2_spritesheet_106: 696902671
+      ShootCube2_spritesheet_107: 343929521
+      ShootCube2_spritesheet_108: -542428619
+      ShootCube2_spritesheet_109: 2947357
+      ShootCube2_spritesheet_11: 1817756194
+      ShootCube2_spritesheet_110: -75961901
+      ShootCube2_spritesheet_111: 535227737
+      ShootCube2_spritesheet_112: 1685869316
+      ShootCube2_spritesheet_113: -59018874
+      ShootCube2_spritesheet_114: 1707125584
+      ShootCube2_spritesheet_115: -611343738
+      ShootCube2_spritesheet_116: 311156541
+      ShootCube2_spritesheet_117: -721175879
+      ShootCube2_spritesheet_118: -2034052229
+      ShootCube2_spritesheet_119: 1356761726
+      ShootCube2_spritesheet_12: -1305460418
+      ShootCube2_spritesheet_120: -1608201070
+      ShootCube2_spritesheet_121: -478607389
+      ShootCube2_spritesheet_122: -562823718
+      ShootCube2_spritesheet_123: 1683247693
+      ShootCube2_spritesheet_124: 1641682231
+      ShootCube2_spritesheet_125: 785388974
+      ShootCube2_spritesheet_126: -814128015
+      ShootCube2_spritesheet_127: 132924446
+      ShootCube2_spritesheet_128: -1394465544
+      ShootCube2_spritesheet_129: 402889301
+      ShootCube2_spritesheet_13: -583832472
+      ShootCube2_spritesheet_130: 551185710
+      ShootCube2_spritesheet_131: 2084639778
+      ShootCube2_spritesheet_132: 607773843
+      ShootCube2_spritesheet_133: 1116227256
+      ShootCube2_spritesheet_134: -852367605
+      ShootCube2_spritesheet_135: -1473520072
+      ShootCube2_spritesheet_136: -90118006
+      ShootCube2_spritesheet_137: -1667733571
+      ShootCube2_spritesheet_138: -574080150
+      ShootCube2_spritesheet_139: -188739432
+      ShootCube2_spritesheet_14: 1232510904
+      ShootCube2_spritesheet_15: -915356956
+      ShootCube2_spritesheet_16: -1522842969
+      ShootCube2_spritesheet_17: 481260073
+      ShootCube2_spritesheet_18: 550093649
+      ShootCube2_spritesheet_19: -1208243037
+      ShootCube2_spritesheet_2: 333789351
+      ShootCube2_spritesheet_20: 57661002
+      ShootCube2_spritesheet_21: -1634007514
+      ShootCube2_spritesheet_22: 1687966265
+      ShootCube2_spritesheet_23: 650167472
+      ShootCube2_spritesheet_24: 361271391
+      ShootCube2_spritesheet_25: 271432979
+      ShootCube2_spritesheet_26: 2023752252
+      ShootCube2_spritesheet_27: -1671354998
+      ShootCube2_spritesheet_28: -243439951
+      ShootCube2_spritesheet_29: 713308719
+      ShootCube2_spritesheet_3: 387721136
+      ShootCube2_spritesheet_30: -1474611915
+      ShootCube2_spritesheet_31: -1334289831
+      ShootCube2_spritesheet_32: 262938742
+      ShootCube2_spritesheet_33: 162178644
+      ShootCube2_spritesheet_34: -2105967714
+      ShootCube2_spritesheet_35: -1024603687
+      ShootCube2_spritesheet_36: -1473445685
+      ShootCube2_spritesheet_37: -841221133
+      ShootCube2_spritesheet_38: -96101846
+      ShootCube2_spritesheet_39: 182901491
+      ShootCube2_spritesheet_4: -1816490085
+      ShootCube2_spritesheet_40: -780882795
+      ShootCube2_spritesheet_41: -1891177821
+      ShootCube2_spritesheet_42: -663985723
+      ShootCube2_spritesheet_43: -1075826003
+      ShootCube2_spritesheet_44: 1290573255
+      ShootCube2_spritesheet_45: 687016303
+      ShootCube2_spritesheet_46: 1609611682
+      ShootCube2_spritesheet_47: 1411263592
+      ShootCube2_spritesheet_48: -2065894759
+      ShootCube2_spritesheet_49: -1194715918
+      ShootCube2_spritesheet_5: -1350617115
+      ShootCube2_spritesheet_50: -2016009539
+      ShootCube2_spritesheet_51: -1437075595
+      ShootCube2_spritesheet_52: -1305183734
+      ShootCube2_spritesheet_53: 1341435110
+      ShootCube2_spritesheet_54: 363930733
+      ShootCube2_spritesheet_55: 439276757
+      ShootCube2_spritesheet_56: 2004030526
+      ShootCube2_spritesheet_57: -1195219680
+      ShootCube2_spritesheet_58: -1008408555
+      ShootCube2_spritesheet_59: 1252563869
+      ShootCube2_spritesheet_6: -2052223372
+      ShootCube2_spritesheet_60: 2105046446
+      ShootCube2_spritesheet_61: -1775077891
+      ShootCube2_spritesheet_62: -934748699
+      ShootCube2_spritesheet_63: 1656777131
+      ShootCube2_spritesheet_64: -2009151470
+      ShootCube2_spritesheet_65: -1588897703
+      ShootCube2_spritesheet_66: 1100129770
+      ShootCube2_spritesheet_67: 643254747
+      ShootCube2_spritesheet_68: 998984479
+      ShootCube2_spritesheet_69: -1407418335
+      ShootCube2_spritesheet_7: 927331841
+      ShootCube2_spritesheet_70: 87143493
+      ShootCube2_spritesheet_71: -1699605568
+      ShootCube2_spritesheet_72: -19812446
+      ShootCube2_spritesheet_73: 1736262598
+      ShootCube2_spritesheet_74: -2093057951
+      ShootCube2_spritesheet_75: -312548086
+      ShootCube2_spritesheet_76: 1879633770
+      ShootCube2_spritesheet_77: -1583293762
+      ShootCube2_spritesheet_78: 1662545412
+      ShootCube2_spritesheet_79: -1262558477
+      ShootCube2_spritesheet_8: 1678766960
+      ShootCube2_spritesheet_80: 746746529
+      ShootCube2_spritesheet_81: -1379451584
+      ShootCube2_spritesheet_82: 491509243
+      ShootCube2_spritesheet_83: -1244339216
+      ShootCube2_spritesheet_84: 1354920205
+      ShootCube2_spritesheet_85: 977278712
+      ShootCube2_spritesheet_86: 705480656
+      ShootCube2_spritesheet_87: 1378276747
+      ShootCube2_spritesheet_88: 1867186145
+      ShootCube2_spritesheet_89: -1923659920
+      ShootCube2_spritesheet_9: 1167710821
+      ShootCube2_spritesheet_90: 1856770935
+      ShootCube2_spritesheet_91: 1349271763
+      ShootCube2_spritesheet_92: -370489914
+      ShootCube2_spritesheet_93: -1088257242
+      ShootCube2_spritesheet_94: 671228072
+      ShootCube2_spritesheet_95: 1505796539
+      ShootCube2_spritesheet_96: -1485350534
+      ShootCube2_spritesheet_97: 440091327
+      ShootCube2_spritesheet_98: -1200046748
+      ShootCube2_spritesheet_99: 1389346400
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

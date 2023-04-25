@@ -1,0 +1,2599 @@
+fileFormatVersion: 2
+guid: 299d0548b705e435f98a366f43f34529
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11040
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a8b90d0a72f49a28a24996da27f105
+      internalID: -1091240993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 11040
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793477c845db44ec09ed8e87e9c689db
+      internalID: -1295191271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 11040
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a90d80577cc416e9a786452b8169f0
+      internalID: -894624224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 11040
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9ade939b87d480292a8893589596a1
+      internalID: 1793354893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 11040
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c56b7c2664643b0a85c1c0885f9368
+      internalID: -1901804915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 11040
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969b921dd49e44e28b7f35ed43ca945a
+      internalID: -1042853324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 11040
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7d8b54ce8ec48ef8f682798a58204f
+      internalID: -2056862928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10304
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac37cb9d3a2784b0b97e1e2e6f56fa8c
+      internalID: -1493903864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 10304
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef42d36154d844f1288e05d288977689
+      internalID: -729872759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 10304
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f862b66b74d44415e9756c3fb8660048
+      internalID: -664908631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 10304
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2aeee9bb72a41028b1e09ec09f4a58
+      internalID: 1719405519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 10304
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a955ad1faf4d444e98933177cc6a7451
+      internalID: 1463904961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 10304
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91de2bd4564a44a67af84d94f5b0a98e
+      internalID: -1671646716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 10304
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61958c626f8e64465a9c1c26d64bc7a5
+      internalID: 2143601764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9568
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5681330d24645d39aa8b96f1b44189
+      internalID: 792218720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 9568
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ad740aeb6f9439497f27ceaf99aa63
+      internalID: -213769369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 9568
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e7dabd97cd14a90a8dd71fc495d65b
+      internalID: 1771368851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 9568
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3929c10f38c74357a0a9f359b78eea7
+      internalID: -1038843825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 9568
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86248b3049cd47ef9df2c198e874257
+      internalID: 41275013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 9568
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4668066805cc4c199525d3b7b905c13
+      internalID: 1040186436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 9568
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663e66b1783a34cf89f0cf4c7c0127d7
+      internalID: -207427218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8832
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ef63bbf841d49eb8b97b2e51a01013
+      internalID: 1265853595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 8832
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3d77cdea1aa402e8143583e432d21d
+      internalID: 1467236649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 8832
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80954b2359918451d9d8652419969ad2
+      internalID: -1612357275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 8832
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89b251b1f3b0469180651d5602a611d
+      internalID: -2138765714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 8832
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8d8ec2cc1494eb19d781db7d5829fb
+      internalID: 1673922931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 8832
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a87dc6aea5c64b53bc6e6ce931cf266
+      internalID: -1246201486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 8832
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcea3f5fa70d449cca7a6b22316ad201
+      internalID: 591575530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8096
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d502c69d7a8b14814be6d09e8d202d8b
+      internalID: 487041490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 8096
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed7950b8546740669f428cb9e0f91c6
+      internalID: -1963076227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 8096
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7c19ae38f3b4e35a60c3e72ec3bcab
+      internalID: -409902009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 8096
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ee813d184b74e348860a26db447e40
+      internalID: 422158780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 8096
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9583f992674474b2987ac216c40e8065
+      internalID: 1000133386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 8096
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ab2b24cc9734d37a43c4183e2e7053
+      internalID: 1913777843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 8096
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246af9473325a4a988c2fc45d444bdcd
+      internalID: -942704524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7360
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c301185f30649f3b85a71059bb28b7
+      internalID: 2007248037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 7360
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97323b5863f6543549c4b8a9cc2388a9
+      internalID: 654805835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7360
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929119f28b38543af8ba96cf4f5b0693
+      internalID: -1837314438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 7360
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce02414e70bcc4929bdfdc81933130f2
+      internalID: -86870281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7360
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf46f1849339f4f479fbbe92006f1841
+      internalID: 612631173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7360
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9146f0177e94bfeadd0524cf87788b
+      internalID: 1299647587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 7360
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cdd6f6eda5846e79eef6f6d97dae38
+      internalID: -700325245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6624
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7df58d24d731484c8a49fce44f73c2c
+      internalID: 346300640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 6624
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d34a665832d4df3ba908c013eea0b0
+      internalID: 1382742658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 6624
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633154138d92940b19b2b43236fc9d0b
+      internalID: 1996788048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 6624
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8a2dd77d05d43a1b4faaf792f3dad9
+      internalID: 1334374306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6624
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27322d335b1dc438b9d77465023fedc1
+      internalID: -1108387992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6624
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1676041106b3547b3bcb89cd4571be8b
+      internalID: -1579669626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6624
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6880399224ba4239a9c5abadff6a3c3
+      internalID: -772056748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5888
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4569458e47ea54759b2af3be2f8b7463
+      internalID: 2102610247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 5888
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de5fadf5a2884467a3fa097a8cf6bf8
+      internalID: -1244699567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5888
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2966bfbcb371e440b8b5e590cc9c6ff2
+      internalID: -1707933486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5888
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7aad2df0f1054a5c835fc80e6a78172
+      internalID: 1232093485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5888
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81789c16997d47078efa01ba9c2b89b
+      internalID: -1351776805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5888
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44854b1880aab49baa6b77279a5ce82e
+      internalID: -1674212345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5888
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb7755fd5f6a4918832b0d2be3f43e9
+      internalID: -1110229313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5152
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc0cb77ba9b74d1a8d94ef68911b504
+      internalID: -1627384887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 5152
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2657708b3732b472a804ffdea171b92a
+      internalID: 357229929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5152
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6cbc63d695c406d94df19e94fe4825
+      internalID: 1757976196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5152
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe408e2c06744b58bc08021fa0af55a
+      internalID: 1799801446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5152
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effa472d8531e489caaaed205c776b5c
+      internalID: 1062818119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5152
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a201b62a8a8ed44db9305ec82c0811b5
+      internalID: -792853113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5152
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f49de75792941c9b61e0b8e79aae3b
+      internalID: -1753285325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4416
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff799d51e45b4f82b8bde04ad3a8e96
+      internalID: -869286493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 4416
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5999aabe4866143919d7c01b2f3fac13
+      internalID: -100697742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4416
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ac113e3c5664f8dbd85c95edb4d483
+      internalID: 1659673079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 4416
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edc297f740094690a939fa31deff419
+      internalID: 467756724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4416
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50e19e59dd084ea58364f53179149fa
+      internalID: -96115985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4416
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64642da8da843495eb06a718a185347f
+      internalID: 562395711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4416
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b186f92c87547b888865b1d256304b
+      internalID: -1295543374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3680
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f93783290c74714aa12a148c9a6f2a
+      internalID: 411127719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 3680
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03efb6a73c3aa4c7ea8146060511a0ca
+      internalID: 1474121013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3680
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823bfcdf16d834cad848bc51fefcd79f
+      internalID: 2046902679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3680
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba88fd11ba604b50b7316270cbbd7f3
+      internalID: 1292324895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3680
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d535c71b83d49aa88e0e989e70f2b8
+      internalID: 266964928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3680
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc05021ac162348d9a724d1f88a8f0b0
+      internalID: -6650118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3680
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b65a95ba88a44f5833def662dc5691
+      internalID: -1486222611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2944
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d79e94ae0334eaaa5cc785c8a57fa9
+      internalID: -1027599335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2944
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680d39853b4b245dab12e209405bb3b9
+      internalID: -1150139517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2944
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ea26665c43a429abafc0ddfc0bf002
+      internalID: 1289884106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2944
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae819de712e2040609dab8221db4b36e
+      internalID: -444927526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2944
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf218906f872b4b208285dabebf2d420
+      internalID: -1569935346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2944
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cc05d3e3cfe41f5bc58f07af3a9513
+      internalID: 696196669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2944
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8239923d8257344d5a0893d55cd331a5
+      internalID: -1360856828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2208
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc33885a36154b41ab2cb6ccd363499
+      internalID: -309881361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2208
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154051287d908430188246531a714368
+      internalID: -287902138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2208
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f72dbb1bf2e4d3bb3ef4b43768e0dc
+      internalID: -1394003042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2208
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc13afca4130a435e8140de597e59021
+      internalID: 130876964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2208
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863fbf764f7b649c698c3331f5218994
+      internalID: 1120414733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2208
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c37e2c3260249f49552806feee63bd
+      internalID: 1366430676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2208
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431727ae19d4e44fba6795cfc2827607
+      internalID: -1111545090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb58106f48e9c429d9e3ee0e264991a8
+      internalID: 871985043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1472
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092961e0a5b4b444c8765d8ece31b721
+      internalID: -768468902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_93
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1472
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84989bf2f42174484a39afd3f9d716d8
+      internalID: -2065761268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_94
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1472
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aab9408b8cef4a82828a9cd7011f0bc
+      internalID: -758168709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_95
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1472
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd325b933b504d508838c7a9e75a781
+      internalID: 1449447252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_96
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1472
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f74ae1b499e4c1db33506bd85eb272
+      internalID: 1781597102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_97
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1472
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649d498765c0c44a49d5b7a8756afe6b
+      internalID: -90570965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bec977212ca3491687e42630ac76614
+      internalID: -1584268623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_99
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 736
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2449f2a054d39450a93b1cabf5e04928
+      internalID: -1291202006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_100
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 736
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be216872a31849f9848106c9d188df8
+      internalID: -1467698559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_101
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 736
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3fc5bee3d604d18aa7383e9e4b252d
+      internalID: -1740674611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_102
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 736
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d28920f09bc41988bc3e3cc6ff3004
+      internalID: 578741186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_103
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 736
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa6dd6594f5e46d98e2d9ccf965d96f
+      internalID: 1885299474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_104
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 736
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed37ccd750b74d55a3186ab074e764c
+      internalID: 1942076144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abe18f9d521b475395c2617e66f0c45
+      internalID: -98236399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_106
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdd26e3cdcee4c88a8f2ca70729d807
+      internalID: -1769042326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_107
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add0989c3cfea4861b937eabe863a141
+      internalID: -1151733454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_108
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7c0c80e425e4c86acb442aad1d5cf5
+      internalID: -354642816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_109
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5af55d9a8824f60bb150c3856c65ef
+      internalID: -1502041161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_110
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153b8b138e8174f16aa08e93824fe579
+      internalID: -1299146685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JetpackRemove_spritesheet_111
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 480
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f967e6b823249c39703f24c8c13856
+      internalID: 404225210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 11aa9173352a6479fa5411635a21300b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      JetpackRemove_spritesheet_0: -1091240993
+      JetpackRemove_spritesheet_1: -1295191271
+      JetpackRemove_spritesheet_10: 1719405519
+      JetpackRemove_spritesheet_100: -1467698559
+      JetpackRemove_spritesheet_101: -1740674611
+      JetpackRemove_spritesheet_102: 578741186
+      JetpackRemove_spritesheet_103: 1885299474
+      JetpackRemove_spritesheet_104: 1942076144
+      JetpackRemove_spritesheet_105: -98236399
+      JetpackRemove_spritesheet_106: -1769042326
+      JetpackRemove_spritesheet_107: -1151733454
+      JetpackRemove_spritesheet_108: -354642816
+      JetpackRemove_spritesheet_109: -1502041161
+      JetpackRemove_spritesheet_11: 1463904961
+      JetpackRemove_spritesheet_110: -1299146685
+      JetpackRemove_spritesheet_111: 404225210
+      JetpackRemove_spritesheet_12: -1671646716
+      JetpackRemove_spritesheet_13: 2143601764
+      JetpackRemove_spritesheet_14: 792218720
+      JetpackRemove_spritesheet_15: -213769369
+      JetpackRemove_spritesheet_16: 1771368851
+      JetpackRemove_spritesheet_17: -1038843825
+      JetpackRemove_spritesheet_18: 41275013
+      JetpackRemove_spritesheet_19: 1040186436
+      JetpackRemove_spritesheet_2: -894624224
+      JetpackRemove_spritesheet_20: -207427218
+      JetpackRemove_spritesheet_21: 1265853595
+      JetpackRemove_spritesheet_22: 1467236649
+      JetpackRemove_spritesheet_23: -1612357275
+      JetpackRemove_spritesheet_24: -2138765714
+      JetpackRemove_spritesheet_25: 1673922931
+      JetpackRemove_spritesheet_26: -1246201486
+      JetpackRemove_spritesheet_27: 591575530
+      JetpackRemove_spritesheet_28: 487041490
+      JetpackRemove_spritesheet_29: -1963076227
+      JetpackRemove_spritesheet_3: 1793354893
+      JetpackRemove_spritesheet_30: -409902009
+      JetpackRemove_spritesheet_31: 422158780
+      JetpackRemove_spritesheet_32: 1000133386
+      JetpackRemove_spritesheet_33: 1913777843
+      JetpackRemove_spritesheet_34: -942704524
+      JetpackRemove_spritesheet_35: 2007248037
+      JetpackRemove_spritesheet_36: 654805835
+      JetpackRemove_spritesheet_37: -1837314438
+      JetpackRemove_spritesheet_38: -86870281
+      JetpackRemove_spritesheet_39: 612631173
+      JetpackRemove_spritesheet_4: -1901804915
+      JetpackRemove_spritesheet_40: 1299647587
+      JetpackRemove_spritesheet_41: -700325245
+      JetpackRemove_spritesheet_42: 346300640
+      JetpackRemove_spritesheet_43: 1382742658
+      JetpackRemove_spritesheet_44: 1996788048
+      JetpackRemove_spritesheet_45: 1334374306
+      JetpackRemove_spritesheet_46: -1108387992
+      JetpackRemove_spritesheet_47: -1579669626
+      JetpackRemove_spritesheet_48: -772056748
+      JetpackRemove_spritesheet_49: 2102610247
+      JetpackRemove_spritesheet_5: -1042853324
+      JetpackRemove_spritesheet_50: -1244699567
+      JetpackRemove_spritesheet_51: -1707933486
+      JetpackRemove_spritesheet_52: 1232093485
+      JetpackRemove_spritesheet_53: -1351776805
+      JetpackRemove_spritesheet_54: -1674212345
+      JetpackRemove_spritesheet_55: -1110229313
+      JetpackRemove_spritesheet_56: -1627384887
+      JetpackRemove_spritesheet_57: 357229929
+      JetpackRemove_spritesheet_58: 1757976196
+      JetpackRemove_spritesheet_59: 1799801446
+      JetpackRemove_spritesheet_6: -2056862928
+      JetpackRemove_spritesheet_60: 1062818119
+      JetpackRemove_spritesheet_61: -792853113
+      JetpackRemove_spritesheet_62: -1753285325
+      JetpackRemove_spritesheet_63: -869286493
+      JetpackRemove_spritesheet_64: -100697742
+      JetpackRemove_spritesheet_65: 1659673079
+      JetpackRemove_spritesheet_66: 467756724
+      JetpackRemove_spritesheet_67: -96115985
+      JetpackRemove_spritesheet_68: 562395711
+      JetpackRemove_spritesheet_69: -1295543374
+      JetpackRemove_spritesheet_7: -1493903864
+      JetpackRemove_spritesheet_70: 411127719
+      JetpackRemove_spritesheet_71: 1474121013
+      JetpackRemove_spritesheet_72: 2046902679
+      JetpackRemove_spritesheet_73: 1292324895
+      JetpackRemove_spritesheet_74: 266964928
+      JetpackRemove_spritesheet_75: -6650118
+      JetpackRemove_spritesheet_76: -1486222611
+      JetpackRemove_spritesheet_77: -1027599335
+      JetpackRemove_spritesheet_78: -1150139517
+      JetpackRemove_spritesheet_79: 1289884106
+      JetpackRemove_spritesheet_8: -729872759
+      JetpackRemove_spritesheet_80: -444927526
+      JetpackRemove_spritesheet_81: -1569935346
+      JetpackRemove_spritesheet_82: 696196669
+      JetpackRemove_spritesheet_83: -1360856828
+      JetpackRemove_spritesheet_84: -309881361
+      JetpackRemove_spritesheet_85: -287902138
+      JetpackRemove_spritesheet_86: -1394003042
+      JetpackRemove_spritesheet_87: 130876964
+      JetpackRemove_spritesheet_88: 1120414733
+      JetpackRemove_spritesheet_89: 1366430676
+      JetpackRemove_spritesheet_9: -664908631
+      JetpackRemove_spritesheet_90: -1111545090
+      JetpackRemove_spritesheet_91: 871985043
+      JetpackRemove_spritesheet_92: -768468902
+      JetpackRemove_spritesheet_93: -2065761268
+      JetpackRemove_spritesheet_94: -758168709
+      JetpackRemove_spritesheet_95: 1449447252
+      JetpackRemove_spritesheet_96: 1781597102
+      JetpackRemove_spritesheet_97: -90570965
+      JetpackRemove_spritesheet_98: -1584268623
+      JetpackRemove_spritesheet_99: -1291202006
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

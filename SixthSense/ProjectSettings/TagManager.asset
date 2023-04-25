@@ -20,6 +20,11 @@ TagManager:
   - Bullet
   - PlayerBullet
   - crosshair
+  - dangerCube
+  - Jetpack
+  - TimePrefab
+  - BlueCylinder
+  - YellowSphere
   layers:
   - Default
   - TransparentFX
@@ -29,7 +34,7 @@ TagManager:
   - UI
   - Ground
   - Cube
-  - 
+  - Minimap
   - 
   - 
   - 
